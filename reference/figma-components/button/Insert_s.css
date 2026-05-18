@@ -1,0 +1,173 @@
+/* Insert S */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 12px;
+
+position: relative;
+width: 570px;
+height: 42px;
+left: 1445px;
+top: 900px;
+
+
+
+/* Button */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 16.1473px 24.221px;
+gap: 9.09px;
+
+width: 451px;
+height: 42px;
+
+/* Cherrywood */
+border: 0.645892px solid #601D1D;
+border-radius: 80.7365px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Star */
+
+margin: 0 auto;
+display: none;
+width: 18.19px;
+height: 18.19px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* E-mail Adresse */
+
+margin: 0 auto;
+width: 86px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+
+/* Cherrywood */
+color: #601D1D;
+
+opacity: 0.5;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X */
+
+margin: 0 auto;
+display: none;
+width: 18.19px;
+height: 18.19px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Button */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 16.1473px;
+gap: 9.09px;
+
+width: 109px;
+height: 42px;
+
+/* Cherrywood */
+background: #601D1D;
+/* Cherrywood */
+border: 1.13664px solid #601D1D;
+border-radius: 80.7365px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Star */
+
+margin: 0 auto;
+display: none;
+width: 18.19px;
+height: 18.19px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Anmelden */
+
+margin: 0 auto;
+width: 60px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X */
+
+margin: 0 auto;
+display: none;
+width: 18.19px;
+height: 18.19px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;

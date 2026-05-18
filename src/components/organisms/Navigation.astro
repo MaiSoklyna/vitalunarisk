@@ -1,0 +1,274 @@
+---
+import Button from '@atoms/Button.astro';
+
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+
+const navLinks = [
+  { href: '/', label: 'Start' },
+  { href: '/angebot', label: 'Angebot' },
+  { href: '/ueber-uns', label: 'Über uns' },
+  { href: '/kontakt', label: 'Kontakt' },
+];
+
+const isActive = (href: string) =>
+  href === '/' ? currentPath === '/' : currentPath.startsWith(href);
+---
+
+<header id="main-header" class="nav">
+  <div class="nav__inner max-w-layout container-x">
+    <a href="/" class="nav__logo" aria-label="VitaLunaris – Startseite">
+      <img src="/logo/logo.svg" alt="VitaLunaris" class="nav__logo-img" />
+    </a>
+
+    <!-- Desktop pill nav (≥ 1024px) -->
+    <nav class="nav__pill" aria-label="Hauptnavigation">
+      {navLinks.map(({ href, label }) => (
+        <a
+          href={href}
+          class={`nav__link ${isActive(href) ? 'nav__link--active' : ''}`}
+        >
+          {label}
+        </a>
+      ))}
+      <Button href="/kontakt" variant="header" size="sm" class="nav__cta">
+        Book Now
+      </Button>
+    </nav>
+
+    <!-- Compact menu trigger (< 1024px): hover/focus reveals the dropdown nav -->
+    <div class="nav__compact" data-compact-menu>
+      <button
+        type="button"
+        class="nav__menu-btn"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+        aria-controls="compact-menu"
+        data-menu-toggle
+      >
+        <img src="/images/symbol/Menu.svg" alt="" class="nav__menu-icon" />
+      </button>
+
+      <div id="compact-menu" class="nav__dropdown" role="menu" aria-hidden="true">
+        {navLinks.map(({ href, label }) => (
+          <a
+            href={href}
+            role="menuitem"
+            class={`nav__dropdown-link ${isActive(href) ? 'nav__dropdown-link--active' : ''}`}
+          >
+            {label}
+          </a>
+        ))}
+        <div class="nav__dropdown-cta">
+          <Button href="/kontakt" variant="header" size="sm" fullWidth>
+            Termin buchen
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* ============================================================
+     NAV — BEM: .nav (block), .nav__* (elements), --modifier (state)
+     ============================================================ */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--gradient-header);
+    transition: padding 300ms ease;
+  }
+
+  .nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    min-height: 60px;
+  }
+
+  /* ---------- LOGO (single asset, responsive height) ---------- */
+  .nav__logo {
+    display: inline-flex;
+    align-items: center;
+  }
+  .nav__logo-img {
+    width: auto;
+    height: 28px;          /* mobile 360px+ */
+    transition: height 300ms ease;
+  }
+  @media (min-width: 768px)  { .nav__logo-img { height: 32px; } } /* tablet */
+  @media (min-width: 1024px) { .nav__logo-img { height: 36px; } } /* desktop */
+  @media (min-width: 1280px) { .nav__logo-img { height: 40px; } }
+  @media (min-width: 1920px) { .nav__logo-img { height: 48px; } }
+
+  .nav.is-scrolled .nav__logo-img { height: 26px; }
+  @media (min-width: 1024px) { .nav.is-scrolled .nav__logo-img { height: 30px; } }
+
+  /* ---------- DESKTOP PILL (≥ 1024px) ---------- */
+  .nav__pill { display: none; }
+  @media (min-width: 1024px) {
+    .nav__pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 28px;
+      padding: 8px 8px 8px 24px;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(96, 29, 29, 0.1);
+      border-radius: 100px;
+    }
+  }
+  .nav__link {
+    font-family: 'ES Park TRIAL', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--c-cherrywood);
+    text-decoration: none;
+    transition: opacity 200ms ease;
+  }
+  .nav__link:hover { opacity: 0.7; }
+  .nav__link--active { font-weight: 600; }
+
+  /* ---------- COMPACT TRIGGER + DROPDOWN ( < 1024px ) ---------- */
+  .nav__compact {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+  @media (min-width: 1024px) { .nav__compact { display: none; } }
+
+  .nav__menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    color: var(--c-cherrywood);
+    cursor: pointer;
+  }
+  @media (min-width: 768px) {
+    .nav__menu-btn { width: 48px; height: 48px; }
+  }
+  .nav__menu-icon { width: 28px; height: 28px; display: block; }
+  @media (min-width: 768px) { .nav__menu-icon { width: 32px; height: 32px; } }
+
+  /* Dropdown — revealed on hover/focus AND when toggled open */
+  .nav__dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(96, 29, 29, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(96, 29, 29, 0.12);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 220ms ease, transform 220ms ease, visibility 220ms ease;
+  }
+  /* Hover bridge so cursor moving from button to dropdown doesn't lose focus */
+  .nav__dropdown::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    height: 12px;
+  }
+
+  .nav__compact:hover .nav__dropdown,
+  .nav__compact:focus-within .nav__dropdown,
+  .nav__compact.is-open .nav__dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .nav__compact:hover .nav__dropdown,
+  .nav__compact:focus-within .nav__dropdown,
+  .nav__compact.is-open .nav__dropdown {
+    pointer-events: auto;
+  }
+  .nav__compact:hover .nav__dropdown[aria-hidden='true'],
+  .nav__compact:focus-within .nav__dropdown[aria-hidden='true'],
+  .nav__compact.is-open .nav__dropdown[aria-hidden='true'] {
+    /* visibility override is sufficient; aria attr is updated by JS for screen-readers */
+  }
+
+  .nav__dropdown-link {
+    font-family: 'ES Park TRIAL', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--c-cherrywood);
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 12px;
+    transition: background 180ms ease;
+  }
+  .nav__dropdown-link:hover { background: rgba(96, 29, 29, 0.08); }
+  .nav__dropdown-link--active { font-weight: 600; }
+
+  .nav__dropdown-cta { margin-top: 8px; padding: 0 4px 4px; }
+</style>
+
+<script>
+  // Compact menu: hover handled by CSS; clicks/keyboard handled here for a11y.
+  const header = document.getElementById('main-header');
+  const compact = document.querySelector<HTMLElement>('[data-compact-menu]');
+  const toggle = compact?.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+  const dropdown = document.getElementById('compact-menu');
+
+  function setMenu(open: boolean) {
+    if (!compact || !toggle || !dropdown) return;
+    compact.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    dropdown.setAttribute('aria-hidden', open ? 'false' : 'true');
+  }
+
+  toggle?.addEventListener('click', () => {
+    const open = compact?.classList.contains('is-open');
+    setMenu(!open);
+  });
+
+  // close when a dropdown link is clicked
+  dropdown?.querySelectorAll('a').forEach((a) =>
+    a.addEventListener('click', () => setMenu(false))
+  );
+
+  // close on Escape / outside click
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setMenu(false);
+  });
+  document.addEventListener('click', (e) => {
+    if (!compact) return;
+    if (!compact.contains(e.target as Node)) setMenu(false);
+  });
+
+  // logo collapse on scroll
+  function onScroll() {
+    if (!header) return;
+    header.classList.toggle('is-scrolled', window.scrollY > 80);
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>

@@ -1,0 +1,177 @@
+---
+import Heading from '@atoms/Heading.astro';
+import Button from '@atoms/Button.astro';
+
+interface Props {
+  title: string;
+  body?: string;
+  image?: string;
+  imageAlt?: string;
+  ctaText?: string;
+  ctaHref?: string;
+}
+
+const {
+  title,
+  body,
+  image = '/images/ebene/Ebene_2-7.svg',
+  imageAlt = '',
+  ctaText = 'Erstgespräch buchen',
+  ctaHref = '/kontakt',
+} = Astro.props;
+---
+
+<section class="claim">
+  <div class="claim__inner">
+    <div class="claim__media" aria-hidden={!imageAlt}>
+      <img src={image} alt={imageAlt} class="claim__image" loading="lazy" decoding="async" />
+    </div>
+
+    <div class="claim__content">
+      <Heading level={2} variant="h1" class="claim__title">{title}</Heading>
+      {body && <p class="claim__body">{body}</p>}
+      <div class="claim__cta">
+        <Button href={ctaHref} variant="primary" size="lg" class="claim__cta-btn">{ctaText}</Button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ============================================================
+     CLAIM (Narrative Block 5) — Figma Desktop+:
+     - Pale Gold bg
+     - padding 90px 104px 90px 241px, gap 300px between media & content
+     - Image (Ebene_2-7) 431×621.96
+     - Content: H1 90/110, P1 23/150 Cherrywood, gap 40
+     - Primary Button L: 295×61, padding 20×40, font 18/21, radius 100
+     ============================================================ */
+  .claim {
+    background: var(--c-pale-gold);
+    color: var(--c-cherrywood);
+    padding: 60px 20px;
+  }
+  @media (min-width: 768px)  { .claim { padding: 80px 32px; } }
+  @media (min-width: 1024px) { .claim { padding: 90px 48px; } }
+  @media (min-width: 1280px) { .claim { padding: 90px 80px 90px 120px; } }
+  @media (min-width: 1920px) { .claim { padding: 90px 104px 90px 241px; } }
+
+  .claim__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px) {
+    .claim__inner {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 80px;
+    }
+  }
+  @media (min-width: 1280px) { .claim__inner { gap: 160px; } }
+  @media (min-width: 1920px) { .claim__inner { gap: 300px; } }
+
+  /* ----- media ----- */
+  .claim__media {
+    flex: 0 0 auto;
+    width: 240px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (min-width: 768px)  { .claim__media { width: 320px; } }
+  @media (min-width: 1024px) { .claim__media { width: 360px; } }
+  @media (min-width: 1280px) { .claim__media { width: 400px; } }
+  @media (min-width: 1920px) { .claim__media { width: 431px; } }
+
+  .claim__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 431 / 621.96;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* ----- content ----- */
+  .claim__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 26.67px;
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 844px;
+  }
+  @media (min-width: 1024px) { .claim__content { gap: 32px; } }
+  @media (min-width: 1920px) { .claim__content { gap: 40px; } }
+
+  .claim__title {
+    color: var(--c-cherrywood);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 110%;
+    margin: 0;
+    align-self: stretch;
+    max-width: none;
+  }
+  @media (min-width: 768px)  { .claim__title { font-size: 54px; line-height: 110%; } }
+  @media (min-width: 1280px) { .claim__title { font-size: 60px; line-height: 69px; } }
+  @media (min-width: 1920px) { .claim__title { font-size: 90px; line-height: 110%; } }
+
+  .claim__body {
+    margin: 0;
+    color: var(--c-cherrywood);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    align-self: stretch;
+  }
+  @media (min-width: 1920px) { .claim__body { font-size: 23px; line-height: 150%; } }
+
+  /* ----- CTA — Primary Button L ----- */
+  .claim__cta { margin-top: 0; }
+  .claim__cta :global(.claim__cta-btn) {
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 13.5328px 24px;
+    height: 42px;
+    min-height: 42px;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 67.66px;
+    background: var(--c-cherrywood);
+    color: var(--c-spring-wood);
+  }
+  @media (min-width: 1024px) {
+    .claim__cta :global(.claim__cta-btn) {
+      height: 52px;
+      min-height: 52px;
+      padding: 16px 32px;
+      font-size: 15px;
+      line-height: 18px;
+      border-radius: 100px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .claim__cta :global(.claim__cta-btn) {
+      width: 295px;
+      height: 61px;
+      min-height: 61px;
+      padding: 20px 40px;
+      font-size: 18px;
+      line-height: 21px;
+      border-radius: 100px;
+    }
+  }
+</style>

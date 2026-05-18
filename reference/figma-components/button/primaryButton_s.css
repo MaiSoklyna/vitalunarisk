@@ -1,0 +1,46 @@
+/* Primary Button S */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+gap: 12px;
+
+position: relative;
+width: 160px;
+height: 42px;
+right: 5211px;
+top: 102px;
+
+/* Cherrywood */
+background: #601D1D;
+border-radius: 100px;
+transform: rotate(0.36deg);
+
+
+/* Button 1 */
+
+margin: 0 auto;
+width: 140px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+text-align: center;
+
+/* Spring Wood */
+color: #F9F4EE;
+
+transform: rotate(0.36deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;

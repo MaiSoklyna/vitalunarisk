@@ -1,0 +1,210 @@
+---
+import Heading from '@atoms/Heading.astro';
+import Text from '@atoms/Text.astro';
+import Button from '@atoms/Button.astro';
+
+interface Props {
+  icon?: string;
+  iconAlt?: string;
+  title: string;
+  description: string;
+  price?: string;
+  priceCaption?: string;
+  ctaText?: string;
+  ctaHref?: string;
+}
+
+const {
+  icon,
+  iconAlt = '',
+  title,
+  description,
+  price,
+  priceCaption,
+  ctaText = 'Mehr erfahren',
+  ctaHref = '/angebot',
+} = Astro.props;
+---
+
+<article class="offer-card">
+  {icon && (
+    <div class="offer-card__icon" aria-hidden="true">
+      <img src={icon} alt={iconAlt} />
+    </div>
+  )}
+  <Heading level={3} class="offer-card__title">{title}</Heading>
+  <Text size="p2" class="offer-card__body">{description}</Text>
+
+  {price && (
+    <div class="offer-card__price">
+      <Heading level={4} class="offer-card__price-value">{price}</Heading>
+      {priceCaption && <Text size="p3" class="offer-card__price-caption">{priceCaption}</Text>}
+    </div>
+  )}
+
+  <div class="offer-card__cta">
+    <Button href={ctaHref} variant="primary" size="lg" fullWidth>{ctaText}</Button>
+  </div>
+</article>
+
+<style>
+  /* ============================================================
+     OFFER CARD — Figma spec at Desktop+ (w=1920):
+     - Card: 420.5×724, padding 40px 41px, gap 59px, radius 25px, 1px border
+     - Inner title-stack gap 17.55px
+     - Icon: 136×190
+     - Title H3: 32/120 weight 500
+     - Body P2: 18/140 weight 400
+     - Price row gap 80px (value H3 32/120, caption P2 18/140)
+     - Button L: 338.5×61, padding 20×40, font 18/21, radius 100
+     Scales down at smaller breakpoints.
+     ============================================================ */
+  .offer-card {
+    box-sizing: border-box;
+    background: var(--c-spring-wood);
+    color: var(--c-cherrywood);
+    border: 0.667px solid var(--c-cherrywood);
+    border-radius: 16.67px;
+    padding: 26.67px 27.33px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 39.33px;
+    height: 100%;
+  }
+  @media (min-width: 1280px) {
+    .offer-card {
+      border-width: 0.8px;
+      border-radius: 20px;
+      padding: 32px 32px;
+      gap: 48px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .offer-card {
+      border-width: 1px;
+      border-radius: 25px;
+      padding: 40px 41px;
+      gap: 59px;
+    }
+  }
+
+  /* ----- title block (icon + heading + body) ----- */
+  .offer-card > .offer-card__icon ~ .offer-card__title,
+  .offer-card__title { color: var(--c-cherrywood); }
+
+  .offer-card__icon {
+    width: 90.67px;
+    height: 126.31px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .offer-card__icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  @media (min-width: 1280px) {
+    .offer-card__icon { width: 112px; height: 156px; }
+  }
+  @media (min-width: 1920px) {
+    .offer-card__icon { width: 136px; height: 190px; }
+  }
+
+  /* H3 — Figma 24→32 */
+  .offer-card__title {
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--c-cherrywood);
+    margin: 0;
+  }
+  @media (min-width: 1280px) {
+    .offer-card__title { font-size: 28px; line-height: 120%; }
+  }
+  @media (min-width: 1920px) {
+    .offer-card__title { font-size: 32px; line-height: 120%; }
+  }
+
+  /* P2/P3 body — Figma 12→18 */
+  .offer-card__body {
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: var(--c-cherrywood);
+    opacity: 1;
+    flex-grow: 1;
+  }
+  @media (min-width: 1280px) {
+    .offer-card__body { font-size: 15px; line-height: 140%; }
+  }
+  @media (min-width: 1920px) {
+    .offer-card__body { font-size: 18px; line-height: 140%; }
+  }
+
+  /* ----- price row — H3 + P2 inline ----- */
+  .offer-card__price {
+    border-top: 0;
+    padding-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 53.33px;
+    width: 100%;
+    align-self: stretch;
+  }
+  @media (min-width: 1920px) { .offer-card__price { gap: 80px; } }
+
+  .offer-card__price-value {
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--c-cherrywood);
+    margin: 0;
+  }
+  @media (min-width: 1280px) { .offer-card__price-value { font-size: 28px; line-height: 120%; } }
+  @media (min-width: 1920px) { .offer-card__price-value { font-size: 32px; line-height: 120%; } }
+
+  .offer-card__price-caption {
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: var(--c-cherrywood);
+    opacity: 1;
+    text-align: right;
+  }
+  @media (min-width: 1280px) { .offer-card__price-caption { font-size: 15px; } }
+  @media (min-width: 1920px) { .offer-card__price-caption { font-size: 18px; } }
+
+  /* ----- CTA button — full-width, primary cherrywood ----- */
+  .offer-card__cta { margin-top: 0; align-self: stretch; width: 100%; }
+  .offer-card__cta :global(.btn) {
+    width: 100%;
+    height: 42px;
+    min-height: 42px;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 100px;
+  }
+  @media (min-width: 1280px) {
+    .offer-card__cta :global(.btn) {
+      height: 52px;
+      min-height: 52px;
+      padding: 16px 32px;
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .offer-card__cta :global(.btn) {
+      height: 61px;
+      min-height: 61px;
+      padding: 20px 40px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+</style>

@@ -1,0 +1,218 @@
+---
+import Heading from '@atoms/Heading.astro';
+import Button from '@atoms/Button.astro';
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  body?: string;
+  ctaText?: string;
+  ctaHref?: string;
+  secondaryCtaText?: string;
+  secondaryCtaHref?: string;
+  backgroundImage?: string;
+}
+
+const {
+  eyebrow,
+  title,
+  body,
+  ctaText = 'Erstgespräch buchen',
+  ctaHref = '/kontakt',
+  secondaryCtaText = 'Alle Angebote',
+  secondaryCtaHref = '/angebot',
+  backgroundImage,
+} = Astro.props;
+---
+
+<section class="dark-cta">
+  {backgroundImage && (
+    <div
+      class="dark-cta__bg"
+      style={`background-image: url(${backgroundImage});`}
+      aria-hidden="true"
+    ></div>
+  )}
+  <div class="dark-cta__overlay" aria-hidden="true"></div>
+
+  <div class="dark-cta__inner max-w-layout container-x">
+    {eyebrow && <Heading variant="eyebrow" class="dark-cta__eyebrow">{eyebrow}</Heading>}
+    <Heading level={2} variant="h1" class="dark-cta__title">
+      <Fragment set:html={title} />
+    </Heading>
+    {body && <p class="dark-cta__body">{body}</p>}
+
+    <div class="dark-cta__cta">
+      <Button href={ctaHref} class="dark-cta__btn dark-cta__btn--outline">{ctaText}</Button>
+      {secondaryCtaText && secondaryCtaHref && (
+        <Button href={secondaryCtaHref} class="dark-cta__btn dark-cta__btn--filled">{secondaryCtaText}</Button>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ============================================================
+     DARK CTA — Figma Desktop+:
+     - Centered text block 855×712, gap 40
+     - H1 90/110 white centered, P1 23/150 white centered
+     - Button Group White L: gap 20, two 343×54.79 buttons
+       · Outline (border #F9F4EE)
+       · Filled (#F9F4EE bg, black text)
+     ============================================================ */
+  .dark-cta {
+    position: relative;
+    isolation: isolate;
+    background: var(--c-cherrywood);
+    color: var(--c-spring-wood);
+    padding: 96px 20px;
+    overflow: hidden;
+  }
+  @media (min-width: 768px)  { .dark-cta { padding: 120px 32px; } }
+  @media (min-width: 1024px) { .dark-cta { padding: 150px 48px; } }
+  @media (min-width: 1280px) { .dark-cta { padding: 180px 60px; } }
+  @media (min-width: 1920px) { .dark-cta { padding: 200px 90px; } }
+
+  .dark-cta__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.55;
+  }
+  .dark-cta__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(96, 29, 29, 0.35) 0%, rgba(96, 29, 29, 0.85) 100%);
+  }
+
+  .dark-cta__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 26.67px;
+    text-align: center;
+    max-width: 855px;
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px) { .dark-cta__inner { gap: 32px; } }
+  @media (min-width: 1920px) { .dark-cta__inner { gap: 40px; } }
+
+  .dark-cta__eyebrow {
+    color: var(--c-pale-gold);
+    opacity: 0.95;
+    text-align: center;
+    align-self: stretch;
+  }
+
+  .dark-cta__title {
+    color: var(--c-spring-wood);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 110%;
+    text-align: center;
+    align-self: stretch;
+    margin: 0;
+    max-width: none;
+  }
+  @media (min-width: 768px)  { .dark-cta__title { font-size: 54px; line-height: 110%; } }
+  @media (min-width: 1280px) { .dark-cta__title { font-size: 60px; line-height: 69px; } }
+  @media (min-width: 1920px) { .dark-cta__title { font-size: 90px; line-height: 110%; } }
+
+  .dark-cta__body {
+    margin: 0;
+    color: var(--c-spring-wood);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    align-self: stretch;
+    max-width: none;
+  }
+  @media (min-width: 1920px) { .dark-cta__body { font-size: 23px; line-height: 150%; } }
+
+  /* ----- Button Group White L ----- */
+  .dark-cta__cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    .dark-cta__cta {
+      flex-direction: row;
+      gap: 16px;
+    }
+  }
+  @media (min-width: 1920px) { .dark-cta__cta { gap: 20px; } }
+
+  /* Common button frame */
+  .dark-cta__cta :global(.dark-cta__btn) {
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 11.26px;
+    padding: 13.5328px 24px;
+    height: 42px;
+    min-height: 42px;
+    width: 100%;
+    max-width: 343px;
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 67.66px;
+    text-align: center;
+  }
+  @media (min-width: 1024px) {
+    .dark-cta__cta :global(.dark-cta__btn) {
+      height: 50px;
+      min-height: 50px;
+      padding: 14px 28px;
+      font-size: 16px;
+      line-height: 19px;
+      border-radius: 100px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .dark-cta__cta :global(.dark-cta__btn) {
+      width: 343px;
+      height: 54.79px;
+      min-height: 54.79px;
+      padding: 16.8941px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  /* Outline variant — transparent, Spring-Wood border + text */
+  .dark-cta__cta :global(.dark-cta__btn--outline) {
+    background: transparent;
+    color: var(--c-spring-wood);
+    border: 0.8px solid var(--c-spring-wood);
+  }
+  .dark-cta__cta :global(.dark-cta__btn--outline:hover) {
+    background: rgba(249, 244, 238, 0.1);
+  }
+
+  /* Filled variant — Spring-Wood bg, black text */
+  .dark-cta__cta :global(.dark-cta__btn--filled) {
+    background: var(--c-spring-wood);
+    color: var(--c-black);
+    border: 1.40784px solid var(--c-spring-wood);
+  }
+  .dark-cta__cta :global(.dark-cta__btn--filled:hover) {
+    background: #F3EBE0;
+  }
+</style>

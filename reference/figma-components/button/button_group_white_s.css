@@ -1,0 +1,172 @@
+/* Button Group White S */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 12px;
+
+position: relative;
+width: 473px;
+height: 42px;
+left: 1445px;
+top: 440px;
+
+
+
+/* Button */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 13.5328px;
+gap: 7.62px;
+
+width: 231px;
+height: 42px;
+
+/* Spring Wood */
+border: 0.541311px solid #F9F4EE;
+border-radius: 67.6638px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Star */
+
+margin: 0 auto;
+display: none;
+width: 15.24px;
+height: 15.24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Erstgespräch buchen */
+
+margin: 0 auto;
+width: 123px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X */
+
+margin: 0 auto;
+display: none;
+width: 15.24px;
+height: 15.24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Button */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 13.5328px;
+gap: 7.62px;
+
+width: 230px;
+height: 42px;
+
+/* Spring Wood */
+background: #F9F4EE;
+/* Spring Wood */
+border: 0.9526px solid #F9F4EE;
+border-radius: 67.6638px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Star */
+
+margin: 0 auto;
+display: none;
+width: 15.24px;
+height: 15.24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Unsere Angebote */
+
+margin: 0 auto;
+width: 99px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+
+/* Black Full */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X */
+
+margin: 0 auto;
+display: none;
+width: 15.24px;
+height: 15.24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;

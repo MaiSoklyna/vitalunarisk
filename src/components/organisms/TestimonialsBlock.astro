@@ -1,0 +1,119 @@
+---
+import Heading from '@atoms/Heading.astro';
+import Text from '@atoms/Text.astro';
+import TestimonialCard from '@molecules/TestimonialCard.astro';
+
+interface Testimonial {
+  icon?: string;
+  quote: string;
+  name: string;
+}
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  intro?: string;
+  testimonials: Testimonial[];
+}
+
+const { eyebrow, title, intro, testimonials } = Astro.props;
+---
+
+<section class="t-block">
+  <div class="t-block__inner max-w-layout container-x">
+    <header class="t-block__header">
+      {eyebrow && <Heading variant="eyebrow" class="t-block__eyebrow">{eyebrow}</Heading>}
+      <Heading level={2} variant="h1" class="t-block__title">{title}</Heading>
+      {intro && <Text size="p1" class="t-block__intro">{intro}</Text>}
+    </header>
+
+    <div class="t-block__grid">
+      {testimonials.map((t) => <TestimonialCard {...t} />)}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ============================================================
+     TESTIMONIALS — Figma Narrative Block 4 spec (Desktop+):
+     gradient Spring Wood → Pale Gold, padding 90px, gap 90px
+     Header centered, H1 90/110, max-width 862, gap 40
+     4 white cards in a row, gap 22, radius 25, padding 40
+     ============================================================ */
+  .t-block {
+    background: linear-gradient(180deg, #F9F4EE 57.41%, #FFD869 100%);
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: 768px)  { .t-block { padding: 60px 32px; } }
+  @media (min-width: 1024px) { .t-block { padding: 80px 40px; } }
+  @media (min-width: 1280px) { .t-block { padding: 90px 60px; } }
+  @media (min-width: 1920px) { .t-block { padding: 90px; } }
+
+  .t-block__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    max-width: 1740px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  @media (min-width: 1024px) { .t-block__inner { gap: 64px; } }
+  @media (min-width: 1280px) { .t-block__inner { gap: 80px; } }
+  @media (min-width: 1920px) { .t-block__inner { gap: 90px; } }
+
+  .t-block__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 26.67px;
+    max-width: 574.67px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  @media (min-width: 1280px) { .t-block__header { gap: 32px; max-width: 862px; } }
+  @media (min-width: 1920px) { .t-block__header { gap: 40px; max-width: 862px; } }
+
+  .t-block__eyebrow {
+    color: var(--c-cherrywood);
+    text-align: center;
+    align-self: stretch;
+  }
+  .t-block__title {
+    color: var(--c-cherrywood);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 110%;
+    text-align: center;
+    align-self: stretch;
+    margin: 0;
+  }
+  @media (min-width: 768px)  { .t-block__title { font-size: 54px; line-height: 110%; } }
+  @media (min-width: 1280px) { .t-block__title { font-size: 60px; line-height: 69px; } }
+  @media (min-width: 1920px) { .t-block__title { font-size: 90px; line-height: 110%; } }
+
+  .t-block__intro {
+    color: var(--c-cherrywood);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    align-self: stretch;
+  }
+  @media (min-width: 1920px) { .t-block__intro { font-size: 23px; line-height: 150%; } }
+
+  .t-block__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+  @media (min-width: 640px)  { .t-block__grid { grid-template-columns: repeat(2, 1fr); gap: 18px; } }
+  @media (min-width: 1024px) { .t-block__grid { grid-template-columns: repeat(4, 1fr); gap: 18px; } }
+  @media (min-width: 1920px) { .t-block__grid { gap: 22px; } }
+</style>

@@ -1,0 +1,166 @@
+/* Button Group White L */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 20px;
+
+position: relative;
+width: 706px;
+height: 54.79px;
+left: 133.38px;
+top: 447px;
+
+
+
+/* Button */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16.8941px;
+gap: 11.26px;
+
+width: 343px;
+height: 54.79px;
+
+/* Spring Wood */
+border: 0.8px solid #F9F4EE;
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Star */
+
+display: none;
+width: 22.53px;
+height: 22.53px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Erstgespräch buchen */
+
+width: 184px;
+height: 21px;
+
+/* Button text */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+/* identical to box height */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X */
+
+display: none;
+width: 22.53px;
+height: 22.53px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Button */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16.8941px;
+gap: 11.26px;
+
+width: 343px;
+height: 54.79px;
+
+/* Spring Wood */
+background: #F9F4EE;
+/* Spring Wood */
+border: 1.40784px solid #F9F4EE;
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Star */
+
+display: none;
+width: 22.53px;
+height: 22.53px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Alle Angebote */
+
+width: 121px;
+height: 21px;
+
+/* Button text */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+/* identical to box height */
+
+/* Black Full */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X */
+
+display: none;
+width: 22.53px;
+height: 22.53px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;

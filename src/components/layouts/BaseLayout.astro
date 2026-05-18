@@ -1,0 +1,57 @@
+---
+import '@/styles/global.css';
+import Navigation from '@organisms/Navigation.astro';
+import Footer from '@organisms/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  currentPath?: string;
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description = 'VitaLunaris — Erforsche die Systeme der Seele.',
+  currentPath = Astro.url.pathname,
+  ogImage = '/logo/logo.svg',
+  noindex = false,
+} = Astro.props;
+
+const canonical = new URL(currentPath, Astro.site ?? 'https://vitalunarisk.ch').toString();
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/logo/logo-compact.svg" />
+
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="/fonts/ESParkTRIAL-Regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="/fonts/ESParkTRIAL-Medium.ttf" as="font" type="font/ttf" crossorigin />
+  </head>
+  <body>
+    <Navigation currentPath={currentPath} />
+    <main id="content">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,17 @@
+---
+type Level = 1 | 2 | 3 | 4 | 5 | 6;
+type Variant = 'h1' | 'h2' | 'h3' | 'h4' | 'eyebrow';
+
+interface Props {
+  level?: Level;
+  variant?: Variant;
+  class?: string;
+  [key: string]: any;
+}
+
+const { level = 2, variant, class: className = '', ...rest } = Astro.props;
+const Tag = `h${level}` as const;
+const typeClass = `type-${variant ?? `h${level}`}`;
+---
+
+<Tag class={`${typeClass} ${className}`} {...rest}><slot /></Tag>

@@ -1,0 +1,202 @@
+---
+import Heading from '@atoms/Heading.astro';
+import Button from '@atoms/Button.astro';
+
+interface Props {
+  eyebrow?: string;
+  name: string;
+  role?: string;
+  quote: string;
+  image: string;
+  imageAlt?: string;
+  imageSide?: 'left' | 'right';
+  ctaText?: string;
+  ctaHref?: string;
+}
+
+const {
+  eyebrow,
+  name,
+  role,
+  quote,
+  image,
+  imageAlt = '',
+  imageSide = 'right',
+  ctaText = 'Mehr lesen',
+  ctaHref = '/kontakt',
+} = Astro.props;
+---
+
+<section class={`feat-t feat-t--image-${imageSide}`}>
+  <div class="feat-t__inner">
+    <div class="feat-t__content">
+      {eyebrow && <Heading variant="eyebrow" class="feat-t__eyebrow">{eyebrow}</Heading>}
+      <Heading level={2} variant="h1" class="feat-t__name"><Fragment set:html={name} /></Heading>
+      {role && <p class="feat-t__role">{role}</p>}
+      <p class="feat-t__quote"><Fragment set:html={quote} /></p>
+      <div class="feat-t__cta">
+        <Button href={ctaHref} variant="primary" size="lg" class="feat-t__cta-btn">{ctaText}</Button>
+      </div>
+    </div>
+
+    <div class="feat-t__media">
+      <img src={image} alt={imageAlt} class="feat-t__image" loading="lazy" decoding="async" />
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ============================================================
+     FEATURED TESTIMONIAL (Narrative Block 6) — Figma Desktop+:
+     - Spring Wood bg, padding 90px, row layout, space-between
+     - Text: 711×712, gap 40, H1 90/110, P1 23/150
+     - Primary Button L (Cherrywood)
+     - Image: 857×900, radius 25
+     ============================================================ */
+  .feat-t {
+    background: var(--c-spring-wood);
+    padding: 60px 20px;
+  }
+  @media (min-width: 768px)  { .feat-t { padding: 80px 32px; } }
+  @media (min-width: 1024px) { .feat-t { padding: 90px 48px; } }
+  @media (min-width: 1280px) { .feat-t { padding: 90px 60px; } }
+  @media (min-width: 1920px) { .feat-t { padding: 90px; } }
+
+  .feat-t__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px) {
+    .feat-t__inner {
+      flex-direction: row;
+      align-items: center;
+      gap: 60px;
+    }
+    .feat-t--image-right .feat-t__media { order: 2; }
+    .feat-t--image-right .feat-t__content { order: 1; }
+    .feat-t--image-left  .feat-t__media   { order: 1; }
+    .feat-t--image-left  .feat-t__content { order: 2; }
+  }
+  @media (min-width: 1280px) { .feat-t__inner { gap: 80px; } }
+  @media (min-width: 1920px) { .feat-t__inner { gap: 100px; } }
+
+  /* ----- content ----- */
+  .feat-t__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 26.67px;
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 711px;
+    width: 100%;
+  }
+  @media (min-width: 1024px) { .feat-t__content { gap: 32px; } }
+  @media (min-width: 1920px) { .feat-t__content { gap: 40px; } }
+
+  .feat-t__eyebrow {
+    color: var(--c-cherrywood);
+    align-self: stretch;
+  }
+
+  .feat-t__name {
+    color: var(--c-cherrywood);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 110%;
+    margin: 0;
+    align-self: stretch;
+  }
+  @media (min-width: 768px)  { .feat-t__name { font-size: 54px; line-height: 110%; } }
+  @media (min-width: 1280px) { .feat-t__name { font-size: 60px; line-height: 69px; } }
+  @media (min-width: 1920px) { .feat-t__name { font-size: 90px; line-height: 110%; } }
+
+  .feat-t__role {
+    margin: 0;
+    color: var(--c-cherrywood);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    opacity: 0.7;
+  }
+  @media (min-width: 1920px) { .feat-t__role { font-size: 18px; line-height: 150%; } }
+
+  .feat-t__quote {
+    margin: 0;
+    color: var(--c-cherrywood);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    align-self: stretch;
+    max-width: none;
+  }
+  @media (min-width: 1920px) { .feat-t__quote { font-size: 23px; line-height: 150%; } }
+
+  /* ----- CTA (Primary Button L) ----- */
+  .feat-t__cta { margin-top: 0; }
+  .feat-t__cta :global(.feat-t__cta-btn) {
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 13.5328px 24px;
+    height: 42px;
+    min-height: 42px;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 67.66px;
+    background: var(--c-cherrywood);
+    color: var(--c-spring-wood);
+  }
+  @media (min-width: 1024px) {
+    .feat-t__cta :global(.feat-t__cta-btn) {
+      height: 52px;
+      min-height: 52px;
+      padding: 16px 32px;
+      font-size: 15px;
+      line-height: 18px;
+      border-radius: 100px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .feat-t__cta :global(.feat-t__cta-btn) {
+      width: 207px;
+      height: 61px;
+      min-height: 61px;
+      padding: 20px 40px;
+      font-size: 18px;
+      line-height: 21px;
+      border-radius: 100px;
+    }
+  }
+
+  /* ----- media (kept) ----- */
+  .feat-t__media {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 857px;
+    overflow: hidden;
+    border-radius: 16.67px;
+    background: rgba(0, 0, 0, 0.04);
+    aspect-ratio: 857 / 900;
+  }
+  @media (min-width: 1024px) { .feat-t__media { border-radius: 20px; width: 50%; } }
+  @media (min-width: 1920px) { .feat-t__media { border-radius: 25px; width: 857px; } }
+
+  .feat-t__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+</style>

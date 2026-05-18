@@ -1,0 +1,146 @@
+---
+interface Props {
+  icon?: string;
+  quote: string;
+  name: string;
+  initial?: string;
+  rating?: number;
+}
+
+const {
+  quote,
+  name,
+  initial = name.charAt(0).toUpperCase(),
+  rating = 5,
+} = Astro.props;
+
+const stars = Array.from({ length: rating });
+---
+
+<article class="t-card">
+  <div class="t-card__inner">
+    <div class="t-card__stars" aria-label={`${rating} von 5 Sternen`}>
+      {stars.map(() => (
+        <svg class="t-card__star" viewBox="0 0 32 31" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16 0 L19.6 10.4 L30.7 10.7 L21.8 17.4 L25 28.1 L16 21.8 L7 28.1 L10.2 17.4 L1.3 10.7 L12.4 10.4 Z"
+            fill="#EC9F27"
+          />
+        </svg>
+      ))}
+    </div>
+
+    <p class="t-card__quote">{quote}</p>
+
+    <div class="t-card__author">
+      <span class="t-card__avatar" aria-hidden="true">{initial}</span>
+      <span class="t-card__name">{name}</span>
+    </div>
+  </div>
+</article>
+
+<style>
+  /* ============================================================
+     TESTIMONIAL CARD — Figma Desktop+:
+     - 418.5×478, white, radius 25, padding 40, inner gap 30, width 338.5
+     - Stars: 5x #EC9F27, ~32×31 each, row gap ~7.35
+     - Quote: P1 23/150 black
+     - Author row gap 20: 48×48 #FFD869 circle with initial, then name P1
+     Scales down across breakpoints.
+     ============================================================ */
+  .t-card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: var(--c-white);
+    border-radius: 16.67px;
+    padding: 24px;
+    height: 100%;
+    min-height: 320px;
+  }
+  @media (min-width: 1024px) { .t-card { padding: 32px; min-height: 380px; border-radius: 20px; } }
+  @media (min-width: 1920px) { .t-card { padding: 40px; min-height: 478px; border-radius: 25px; } }
+
+  .t-card__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    width: 100%;
+    height: 100%;
+  }
+  @media (min-width: 1024px) { .t-card__inner { gap: 24px; } }
+  @media (min-width: 1920px) { .t-card__inner { gap: 30px; width: 338.5px; } }
+
+  /* ----- stars ----- */
+  .t-card__stars {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+  }
+  @media (min-width: 1920px) { .t-card__stars { gap: 7.35px; } }
+
+  .t-card__star {
+    width: 20px;
+    height: 19px;
+    flex: 0 0 auto;
+  }
+  @media (min-width: 1024px) { .t-card__star { width: 26px; height: 25px; } }
+  @media (min-width: 1920px) { .t-card__star { width: 32.32px; height: 30.85px; } }
+
+  /* ----- quote (P1 black) ----- */
+  .t-card__quote {
+    margin: 0;
+    color: var(--c-black);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    flex-grow: 1;
+    align-self: stretch;
+  }
+  @media (min-width: 1024px) { .t-card__quote { font-size: 18px; } }
+  @media (min-width: 1920px) { .t-card__quote { font-size: 23px; line-height: 150%; } }
+
+  /* ----- author row ----- */
+  .t-card__author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    width: 100%;
+  }
+  @media (min-width: 1920px) { .t-card__author { gap: 20px; } }
+
+  .t-card__avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 36px;
+    height: 36px;
+    border-radius: 9999px;
+    background: var(--c-pale-gold);
+    color: var(--c-black);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  @media (min-width: 1024px) { .t-card__avatar { width: 42px; height: 42px; font-size: 19px; } }
+  @media (min-width: 1920px) { .t-card__avatar { width: 48px; height: 48px; font-size: 23px; } }
+
+  .t-card__name {
+    color: var(--c-black);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  @media (min-width: 1024px) { .t-card__name { font-size: 18px; } }
+  @media (min-width: 1920px) { .t-card__name { font-size: 23px; line-height: 150%; } }
+</style>

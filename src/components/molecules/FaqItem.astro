@@ -1,0 +1,93 @@
+---
+import Text from '@atoms/Text.astro';
+
+interface Props {
+  question: string;
+  answer: string;
+  open?: boolean;
+}
+
+const { question, answer, open = false } = Astro.props;
+---
+
+<details class="faq-item" open={open}>
+  <summary class="faq-item__summary">
+    <span class="faq-item__question">{question}</span>
+    <span class="faq-item__icon" aria-hidden="true">
+      <span class="faq-item__bar faq-item__bar--h"></span>
+      <span class="faq-item__bar faq-item__bar--v"></span>
+    </span>
+  </summary>
+  <div class="faq-item__answer">
+    <Text size="p1">
+      <Fragment set:html={answer} />
+    </Text>
+  </div>
+</details>
+
+<style>
+  .faq-item {
+    border-top: 1px solid var(--c-cherrywood);
+  }
+  .faq-item:last-of-type {
+    border-bottom: 1px solid var(--c-cherrywood);
+  }
+
+  .faq-item__summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px 0;
+    color: var(--c-cherrywood);
+  }
+  .faq-item__summary::-webkit-details-marker { display: none; }
+  .faq-item__summary::marker { content: ''; }
+
+  .faq-item__question {
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--c-cherrywood);
+  }
+  @media (min-width: 768px) { .faq-item__question { font-size: 23px; } }
+
+  .faq-item__icon {
+    position: relative;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    color: var(--c-cherrywood);
+  }
+  .faq-item__bar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: currentColor;
+    transition: transform 250ms ease, opacity 250ms ease;
+  }
+  .faq-item__bar--h {
+    width: 30px;
+    height: 1px;
+    transform: translate(-50%, -50%);
+  }
+  .faq-item__bar--v {
+    width: 1px;
+    height: 30px;
+    transform: translate(-50%, -50%);
+  }
+  .faq-item[open] .faq-item__bar--v {
+    transform: translate(-50%, -50%) scaleY(0);
+    opacity: 0;
+  }
+
+  .faq-item__answer {
+    padding-bottom: 24px;
+    color: var(--c-cherrywood);
+    opacity: 0.85;
+    max-width: 72ch;
+  }
+</style>

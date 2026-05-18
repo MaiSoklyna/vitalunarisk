@@ -1,0 +1,205 @@
+---
+import Heading from '@atoms/Heading.astro';
+import Text from '@atoms/Text.astro';
+import Button from '@atoms/Button.astro';
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+  ctaText?: string;
+  ctaHref?: string;
+  secondaryCtaText?: string;
+  secondaryCtaHref?: string;
+  image?: string;
+}
+
+const {
+  eyebrow,
+  title,
+  subtitle,
+  ctaText = 'Termin buchen',
+  ctaHref = '/kontakt',
+  secondaryCtaText,
+  secondaryCtaHref,
+  image,
+} = Astro.props;
+---
+
+<section class="hero">
+  <div class="hero__inner max-w-layout container-x">
+    {image && (
+      <div class="hero__media">
+        <img src={image} alt="" class="hero__image" />
+      </div>
+    )}
+    <div class="hero__content">
+      {eyebrow && <Heading variant="eyebrow" class="hero__eyebrow">{eyebrow}</Heading>}
+      <Heading level={1} class="hero__title"><Fragment set:html={title} /></Heading>
+      {subtitle && <Text size="p1" class="hero__subtitle">{subtitle}</Text>}
+      <div class="hero__cta">
+        <Button href={ctaHref} variant="header" size="lg" class="hero__cta-btn">
+          {ctaText}
+        </Button>
+        {secondaryCtaText && secondaryCtaHref && (
+          <Button href={secondaryCtaHref} variant="primary" size="lg" class="hero__cta-btn">
+            {secondaryCtaText}
+          </Button>
+        )}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ============================================================
+     HERO — responsive per Figma specs (360 / 768 / 1280 / 1920)
+     ============================================================ */
+  .hero { padding: 96px 0 64px; }
+  @media (min-width: 768px)  { .hero { padding: 120px 0 80px; } }
+  @media (min-width: 1280px) { .hero { padding: 140px 0 100px; } }
+  @media (min-width: 1920px) { .hero { padding: 160px 0 120px; } }
+
+  .hero__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  /* Image on top of card text for mobile/tablet (per spec) */
+  .hero__media   { order: 0; }
+  .hero__content { order: 1; }
+
+  @media (min-width: 1024px) {
+    .hero__inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; }
+    .hero__media   { order: 2; }   /* image right of text on desktop */
+    .hero__content { order: 1; }
+  }
+  @media (min-width: 1920px) {
+    .hero__inner { gap: 170px; grid-template-columns: 712px 1fr; }
+  }
+
+  /* ----- TEXT CONTENT ----- */
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26.67px;
+  }
+  @media (min-width: 1920px) { .hero__content { gap: 40px; } }
+
+  /* Eyebrow — shown at all breakpoints */
+  .hero__eyebrow {
+    display: block;
+    color: var(--c-cherrywood);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+  }
+  @media (min-width: 768px) {
+    .hero__eyebrow {
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: normal;
+    }
+  }
+  @media (min-width: 1920px) {
+    .hero__eyebrow { font-size: 23px; line-height: 26px; }
+  }
+
+  /* Title — H1 scale: 40 (360) / 54 (768) / 60 (1280) / 90 (1920) */
+  .hero__title {
+    color: var(--c-cherrywood);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 110%;
+    margin: 0;
+  }
+  @media (min-width: 768px)  { .hero__title { font-size: 54px; line-height: 110%; } }
+  @media (min-width: 1280px) { .hero__title { font-size: 60px; line-height: 69px; } }
+  @media (min-width: 1920px) { .hero__title { font-size: 90px; line-height: 110%; } }
+
+  /* Forced line break before "Systeme" only at tablet (768–1023.98px) */
+  .hero__br--md { display: none; }
+  @media (min-width: 768px) and (max-width: 1023.98px) {
+    .hero__br--md { display: inline; }
+  }
+
+  /* Subtitle — P1 16 / 16 / 16 / 23 */
+  .hero__subtitle {
+    color: var(--c-cherrywood);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    max-width: 56ch;
+  }
+  @media (min-width: 1920px) {
+    .hero__subtitle { font-size: 23px; line-height: 150%; }
+  }
+
+  /* ----- CTA GROUP — Figma Button Group S (gap 12, w=473 at 768) ----- */
+  .hero__cta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+  }
+  @media (min-width: 1920px) { .hero__cta { gap: 20px; } }
+
+  /* Each button — Figma spec at w=768:
+     w=231/230, h=42, padding 13.5328px, gap 7.62px,
+     border 0.541px, radius 67.6638px, font 12/14 ES Park TRIAL */
+  .hero__cta-btn {
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 7.62px;
+    padding: 13.5328px;
+    min-height: 42px;
+    height: 42px;
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 67.6638px;
+    border-width: 0.541311px;
+    white-space: nowrap;
+  }
+  @media (min-width: 768px) {
+    .hero__cta-btn { width: 231px; padding: 13.5328px; }
+  }
+  @media (min-width: 1920px) {
+    .hero__cta-btn {
+      width: 341px;
+      height: 61px;
+      min-height: 61px;
+      padding: 20px;
+      gap: 11.26px;
+      font-size: 18px;
+      line-height: 21px;
+      border-radius: 100px;
+      border-width: 0.8px;
+    }
+  }
+
+  /* ----- MEDIA ----- */
+  .hero__media {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: 25px;
+    background: var(--c-pale-gold);
+    width: 100%;
+  }
+  @media (min-width: 1024px) { .hero__media { aspect-ratio: 1 / 1; } }
+  .hero__image { width: 100%; height: 100%; object-fit: cover; display: block; }
+</style>

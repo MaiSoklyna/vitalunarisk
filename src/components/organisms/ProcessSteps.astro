@@ -1,0 +1,357 @@
+---
+import Heading from '@atoms/Heading.astro';
+import Text from '@atoms/Text.astro';
+
+interface Step {
+  title: string;
+  description: string;
+  color: 'purple' | 'raspberry' | 'aurora' | 'gold';
+}
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  intro?: string;
+  steps: Step[];
+}
+
+const { eyebrow, title, intro, steps } = Astro.props;
+---
+
+<section class="process">
+  <!-- HEADER (all widths) -->
+  <div class="process__container">
+    <header class="process__header">
+      {eyebrow && <Heading variant="eyebrow" class="process__eyebrow">{eyebrow}</Heading>}
+      <Heading level={2} variant="h1" class="process__title">
+        <Fragment set:html={title} />
+      </Heading>
+      {intro && <Text size="p1" class="process__intro">{intro}</Text>}
+    </header>
+  </div>
+
+  <!-- DESKTOP (≥ 768px): single full-bleed curve -->
+  <div class="process__curve-wrapper process__curve-wrapper--desktop">
+    <img src="/images/ebene/process-curve.svg" alt="" class="process__curve" loading="lazy" decoding="async" />
+  </div>
+
+  <!-- DESKTOP (≥ 768px): 4 staggered blocks -->
+  <div class="process__container process__container--blocks">
+    <div class="process__diagram">
+      <div class="process__blocks">
+        {steps.slice(0, 4).map((step, i) => (
+          <div class="process__block">
+            <span class="process__number">{i + 1}</span>
+            <Heading level={3} class="process__block-title">{step.title}</Heading>
+            <Text size="p1" class="process__block-body">{step.description}</Text>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE / TABLET (< 1024px): two halves — each curve shows its own two dots -->
+  <div class="process__mobile">
+    {[0, 2].map((startIdx) => (
+      <div class="process__mobile-section">
+        <div class="process__mobile-curve">
+          <img
+            src={startIdx === 0 ? '/images/ebene/process-curve-1.svg' : '/images/ebene/process-curve-2.svg'}
+            alt=""
+            class="process__curve"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="process__mobile-cards">
+          {steps.slice(startIdx, startIdx + 2).map((step, i) => (
+            <div class="process__mobile-card">
+              <span class="process__number">{startIdx + i + 1}</span>
+              <Heading level={3} class="process__block-title">{step.title}</Heading>
+              <Text size="p1" class="process__block-body">{step.description}</Text>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  /* ============================================================
+     SECTION  (Spring Wood; 8px side safe-area)
+     ============================================================ */
+  .process { background: var(--c-spring-wood); padding: 64px 8px; }
+  @media (min-width: 768px) { .process { padding: 96px 8px; } }
+  @media (min-width: 1024px) { .process { padding: 120px 8px; } }
+
+  .process__container {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  /* ============================================================
+     HEADER
+     ============================================================ */
+  /* Header — Figma spec:
+     w=768 Tablet:  H1 54/110, P1 16/150, gap 26.67, max-width 574.67
+     w=1280 Desktop: H1 60/69,  P1 16/150, gap 32, max-width 862, padding-bottom 32
+     w=1920 Desktop+: H1 90/110, P1 23/150, gap 40, max-width 862, padding-bottom 40 */
+  .process__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 0 20px;
+    text-align: center;
+    max-width: 862px;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+    .process__header { padding: 0 32px 16px; gap: 26.67px; max-width: 574.67px; }
+  }
+  @media (min-width: 1280px) {
+    .process__header { padding: 0 32px 32px; gap: 32px; max-width: 862px; }
+  }
+  @media (min-width: 1920px) {
+    .process__header { padding: 0 32px 40px; gap: 40px; }
+  }
+
+  .process__eyebrow { color: var(--c-cherrywood); opacity: 0.7; }
+  .process__title {
+    color: var(--c-cherrywood);
+    text-align: center;
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+  }
+  .process__intro {
+    color: var(--c-cherrywood);
+    opacity: 0.9;
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .process__title { font-size: 54px; line-height: 110%; }
+    .process__intro { font-size: 16px; line-height: 150%; }
+  }
+  @media (min-width: 1280px) {
+    .process__title { font-size: 60px; line-height: 69px; }
+    .process__intro { font-size: 16px; line-height: 150%; }
+  }
+  @media (min-width: 1920px) {
+    .process__title { font-size: 90px; line-height: 110%; }
+    .process__intro { font-size: 23px; line-height: 150%; }
+  }
+
+  /* ============================================================
+     DESKTOP CURVE  (≥ 768) — full bleed
+     ============================================================ */
+  .process__curve-wrapper--desktop {
+    position: relative;
+    width: auto;
+    aspect-ratio: 1280 / 110;
+    overflow: hidden;
+    margin-left: -8px;
+    margin-right: -8px;
+    display: none;
+  }
+  @media (min-width: 1024px) {
+    .process__curve-wrapper--desktop { display: block; }
+  }
+  @media (min-width: 1280px) {
+    .process__curve-wrapper--desktop { aspect-ratio: 1280 / 130; }
+  }
+
+  .process__curve {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* ============================================================
+     DESKTOP BLOCKS  (≥ 768) — 4 staggered cards
+     ============================================================ */
+  .process__container--blocks { display: none; }
+  .process__diagram { display: none; }
+
+  @media (min-width: 1024px) {
+    .process__container--blocks { display: block; }
+    .process__diagram { display: block; width: 100%; }
+
+    .process__blocks {
+      position: relative;
+      width: 100%;
+      min-height: 360px;
+      padding: 0;
+      margin-top: 16px;
+    }
+    @media (min-width: 1280px) {
+      .process__blocks { min-height: 420px; margin-top: 24px; }
+    }
+
+    .process__block {
+      position: absolute;
+      width: 18%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      gap: 16px;
+    }
+    @media (min-width: 1280px) { .process__block { gap: 40px; } }
+
+    /* ∩ Arch (low – high – high – low) */
+    .process__block:nth-child(1) { left: 0;   top: 60px; }
+    .process__block:nth-child(2) { left: 27%; top: 0;    }
+    .process__block:nth-child(3) { left: 55%; top: 0;    }
+    .process__block:nth-child(4) { left: 82%; top: 60px; }
+
+    .process__number {
+      font-family: 'ES Park TRIAL', serif;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 1.1;
+      color: var(--c-cherrywood);
+    }
+    @media (min-width: 768px) { .process__number { font-size: 64px; } }
+    @media (min-width: 1280px) { .process__number { font-size: 90px; } }
+
+    .process__block-title {
+      color: var(--c-cherrywood);
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+    @media (min-width: 768px) { .process__block-title { font-size: 26px; } }
+    @media (min-width: 1280px) { .process__block-title { font-size: 32px; } }
+
+    .process__block-body {
+      color: var(--c-cherrywood);
+      opacity: 0.9;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    @media (min-width: 768px) { .process__block-body { font-size: 19px; } }
+    @media (min-width: 1280px) { .process__block-body { font-size: 23px; } }
+  }
+
+  /* ============================================================
+     MOBILE  (< 768) — TWO halves
+     Each half: full-bleed SVG + 2 stacked cards.
+     Second SVG is rotated 145° to differentiate the halves.
+     ============================================================ */
+  .process__mobile { display: block; }
+  @media (min-width: 1024px) { .process__mobile { display: none; } }
+
+  .process__mobile-section {
+    margin-top: 24px;
+  }
+  .process__mobile-section:first-child { margin-top: 0; }
+
+  .process__mobile-curve {
+    position: relative;
+    width: auto;
+    aspect-ratio: 600 / 130;
+    overflow: visible;
+    margin-left: -8px;   /* cancel section's 8px side padding → true edge-to-edge */
+    margin-right: -8px;
+    padding: 0;
+    box-sizing: content-box;
+  }
+  @media (min-width: 768px) and (max-width: 1023.98px) {
+    .process__mobile-curve { padding-top: 16px; }
+  }
+  .process__mobile-curve img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .process__mobile-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 16px 0 0;
+  }
+
+  /* Tablet/Mobile-wide: two cards side-by-side in a clean grid.
+     Applies from 480px up (covers small tablets through 1023). */
+  @media (min-width: 480px) and (max-width: 1023.98px) {
+    .process__mobile-cards {
+      flex-direction: row;
+      gap: 28px;
+      padding: 24px 12px 0;
+      align-items: flex-start;
+    }
+    .process__mobile-cards > .process__mobile-card {
+      flex: 1 1 0;
+      min-width: 0;
+      max-width: calc(50% - 14px);
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1023.98px) {
+    .process__mobile-cards {
+      gap: 44px;
+      padding: 32px 44px 0;
+    }
+    .process__mobile-cards > .process__mobile-card {
+      max-width: calc(50% - 22px);
+    }
+  }
+
+  .process__mobile-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    text-align: left;
+  }
+  @media (min-width: 768px) {
+    .process__mobile-card { gap: 26.67px; }
+  }
+  .process__mobile-card .process__number {
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.1;
+    color: var(--c-cherrywood);
+  }
+  @media (min-width: 768px) {
+    .process__mobile-card .process__number {
+      font-family: 'ES Park TRIAL', serif;
+      font-weight: 400;
+      font-size: 54px;
+      line-height: 110%;
+    }
+  }
+  .process__mobile-card .process__block-title {
+    color: var(--c-cherrywood);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  @media (min-width: 768px) {
+    .process__mobile-card .process__block-title {
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 500;
+    }
+  }
+  .process__mobile-card .process__block-body {
+    color: var(--c-cherrywood);
+    opacity: 0.9;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  @media (min-width: 768px) {
+    .process__mobile-card .process__block-body {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+</style>

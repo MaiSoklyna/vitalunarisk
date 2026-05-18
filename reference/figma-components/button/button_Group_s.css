@@ -1,0 +1,172 @@
+/* Button Group S */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 12px;
+
+position: relative;
+width: 473px;
+height: 42px;
+left: 1445px;
+top: 664px;
+
+
+
+/* Button */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 13.5328px;
+gap: 7.62px;
+
+width: 231px;
+height: 42px;
+
+/* Cherrywood */
+border: 0.541311px solid #601D1D;
+border-radius: 67.6638px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Star */
+
+margin: 0 auto;
+display: none;
+width: 15.24px;
+height: 15.24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Erstgespräch buchen */
+
+margin: 0 auto;
+width: 123px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X */
+
+margin: 0 auto;
+display: none;
+width: 15.24px;
+height: 15.24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Button */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 13.5328px;
+gap: 7.62px;
+
+width: 230px;
+height: 42px;
+
+/* Cherrywood */
+background: #601D1D;
+/* Cherrywood */
+border: 0.9526px solid #601D1D;
+border-radius: 67.6638px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Star */
+
+margin: 0 auto;
+display: none;
+width: 15.24px;
+height: 15.24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Unsere Angebote */
+
+margin: 0 auto;
+width: 99px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X */
+
+margin: 0 auto;
+display: none;
+width: 15.24px;
+height: 15.24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;

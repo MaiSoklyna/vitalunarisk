@@ -1,0 +1,509 @@
+/* Typography Desktop+ */
+
+
+
+
+/* Regular, 18px */
+
+position: absolute;
+width: 95px;
+height: 18px;
+left: 951px;
+top: 139px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+letter-spacing: 0.1em;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* SemiBold, 18px */
+
+position: absolute;
+width: 117px;
+height: 18px;
+left: 1062px;
+top: 139px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+letter-spacing: 0.1em;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Regular, 90px */
+
+position: absolute;
+width: 144px;
+height: 21px;
+left: 65px;
+top: 192.01px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+letter-spacing: 0.1em;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Heading 1 */
+
+position: absolute;
+width: 480px;
+height: 108px;
+left: 60px;
+top: 84px;
+
+/* Desktop+/H1 Desktop+ */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 90px;
+line-height: 110%;
+/* or 99px */
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Bold, 90px */
+
+position: absolute;
+width: 100px;
+height: 21px;
+left: 65px;
+top: 329.01px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+letter-spacing: 0.1em;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* H1 Italic */
+
+position: absolute;
+width: 462px;
+height: 97px;
+left: 64px;
+top: 232px;
+
+/* Desktop+/H1 (Italic) Desktop+ */
+font-family: 'ES Park TRIAL';
+font-style: italic;
+font-weight: 400;
+font-size: 90px;
+line-height: 110%;
+/* or 99px */
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Bold, 60px */
+
+position: absolute;
+width: 100px;
+height: 21px;
+left: 65px;
+top: 454.01px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+letter-spacing: 0.1em;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Heading 2 */
+
+position: absolute;
+width: 324px;
+height: 71px;
+left: 62px;
+top: 383px;
+
+/* Desktop+/H2 Desktop+ */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 60px;
+line-height: 69px;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Bold, 32px */
+
+position: absolute;
+width: 100px;
+height: 21px;
+left: 65px;
+top: 556.01px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+letter-spacing: 0.1em;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Heading 3 */
+
+position: absolute;
+width: 241px;
+height: 48px;
+left: 63px;
+top: 508px;
+
+/* Desktop+/H3 Desktop+ */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 120%;
+/* or 38px */
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Medium, 24px */
+
+position: absolute;
+width: 115px;
+height: 21px;
+left: 65px;
+top: 646px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+letter-spacing: 0.1em;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Medium, 23px */
+
+position: absolute;
+width: 118px;
+height: 21px;
+left: 66px;
+top: 743px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+letter-spacing: 0.1em;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Heading 4 */
+
+position: absolute;
+width: 119px;
+height: 36.22px;
+left: 64px;
+top: 609.95px;
+
+/* Desktop+/H4 Desktop+ */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Eyebrow */
+
+position: absolute;
+width: 305px;
+height: 36px;
+left: 65px;
+top: 707px;
+
+/* Desktop+/Eyebrow Desktop+ */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 23px;
+line-height: 26px;
+text-transform: uppercase;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Button */
+
+position: absolute;
+width: 70px;
+height: 26px;
+left: 950px;
+top: 110px;
+
+/* Desktop+/Button Desktop+ */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Hyperlink */
+
+position: absolute;
+width: 95px;
+height: 29px;
+left: 1061px;
+top: 110px;
+
+/* Desktop+/Hyperlink Desktop+ */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 21px;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+
+/* Regular, 18px */
+
+position: absolute;
+width: 106px;
+height: 18px;
+left: 695px;
+top: 136px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+letter-spacing: 0.1em;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Paragraph */
+
+position: absolute;
+width: 228px;
+height: 24px;
+left: 695px;
+top: 47px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+text-transform: uppercase;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Paragraph 1 */
+
+position: absolute;
+width: 165px;
+height: 30px;
+left: 695px;
+top: 100px;
+
+/* Desktop+/P1 Desktop+ */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 23px;
+line-height: 150%;
+/* or 34px */
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Regular, 16px */
+
+position: absolute;
+width: 106px;
+height: 18px;
+left: 695px;
+top: 214px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+letter-spacing: 0.1em;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Regular, 16px */
+
+position: absolute;
+width: 106px;
+height: 18px;
+left: 695px;
+top: 295px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+letter-spacing: 0.1em;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Paragraph 2 */
+
+position: absolute;
+width: 119px;
+height: 26px;
+left: 694px;
+top: 181px;
+
+/* Desktop+/P2 Desktop+ */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 140%;
+/* identical to box height, or 25px */
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Paragraph 3 */
+
+position: absolute;
+width: 119px;
+height: 17px;
+left: 694px;
+top: 272px;
+
+/* Desktop+/P3 Desktop+ */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Button / Link */
+
+position: absolute;
+width: 169px;
+height: 24px;
+left: 951px;
+top: 47px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+text-transform: uppercase;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Headlines */
+
+position: absolute;
+width: 123px;
+height: 24px;
+left: 65px;
+top: 47px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+text-transform: uppercase;
+
+/* Black Full */
+color: #000000;
+

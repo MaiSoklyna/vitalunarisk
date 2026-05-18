@@ -1,0 +1,96 @@
+---
+import Heading from '@atoms/Heading.astro';
+import Text from '@atoms/Text.astro';
+import OfferCard from '@molecules/OfferCard.astro';
+
+interface Offer {
+  icon?: string;
+  iconAlt?: string;
+  title: string;
+  description: string;
+  price?: string;
+  priceCaption?: string;
+  ctaText?: string;
+  ctaHref?: string;
+}
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  intro?: string;
+  offers: Offer[];
+}
+
+const { eyebrow, title, intro, offers } = Astro.props;
+---
+
+<section class="offer-block">
+  <div class="offer-block__inner max-w-layout container-x">
+    <header class="offer-block__header">
+      {eyebrow && <Heading variant="eyebrow" class="offer-block__eyebrow">{eyebrow}</Heading>}
+      <Heading level={2} variant="h1" class="offer-block__title">{title}</Heading>
+      {intro && <Text size="p1" class="offer-block__intro">{intro}</Text>}
+    </header>
+
+    <div class="offer-block__grid">
+      {offers.map((o) => <OfferCard {...o} />)}
+    </div>
+  </div>
+</section>
+
+<style>
+  .offer-block { background: var(--c-spring-wood); padding: 60px 20px; }
+  @media (min-width: 768px)  { .offer-block { padding: 60px 32px; } }
+  @media (min-width: 1024px) { .offer-block { padding: 80px 40px; } }
+  @media (min-width: 1280px) { .offer-block { padding: 90px 60px; } }
+  @media (min-width: 1920px) { .offer-block { padding: 90px; } }
+
+  /* Header — Figma spec: centered, gap 26.67px, H1 60/69 Cherrywood, P1 16/150 Cherrywood */
+  .offer-block__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 26.67px;
+    margin: 0 auto 48px;
+    width: 100%;
+    max-width: 574.67px;
+    text-align: center;
+  }
+  .offer-block__eyebrow {
+    color: var(--c-cherrywood);
+    text-align: center;
+    align-self: stretch;
+  }
+  .offer-block__title {
+    color: var(--c-cherrywood);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 110%;
+    text-align: center;
+    align-self: stretch;
+    margin: 0;
+  }
+  @media (min-width: 1280px) {
+    .offer-block__title { font-size: 60px; line-height: 69px; }
+  }
+  .offer-block__intro {
+    color: var(--c-cherrywood);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    align-self: stretch;
+  }
+
+  .offer-block__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 13.33px;
+  }
+  @media (min-width: 640px)  { .offer-block__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .offer-block__grid { grid-template-columns: repeat(4, 1fr); gap: 13.33px; } }
+  @media (min-width: 1920px) { .offer-block__grid { gap: 20px; } }
+</style>

@@ -1,0 +1,8808 @@
+/* 768 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+position: relative;
+width: 768px;
+height: 12108px;
+left: 5193px;
+top: 1085px;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Header */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 12px 20px;
+gap: 13.33px;
+
+width: 768px;
+height: 60px;
+
+background: linear-gradient(90.11deg, #EC9F27 2.91%, #FFD869 37.37%, #F9F4EE 73.16%, #8E84B6 101.35%);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Logo */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 13.3333px 28.6667px;
+gap: 6.67px;
+
+margin: 0 auto;
+width: 199.33px;
+height: 60px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Group 12 */
+
+width: 145.1px;
+height: 26.67px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 22%;
+right: 45.29%;
+top: 38.85%;
+bottom: 33.48%;
+
+background: #601C1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 52.03%;
+right: 45.29%;
+top: 39.05%;
+bottom: 33.48%;
+
+background: #601C1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 55.11%;
+right: 39.78%;
+top: 38.38%;
+bottom: 33.46%;
+
+background: #601C1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 42.56%;
+right: 52.33%;
+top: 39.05%;
+bottom: 33.37%;
+
+background: #601C1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 48.1%;
+right: 49.25%;
+top: 39.05%;
+bottom: 33.48%;
+
+background: #601C1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 30.11%;
+right: 62.69%;
+top: 38.63%;
+bottom: 33.34%;
+
+background: #601C1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 61.06%;
+right: 31.74%;
+top: 38.6%;
+bottom: 33.33%;
+
+background: #601C1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 39.14%;
+right: 58.46%;
+top: 27.31%;
+bottom: 33.5%;
+
+background: #601C1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 22.27%;
+right: 70.32%;
+top: 22.22%;
+bottom: 33.44%;
+
+background: #601C1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 83.03%;
+right: 14.03%;
+top: 38.64%;
+bottom: 55.57%;
+
+background: #601C1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 80.24%;
+right: 16.46%;
+top: 58.58%;
+bottom: 33.53%;
+
+background: #601C1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 80.73%;
+right: 13.6%;
+top: 39.3%;
+bottom: 33.96%;
+
+background: #601C1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 13.6%;
+right: 78.88%;
+top: 38.85%;
+bottom: 33.45%;
+
+background: #601C1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 76.95%;
+right: 21.31%;
+top: 30.29%;
+bottom: 63.92%;
+
+background: #601C1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 69.48%;
+right: 27.82%;
+top: 39.05%;
+bottom: 33.51%;
+
+background: #601C1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 76.79%;
+right: 20.52%;
+top: 39.06%;
+bottom: 33.48%;
+
+background: #601C1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 72.11%;
+right: 24.04%;
+top: 38.36%;
+bottom: 56.6%;
+
+background: #601C1D;
+
+
+/* Menu */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 13.3333px 26.6667px;
+gap: 13.33px;
+
+margin: 0 auto;
+width: 89.33px;
+height: 60px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Menu */
+
+width: 36px;
+height: 34px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Icon */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 25%;
+bottom: 25%;
+
+/* Cherrywood */
+border: 2px solid #601D1D;
+
+
+/* 1 Hero Section */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: flex-start;
+align-content: flex-start;
+padding: 40px;
+gap: 60px 113.333px;
+
+width: 768px;
+height: 1080px;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Placeholder 2 */
+
+width: 686px;
+height: 580px;
+
+background: url(Placeholder.png);
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 26.67px;
+
+width: 572px;
+height: 309px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Willkommen bei VitaLunaris */
+
+width: 572px;
+height: 21px;
+
+/* Tablet/Eywbrow Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+/* identical to box height */
+text-transform: uppercase;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Erforsche die Systeme der Seele. */
+
+width: 572px;
+height: 118px;
+
+/* Tablet/H1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 54px;
+line-height: 110%;
+/* or 59px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Odio cras proin proin sit quis fringilla aliquet. Consectetur elementum viverra egestas egestas nulla ullamcorper varius quam. */
+
+width: 572px;
+height: 48px;
+
+/* Desktop/P1 Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Button Group S */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 12px;
+
+width: 473px;
+height: 42px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Button */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 13.5328px;
+gap: 7.62px;
+
+width: 231px;
+height: 42px;
+
+/* Cherrywood */
+border: 0.541311px solid #601D1D;
+border-radius: 67.6638px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Star */
+
+margin: 0 auto;
+display: none;
+width: 15.24px;
+height: 15.24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Erstgespräch buchen */
+
+margin: 0 auto;
+width: 123px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X */
+
+margin: 0 auto;
+display: none;
+width: 15.24px;
+height: 15.24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Button */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 13.5328px;
+gap: 7.62px;
+
+width: 230px;
+height: 42px;
+
+/* Cherrywood */
+background: #601D1D;
+/* Cherrywood */
+border: 0.9526px solid #601D1D;
+border-radius: 67.6638px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Star */
+
+margin: 0 auto;
+display: none;
+width: 15.24px;
+height: 15.24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Unsere Angebote */
+
+margin: 0 auto;
+width: 99px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X */
+
+margin: 0 auto;
+display: none;
+width: 15.24px;
+height: 15.24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Narrative Block 1 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: flex-start;
+align-content: flex-start;
+padding: 40px;
+gap: 60px 114.667px;
+
+width: 688px;
+height: 856px;
+
+background: linear-gradient(180deg, #FFD869 0%, #F9F4EE 63.8%);
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Placeholder 2 */
+
+width: 612px;
+height: 420px;
+
+background: url(pexels-ivan-s-8117425.jpg);
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 26.67px;
+
+width: 574px;
+height: 277.67px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Ein Raum, in demWandel  geschehen darf */
+
+width: 574px;
+height: 203px;
+
+/* Desktop/H1 Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 60px;
+line-height: 69px;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Odio cras proin proin sit quis fringilla aliquet. Consectetur elementum viverra egestas egestas nulla ullamcorper varius quam. */
+
+width: 574px;
+height: 48px;
+
+/* Desktop/P1 Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Offer Cards Block */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 40px;
+gap: 60px;
+
+width: 768px;
+height: 1314px;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 26.67px;
+
+width: 574.67px;
+height: 192.67px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Was wir für dich halten */
+
+width: 574.67px;
+height: 118px;
+
+/* Tablet/H1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 54px;
+line-height: 110%;
+/* or 59px */
+text-align: center;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Odio cras proin proin sit quis fringilla aliquet. Consectetur elementum viverra egestas egestas nulla ullamcorper varius quam. */
+
+width: 574.67px;
+height: 48px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+text-align: center;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Cards */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+padding: 0px;
+gap: 20px;
+
+width: 700px;
+height: 961px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 48095951 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: flex-start;
+align-content: flex-start;
+padding: 0px;
+gap: 20px;
+
+width: 692px;
+height: 960px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Card 1 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 30px;
+gap: 20px;
+
+width: 336px;
+height: 470px;
+
+/* Spring Wood */
+background: #F9F4EE;
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+gap: 11.7px;
+
+margin: 0 auto;
+width: 276px;
+height: 284.67px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Ebene_2 */
+
+margin: 0 auto;
+width: 90.67px;
+height: 126.31px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Clip path group */
+
+position: absolute;
+left: 5.89%;
+right: 10.39%;
+top: 60.38%;
+bottom: 2.7%;
+
+
+
+/* clippath */
+
+position: absolute;
+left: 5.89%;
+right: 10.39%;
+top: 60.38%;
+bottom: 2.7%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 5.89%;
+right: 10.39%;
+top: 60.38%;
+bottom: 2.7%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 2.12%;
+right: 6.63%;
+top: 57.67%;
+bottom: 0%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 2.12%;
+right: 6.63%;
+top: 57.67%;
+bottom: 0%;
+
+
+
+/* clippath-1 */
+
+position: absolute;
+left: 2.12%;
+right: 6.63%;
+top: 57.67%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 2.12%;
+right: 6.63%;
+top: 57.67%;
+bottom: 0%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 2.12%;
+right: 6.63%;
+top: 57.67%;
+bottom: 0%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 2.12%;
+right: 6.63%;
+top: 57.67%;
+bottom: 0%;
+
+
+
+/* clippath-2 */
+
+position: absolute;
+left: 2.12%;
+right: 6.63%;
+top: 57.67%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 2.12%;
+right: 6.63%;
+top: 57.67%;
+bottom: 0%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 1.85%;
+right: 6.31%;
+top: 57.52%;
+bottom: -0.09%;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: 1.85%;
+right: 6.31%;
+top: 57.52%;
+bottom: -0.09%;
+
+background: url(.png);
+
+
+/* Clip path group */
+
+position: absolute;
+left: 33.65%;
+right: 27.96%;
+top: 2.7%;
+bottom: 69.74%;
+
+
+
+/* clippath-3 */
+
+position: absolute;
+left: 33.65%;
+right: 27.96%;
+top: 2.7%;
+bottom: 69.74%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 33.65%;
+right: 27.96%;
+top: 2.7%;
+bottom: 69.74%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 29.89%;
+right: 24.2%;
+top: 0%;
+bottom: 67.04%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 29.89%;
+right: 24.2%;
+top: 0%;
+bottom: 67.04%;
+
+
+
+/* clippath-4 */
+
+position: absolute;
+left: 29.89%;
+right: 24.2%;
+top: 0%;
+bottom: 67.04%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 29.89%;
+right: 24.2%;
+top: 0%;
+bottom: 67.04%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 29.89%;
+right: 24.2%;
+top: 0%;
+bottom: 67.04%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 29.89%;
+right: 24.2%;
+top: 0%;
+bottom: 67.04%;
+
+
+
+/* clippath-5 */
+
+position: absolute;
+left: 29.89%;
+right: 24.2%;
+top: 0%;
+bottom: 67.04%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 29.89%;
+right: 24.2%;
+top: 0%;
+bottom: 67.04%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 29.69%;
+right: 24.02%;
+top: -0.1%;
+bottom: 66.88%;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: 29.69%;
+right: 24.02%;
+top: -0.1%;
+bottom: 66.88%;
+
+background: url(.png);
+
+
+/* Clip path group */
+
+position: absolute;
+left: 3.77%;
+right: 3.74%;
+top: 21.46%;
+bottom: 34.99%;
+
+
+
+/* clippath-6 */
+
+position: absolute;
+left: 3.77%;
+right: 3.74%;
+top: 21.46%;
+bottom: 34.99%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 3.77%;
+right: 3.74%;
+top: 21.46%;
+bottom: 34.99%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 18.75%;
+bottom: 32.29%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 18.75%;
+bottom: 32.29%;
+
+
+
+/* clippath-7 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 18.75%;
+bottom: 32.29%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 18.75%;
+bottom: 32.29%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 18.75%;
+bottom: 32.29%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 18.75%;
+bottom: 32.29%;
+
+
+
+/* clippath-8 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 18.75%;
+bottom: 32.29%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 18.75%;
+bottom: 32.29%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: -0.32%;
+right: -0.2%;
+top: 18.59%;
+bottom: 32.1%;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: -0.32%;
+right: -0.2%;
+top: 18.59%;
+bottom: 32.1%;
+
+background: url(.png);
+
+
+/* Individuelle Tiefenarbeit */
+
+margin: 0 auto;
+width: 282px;
+height: 56px;
+
+/* Tablet/H4 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud exercitation. */
+
+margin: 0 auto;
+width: 276px;
+height: 68px;
+
+/* Tablet/P3 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 140%;
+/* or 17px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Price */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 53.33px;
+
+margin: 0 auto;
+width: 276px;
+height: 28px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 120 CHF */
+
+margin: 0 auto;
+width: 96px;
+height: 28px;
+
+/* Tablet/H4 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+/* identical to box height */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 90 Min. */
+
+margin: 0 auto;
+width: 82px;
+height: 17px;
+
+/* Tablet/P3 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 140%;
+/* identical to box height, or 17px */
+display: flex;
+align-items: center;
+text-align: right;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Primary Button S */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 12px;
+
+margin: 0 auto;
+width: 276px;
+height: 42px;
+
+/* Cherrywood */
+background: #601D1D;
+border-radius: 100px;
+transform: rotate(0.36deg);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Button 1 */
+
+width: 140px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+text-align: center;
+
+/* Spring Wood */
+color: #F9F4EE;
+
+transform: rotate(0.36deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Card 3 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 30px;
+gap: 39.33px;
+
+width: 336px;
+height: 470px;
+
+/* Spring Wood */
+background: #F9F4EE;
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+gap: 11.7px;
+
+margin: 0 auto;
+width: 276px;
+height: 284.67px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Ebene_2 */
+
+margin: 0 auto;
+width: 82.67px;
+height: 126.67px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Clip path group */
+
+position: absolute;
+left: 8.91%;
+right: 53.76%;
+top: 2.27%;
+bottom: 73.28%;
+
+
+
+/* clippath */
+
+position: absolute;
+left: 8.91%;
+right: 53.76%;
+top: 2.27%;
+bottom: 73.28%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.91%;
+right: 53.76%;
+top: 2.27%;
+bottom: 73.28%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 5.43%;
+right: 50.28%;
+top: 0%;
+bottom: 71%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 5.43%;
+right: 50.28%;
+top: 0%;
+bottom: 71%;
+
+
+
+/* clippath-1 */
+
+position: absolute;
+left: 5.43%;
+right: 50.28%;
+top: 0%;
+bottom: 71%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 5.43%;
+right: 50.28%;
+top: 0%;
+bottom: 71%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 5.43%;
+right: 50.28%;
+top: 0%;
+bottom: 71%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 5.43%;
+right: 50.28%;
+top: 0%;
+bottom: 71%;
+
+
+
+/* clippath-2 */
+
+position: absolute;
+left: 5.43%;
+right: 50.28%;
+top: 0%;
+bottom: 71%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 5.43%;
+right: 50.28%;
+top: 0%;
+bottom: 71%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 5.3%;
+right: 50.01%;
+top: -0.15%;
+bottom: 70.89%;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: 5.3%;
+right: 50.01%;
+top: -0.15%;
+bottom: 70.89%;
+
+background: url(.png);
+
+
+/* Clip path group */
+
+position: absolute;
+left: 3.47%;
+right: 3.47%;
+top: 67.53%;
+bottom: 2.27%;
+
+
+
+/* clippath-3 */
+
+position: absolute;
+left: 3.47%;
+right: 3.47%;
+top: 67.53%;
+bottom: 2.27%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 3.47%;
+right: 3.47%;
+top: 67.53%;
+bottom: 2.27%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 65.25%;
+bottom: 0%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 65.25%;
+bottom: 0%;
+
+
+
+/* clippath-4 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 65.25%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 65.25%;
+bottom: 0%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 65.25%;
+bottom: 0%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 65.25%;
+bottom: 0%;
+
+
+
+/* clippath-5 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 65.25%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 65.25%;
+bottom: 0%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: -0.03%;
+right: -0.01%;
+top: 65.14%;
+bottom: -0.08%;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: -0.03%;
+right: -0.01%;
+top: 65.14%;
+bottom: -0.08%;
+
+background: url(.png);
+
+
+/* Clip path group */
+
+position: absolute;
+left: 21.36%;
+right: 17.1%;
+top: 27.37%;
+bottom: 33.91%;
+
+
+
+/* clippath-6 */
+
+position: absolute;
+left: 21.36%;
+right: 17.1%;
+top: 27.37%;
+bottom: 33.91%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 21.36%;
+right: 17.1%;
+top: 27.37%;
+bottom: 33.91%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 17.89%;
+right: 13.62%;
+top: 25.1%;
+bottom: 31.64%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 17.89%;
+right: 13.62%;
+top: 25.1%;
+bottom: 31.64%;
+
+
+
+/* clippath-7 */
+
+position: absolute;
+left: 17.89%;
+right: 13.62%;
+top: 25.1%;
+bottom: 31.64%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 17.89%;
+right: 13.62%;
+top: 25.1%;
+bottom: 31.64%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 17.89%;
+right: 13.62%;
+top: 25.1%;
+bottom: 31.64%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 17.89%;
+right: 13.62%;
+top: 25.1%;
+bottom: 31.64%;
+
+
+
+/* clippath-8 */
+
+position: absolute;
+left: 17.89%;
+right: 13.62%;
+top: 25.1%;
+bottom: 31.64%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 17.89%;
+right: 13.62%;
+top: 25.1%;
+bottom: 31.64%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 17.64%;
+right: 13.33%;
+top: 24.96%;
+bottom: 31.58%;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: 17.64%;
+right: 13.33%;
+top: 24.96%;
+bottom: 31.58%;
+
+background: url(.png);
+
+
+/* Individuelle Tiefenarbeit */
+
+margin: 0 auto;
+width: 282px;
+height: 56px;
+
+/* Tablet/H4 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud exercitation. */
+
+margin: 0 auto;
+width: 276px;
+height: 68px;
+
+/* Tablet/P3 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 140%;
+/* or 17px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Price */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 53.33px;
+
+margin: 0 auto;
+width: 276px;
+height: 28px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 120 CHF */
+
+margin: 0 auto;
+width: 96px;
+height: 28px;
+
+/* Tablet/H4 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+/* identical to box height */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 90 Min. */
+
+margin: 0 auto;
+width: 82px;
+height: 17px;
+
+/* Tablet/P3 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 140%;
+/* identical to box height, or 17px */
+display: flex;
+align-items: center;
+text-align: right;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Primary Button S */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 12px;
+
+margin: 0 auto;
+width: 276px;
+height: 42px;
+
+/* Cherrywood */
+background: #601D1D;
+border-radius: 100px;
+transform: rotate(0.36deg);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Button 1 */
+
+width: 140px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+text-align: center;
+
+/* Spring Wood */
+color: #F9F4EE;
+
+transform: rotate(0.36deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Card 2 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 30px;
+gap: 40px;
+
+width: 336px;
+height: 470px;
+
+/* Spring Wood */
+background: #F9F4EE;
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+gap: 11.7px;
+
+margin: 0 auto;
+width: 276px;
+height: 284.67px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Ebene_2 */
+
+margin: 0 auto;
+width: 108px;
+height: 126.67px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Clip path group */
+
+position: absolute;
+left: 3%;
+right: 3.01%;
+top: 40.35%;
+bottom: 2.57%;
+
+
+
+/* clippath */
+
+position: absolute;
+left: 3%;
+right: 3.01%;
+top: 40.35%;
+bottom: 2.57%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 3%;
+right: 3.01%;
+top: 40.35%;
+bottom: 2.57%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 37.79%;
+bottom: 0%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 37.79%;
+bottom: 0%;
+
+
+
+/* clippath-1 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 37.79%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 37.79%;
+bottom: 0%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 37.79%;
+bottom: 0%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 37.79%;
+bottom: 0%;
+
+
+
+/* clippath-2 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 37.79%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 37.79%;
+bottom: 0%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: -0.24%;
+right: -0.04%;
+top: 37.56%;
+bottom: -0.13%;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: -0.24%;
+right: -0.04%;
+top: 37.56%;
+bottom: -0.13%;
+
+background: url(.png);
+
+
+/* Clip path group */
+
+position: absolute;
+left: 21.76%;
+right: 32.6%;
+top: 2.57%;
+bottom: 58.53%;
+
+
+
+/* clippath-3 */
+
+position: absolute;
+left: 21.76%;
+right: 32.6%;
+top: 2.57%;
+bottom: 58.53%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 21.76%;
+right: 32.6%;
+top: 2.57%;
+bottom: 58.53%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 18.74%;
+right: 29.6%;
+top: 0%;
+bottom: 55.96%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 18.74%;
+right: 29.6%;
+top: 0%;
+bottom: 55.96%;
+
+
+
+/* clippath-4 */
+
+position: absolute;
+left: 18.74%;
+right: 29.6%;
+top: 0%;
+bottom: 55.96%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 18.74%;
+right: 29.6%;
+top: 0%;
+bottom: 55.96%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 18.74%;
+right: 29.6%;
+top: 0%;
+bottom: 55.96%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 18.74%;
+right: 29.6%;
+top: 0%;
+bottom: 55.96%;
+
+
+
+/* clippath-5 */
+
+position: absolute;
+left: 18.74%;
+right: 29.6%;
+top: 0%;
+bottom: 55.96%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 18.74%;
+right: 29.6%;
+top: 0%;
+bottom: 55.96%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 18.54%;
+right: 29.44%;
+top: -0.13%;
+bottom: 55.79%;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: 18.54%;
+right: 29.44%;
+top: -0.13%;
+bottom: 55.79%;
+
+background: url(.png);
+
+
+/* Individuelle Tiefenarbeit */
+
+margin: 0 auto;
+width: 276px;
+height: 56px;
+
+/* Tablet/H4 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud exercitation. */
+
+margin: 0 auto;
+width: 276px;
+height: 68px;
+
+/* Tablet/P3 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 140%;
+/* or 17px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Price */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 53.33px;
+
+margin: 0 auto;
+width: 276px;
+height: 28px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 120 CHF */
+
+margin: 0 auto;
+width: 96px;
+height: 28px;
+
+/* Tablet/H4 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+/* identical to box height */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 90 Min. */
+
+margin: 0 auto;
+width: 82px;
+height: 17px;
+
+/* Tablet/P3 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 140%;
+/* identical to box height, or 17px */
+display: flex;
+align-items: center;
+text-align: right;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Primary Button S */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 12px;
+
+margin: 0 auto;
+width: 276px;
+height: 42px;
+
+/* Cherrywood */
+background: #601D1D;
+border-radius: 100px;
+transform: rotate(0.36deg);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Button 1 */
+
+width: 140px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+text-align: center;
+
+/* Spring Wood */
+color: #F9F4EE;
+
+transform: rotate(0.36deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Card 4 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 30px;
+gap: 30px;
+
+width: 336px;
+height: 470px;
+
+/* Spring Wood */
+background: #F9F4EE;
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+gap: 11.7px;
+
+margin: 0 auto;
+width: 276px;
+height: 284.67px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Ebene_2 */
+
+margin: 0 auto;
+width: 98px;
+height: 126.72px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Clip path group */
+
+position: absolute;
+left: 10.32%;
+right: 25.86%;
+top: 72.59%;
+bottom: 2.73%;
+
+
+
+/* clippath */
+
+position: absolute;
+left: 10.32%;
+right: 25.86%;
+top: 72.59%;
+bottom: 2.73%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 10.32%;
+right: 25.86%;
+top: 72.59%;
+bottom: 2.73%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 6.79%;
+right: 22.33%;
+top: 69.85%;
+bottom: 0%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 6.79%;
+right: 22.33%;
+top: 69.85%;
+bottom: 0%;
+
+
+
+/* clippath-1 */
+
+position: absolute;
+left: 6.79%;
+right: 22.33%;
+top: 69.85%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 6.79%;
+right: 22.33%;
+top: 69.85%;
+bottom: 0%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 6.79%;
+right: 22.33%;
+top: 69.85%;
+bottom: 0%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 6.79%;
+right: 22.33%;
+top: 69.85%;
+bottom: 0%;
+
+
+
+/* clippath-2 */
+
+position: absolute;
+left: 6.79%;
+right: 22.33%;
+top: 69.85%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 6.79%;
+right: 22.33%;
+top: 69.85%;
+bottom: 0%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 6.72%;
+right: 22%;
+top: 69.77%;
+bottom: -0.22%;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: 6.72%;
+right: 22%;
+top: 69.77%;
+bottom: -0.22%;
+
+background: url(.png);
+
+
+/* Clip path group */
+
+position: absolute;
+left: 3.55%;
+right: 3.54%;
+top: 19.89%;
+bottom: 27.85%;
+
+
+
+/* clippath-3 */
+
+position: absolute;
+left: 3.55%;
+right: 3.54%;
+top: 19.89%;
+bottom: 27.85%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 3.55%;
+right: 3.54%;
+top: 19.89%;
+bottom: 27.85%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 17.16%;
+bottom: 25.11%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 17.16%;
+bottom: 25.11%;
+
+
+
+/* clippath-4 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 17.16%;
+bottom: 25.11%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 17.16%;
+bottom: 25.11%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 17.16%;
+bottom: 25.11%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 17.16%;
+bottom: 25.11%;
+
+
+
+/* clippath-5 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 17.16%;
+bottom: 25.11%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 17.16%;
+bottom: 25.11%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: -0.06%;
+right: -0.06%;
+top: 17.01%;
+bottom: 24.98%;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: -0.06%;
+right: -0.06%;
+top: 17.01%;
+bottom: 24.98%;
+
+background: url(.png);
+
+
+/* Clip path group */
+
+position: absolute;
+left: 46.12%;
+right: 9.56%;
+top: 2.73%;
+bottom: 62.99%;
+
+
+
+/* clippath-6 */
+
+position: absolute;
+left: 46.12%;
+right: 9.56%;
+top: 2.73%;
+bottom: 62.99%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 46.12%;
+right: 9.56%;
+top: 2.73%;
+bottom: 62.99%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 42.58%;
+right: 6.02%;
+top: 0%;
+bottom: 60.25%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 42.58%;
+right: 6.02%;
+top: 0%;
+bottom: 60.25%;
+
+
+
+/* clippath-7 */
+
+position: absolute;
+left: 42.58%;
+right: 6.02%;
+top: 0%;
+bottom: 60.25%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 42.58%;
+right: 6.02%;
+top: 0%;
+bottom: 60.25%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 42.58%;
+right: 6.02%;
+top: 0%;
+bottom: 60.25%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 42.58%;
+right: 6.02%;
+top: 0%;
+bottom: 60.25%;
+
+
+
+/* clippath-8 */
+
+position: absolute;
+left: 42.58%;
+right: 6.02%;
+top: 0%;
+bottom: 60.25%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 42.58%;
+right: 6.02%;
+top: 0%;
+bottom: 60.25%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 42.36%;
+right: 5.71%;
+top: -0.05%;
+bottom: 60.16%;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: 42.36%;
+right: 5.71%;
+top: -0.05%;
+bottom: 60.16%;
+
+background: url(.png);
+
+
+/* Individuelle Tiefenarbeit */
+
+margin: 0 auto;
+width: 276px;
+height: 56px;
+
+/* Tablet/H4 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud exercitation. */
+
+margin: 0 auto;
+width: 276px;
+height: 68px;
+
+/* Tablet/P3 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 140%;
+/* or 17px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Price */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 53.33px;
+
+margin: 0 auto;
+width: 276px;
+height: 28px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 120 CHF */
+
+margin: 0 auto;
+width: 96px;
+height: 28px;
+
+/* Tablet/H4 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+/* identical to box height */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 90 Min. */
+
+margin: 0 auto;
+width: 82px;
+height: 17px;
+
+/* Tablet/P3 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 140%;
+/* identical to box height, or 17px */
+display: flex;
+align-items: center;
+text-align: right;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Primary Button S */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 12px;
+
+margin: 0 auto;
+width: 276px;
+height: 42px;
+
+/* Cherrywood */
+background: #601D1D;
+border-radius: 100px;
+transform: rotate(0.36deg);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Button 1 */
+
+width: 140px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+text-align: center;
+
+/* Spring Wood */
+color: #F9F4EE;
+
+transform: rotate(0.36deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Narrative Block 2 */
+
+width: 768px;
+height: 692px;
+
+/* Lavander Purple */
+background: #8E84B6;
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 48095948 */
+
+position: absolute;
+width: 456px;
+height: 332px;
+left: 274px;
+top: 300px;
+
+/* White */
+background: #FFFFFF;
+border-radius: 16.6667px;
+
+
+/* Placeholder 2 */
+
+position: absolute;
+width: 456px;
+height: 732px;
+left: 0px;
+top: -321px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(pexels-cup-of-couple-7301800.jpg);
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 26.67px;
+
+position: absolute;
+width: 684px;
+height: 280.67px;
+left: 46px;
+top: 60px;
+
+
+
+/* “VitaLunaris ist kein Konzept — es ist ein Feld, in dem wir Raum für dich halten. Ein Raum, in dem Transformation geschehen kann: sanft, ehrlich und tief.” */
+
+width: 684px;
+height: 230px;
+
+/* Desktop/H2 Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 46px;
+
+/* White */
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Theresia & Axel Jansen · VitaLunaris */
+
+width: 684px;
+height: 24px;
+
+/* Desktop/P1 Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* White */
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Narrative Block 3 */
+
+width: 768px;
+height: 1440px;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 26.67px;
+
+position: absolute;
+width: 574.67px;
+height: 192.67px;
+left: 97px;
+top: 60px;
+
+
+
+/* Was wir für dich halten */
+
+width: 574.67px;
+height: 118px;
+
+/* Tablet/H1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 54px;
+line-height: 110%;
+/* or 59px */
+text-align: center;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Odio cras proin proin sit quis fringilla aliquet. Consectetur elementum viverra egestas egestas nulla ullamcorper varius quam. */
+
+width: 574.67px;
+height: 48px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+text-align: center;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Group 2 */
+
+position: absolute;
+width: 2048px;
+height: 704px;
+left: -384px;
+top: 349.33px;
+
+
+
+/* Ellipse 5 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 2048px;
+height: 704px;
+left: -384px;
+top: 349.33px;
+
+/* Cherrywood */
+border: 1.33333px solid #601D1D;
+
+
+/* Group 1 */
+
+position: absolute;
+width: 310px;
+height: 89.33px;
+left: 149.33px;
+top: 352px;
+
+
+
+/* Ellipse 1 */
+
+position: absolute;
+width: 22px;
+height: 22px;
+left: 149.33px;
+top: 419.33px;
+
+/* Lavander Purple */
+background: #8E84B6;
+
+
+/* Ellipse 2 */
+
+position: absolute;
+width: 22px;
+height: 22px;
+left: 437.33px;
+top: 352px;
+
+/* Raspberry Red */
+background: #9F4B67;
+
+
+/* Group 3 */
+
+position: absolute;
+width: 2048px;
+height: 709.57px;
+left: -615px;
+top: 537.43px;
+
+transform: matrix(-0.82, -0.57, -0.57, 0.82, 0, 0);
+
+
+/* Ellipse 5 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 2048px;
+height: 704px;
+left: -615px;
+top: 542px;
+
+/* Cherrywood */
+border: 1.33333px solid #601D1D;
+transform: matrix(-0.82, -0.57, -0.57, 0.82, 0, 0);
+
+
+/* Group 1 */
+
+position: absolute;
+width: 1013.25px;
+height: 109.04px;
+left: 140px;
+top: 824.66px;
+
+transform: matrix(-0.82, -0.57, -0.57, 0.82, 0, 0);
+
+
+/* Ellipse 1 */
+
+position: absolute;
+width: 22px;
+height: 22px;
+left: 959.07px;
+top: 1454.42px;
+
+/* Lavander Purple */
+background: #8E84B6;
+transform: matrix(-0.82, -0.57, -0.57, 0.82, 0, 0);
+
+
+/* Ellipse 2 */
+
+position: absolute;
+width: 22px;
+height: 22px;
+left: 761.58px;
+top: 1234.25px;
+
+/* Raspberry Red */
+background: #9F4B67;
+transform: matrix(-0.82, -0.57, -0.57, 0.82, 0, 0);
+
+
+/* Ellipse 3 */
+
+position: absolute;
+width: 22px;
+height: 22px;
+left: 498px;
+top: 1040px;
+
+/* Northern Lights Blue */
+background: #87C6B3;
+transform: matrix(-0.82, -0.57, -0.57, 0.82, 0, 0);
+
+
+/* Ellipse 4 */
+
+position: absolute;
+width: 22px;
+height: 22px;
+left: 140px;
+top: 896px;
+
+/* Pale Gold */
+background: #FFD869;
+transform: matrix(-0.82, -0.57, -0.57, 0.82, 0, 0);
+
+
+/* Text 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 26.67px;
+
+position: absolute;
+width: 329px;
+height: 285px;
+left: 44px;
+top: 950px;
+
+
+
+/* 3 */
+
+width: 329px;
+height: 59px;
+
+/* Tablet/H1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 54px;
+line-height: 110%;
+/* or 59px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Integration */
+
+width: 329px;
+height: 28px;
+
+/* Tablet/H4 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+/* identical to box height */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud exercitation. */
+
+width: 329px;
+height: 120px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Text 7 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 26.67px;
+
+position: absolute;
+width: 326px;
+height: 285px;
+left: 402px;
+top: 1077px;
+
+
+
+/* 4 */
+
+width: 326px;
+height: 59px;
+
+/* Tablet/H1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 54px;
+line-height: 110%;
+/* or 59px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Transformation */
+
+width: 326px;
+height: 28px;
+
+/* Tablet/H4 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+/* identical to box height */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud exercitation. */
+
+width: 326px;
+height: 120px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Text 5 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 26.67px;
+
+position: absolute;
+width: 327px;
+height: 285px;
+left: 401px;
+top: 419px;
+
+
+
+/* 2 */
+
+width: 327px;
+height: 59px;
+
+/* Tablet/H1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 54px;
+line-height: 110%;
+/* or 59px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Tiefenarbeit */
+
+width: 327px;
+height: 28px;
+
+/* Tablet/H4 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+/* identical to box height */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud exercitation. */
+
+width: 327px;
+height: 120px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Text 6 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 26.67px;
+
+position: absolute;
+width: 331px;
+height: 285px;
+left: 44px;
+top: 524px;
+
+
+
+/* 1 */
+
+width: 331px;
+height: 59px;
+
+/* Tablet/H1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 54px;
+line-height: 110%;
+/* or 59px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Erstgespräch */
+
+width: 331px;
+height: 28px;
+
+/* Tablet/H4 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+/* identical to box height */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud exercitation. */
+
+width: 331px;
+height: 120px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Narrative Block 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+padding: 60px;
+gap: 80px;
+
+width: 768px;
+height: 964px;
+
+background: linear-gradient(180deg, #F9F4EE 57.41%, #FFD869 100%);
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 26.67px;
+
+margin: 0 auto;
+width: 448px;
+height: 118px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Was Menschen sagen */
+
+width: 448px;
+height: 118px;
+
+/* Tablet/H1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 54px;
+line-height: 110%;
+/* or 59px */
+text-align: center;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Cards */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+padding: 0px;
+gap: 20px;
+
+margin: 0 auto;
+width: 704px;
+height: 644px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Card 1 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 30px;
+gap: 10px;
+
+width: 335px;
+height: 312px;
+
+/* White */
+background: #FFFFFF;
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+gap: 20px;
+
+margin: 0 auto;
+width: 275px;
+height: 252px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Group 4 */
+
+margin: 0 auto;
+width: 127.33px;
+height: 20.57px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 0px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 26.45px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 105.78px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 52.89px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 79.34px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud exercitation. */
+
+margin: 0 auto;
+width: 275px;
+height: 144px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+/* Black Full */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Price */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 13.33px;
+
+margin: 0 auto;
+width: 275px;
+height: 32px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Group 3 */
+
+width: 32px;
+height: 32px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ellipse 7 */
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 0px;
+top: 0px;
+
+/* Pale Gold */
+background: #FFD869;
+
+
+/* M */
+
+position: absolute;
+width: 16.67px;
+height: 24px;
+left: 7.33px;
+top: 3.67px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Maria S. */
+
+width: 82px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+display: flex;
+align-items: center;
+
+/* Black Full */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Card 2 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 30px;
+gap: 10px;
+
+width: 335px;
+height: 312px;
+
+/* White */
+background: #FFFFFF;
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+gap: 20px;
+
+margin: 0 auto;
+width: 275px;
+height: 252px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Group 4 */
+
+margin: 0 auto;
+width: 127.33px;
+height: 20.57px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 0px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 26.45px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 105.78px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 52.89px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 79.34px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud exercitation. */
+
+margin: 0 auto;
+width: 275px;
+height: 144px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+/* Black Full */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Price */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 13.33px;
+
+margin: 0 auto;
+width: 275px;
+height: 32px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Group 3 */
+
+width: 32px;
+height: 32px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ellipse 7 */
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 0px;
+top: 0px;
+
+/* Pale Gold */
+background: #FFD869;
+
+
+/* M */
+
+position: absolute;
+width: 16.67px;
+height: 24px;
+left: 7.33px;
+top: 3.67px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Maria S. */
+
+width: 82px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+display: flex;
+align-items: center;
+
+/* Black Full */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Card 3 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 30px;
+gap: 10px;
+
+width: 335px;
+height: 312px;
+
+/* White */
+background: #FFFFFF;
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+gap: 20px;
+
+margin: 0 auto;
+width: 275px;
+height: 252px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Group 4 */
+
+margin: 0 auto;
+width: 127.33px;
+height: 20.57px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 0px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 26.45px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 105.78px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 52.89px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 79.34px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud exercitation. */
+
+margin: 0 auto;
+width: 275px;
+height: 144px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+/* Black Full */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Price */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 13.33px;
+
+margin: 0 auto;
+width: 275px;
+height: 32px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Group 3 */
+
+width: 32px;
+height: 32px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ellipse 7 */
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 0px;
+top: 0px;
+
+/* Pale Gold */
+background: #FFD869;
+
+
+/* M */
+
+position: absolute;
+width: 16.67px;
+height: 24px;
+left: 7.33px;
+top: 3.67px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Maria S. */
+
+width: 82px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+display: flex;
+align-items: center;
+
+/* Black Full */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Card 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 30px;
+gap: 10px;
+
+width: 335px;
+height: 312px;
+
+/* White */
+background: #FFFFFF;
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+gap: 20px;
+
+margin: 0 auto;
+width: 275px;
+height: 252px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Group 4 */
+
+margin: 0 auto;
+width: 127.33px;
+height: 20.57px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 0px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 26.45px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 105.78px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 52.89px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Ebene_2 */
+
+position: absolute;
+width: 21.55px;
+height: 20.57px;
+left: 79.34px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -0.02%;
+right: 0.01%;
+top: -0.02%;
+bottom: 0%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud exercitation. */
+
+margin: 0 auto;
+width: 275px;
+height: 144px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+/* Black Full */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Price */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 13.33px;
+
+margin: 0 auto;
+width: 275px;
+height: 32px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Group 3 */
+
+width: 32px;
+height: 32px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ellipse 7 */
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 0px;
+top: 0px;
+
+/* Pale Gold */
+background: #FFD869;
+
+
+/* M */
+
+position: absolute;
+width: 16.67px;
+height: 24px;
+left: 7.33px;
+top: 3.67px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Black Full */
+color: #000000;
+
+
+
+/* Maria S. */
+
+width: 82px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+display: flex;
+align-items: center;
+
+/* Black Full */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Narrative Block 5 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: flex-start;
+align-content: space-between;
+padding: 60px 40px;
+gap: 88px;
+
+width: 768px;
+height: 992px;
+
+/* Pale Gold */
+background: #FFD869;
+
+/* Inside auto layout */
+flex: none;
+order: 7;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Ebene_2 */
+
+width: 226px;
+height: 327px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Clip path group */
+
+position: absolute;
+left: 30.6%;
+right: 31.95%;
+top: 2.31%;
+bottom: 71.73%;
+
+
+
+/* clippath */
+
+position: absolute;
+left: 30.6%;
+right: 31.95%;
+top: 2.31%;
+bottom: 71.73%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 30.6%;
+right: 31.95%;
+top: 2.31%;
+bottom: 71.73%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 27.26%;
+right: 28.61%;
+top: 0%;
+bottom: 69.42%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 27.26%;
+right: 28.61%;
+top: 0%;
+bottom: 69.42%;
+
+
+
+/* clippath-1 */
+
+position: absolute;
+left: 27.26%;
+right: 28.61%;
+top: 0%;
+bottom: 69.42%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 27.26%;
+right: 28.61%;
+top: 0%;
+bottom: 69.42%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 27.26%;
+right: 28.61%;
+top: 0%;
+bottom: 69.42%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 27.26%;
+right: 28.61%;
+top: 0%;
+bottom: 69.42%;
+
+
+
+/* clippath-2 */
+
+position: absolute;
+left: 27.26%;
+right: 28.61%;
+top: 0%;
+bottom: 69.42%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 27.26%;
+right: 28.61%;
+top: 0%;
+bottom: 69.42%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 27.13%;
+right: 28.31%;
+top: -0.06%;
+bottom: 69.4%;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: 27.13%;
+right: 28.31%;
+top: -0.06%;
+bottom: 69.4%;
+
+background: url(.png);
+
+
+/* Clip path group */
+
+position: absolute;
+left: 22.31%;
+right: 23.66%;
+top: 60.24%;
+bottom: 2.31%;
+
+
+
+/* clippath-3 */
+
+position: absolute;
+left: 22.31%;
+right: 23.66%;
+top: 60.24%;
+bottom: 2.31%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 22.31%;
+right: 23.66%;
+top: 60.24%;
+bottom: 2.31%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 18.97%;
+right: 20.32%;
+top: 57.93%;
+bottom: 0%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 18.97%;
+right: 20.32%;
+top: 57.93%;
+bottom: 0%;
+
+
+
+/* clippath-4 */
+
+position: absolute;
+left: 18.97%;
+right: 20.32%;
+top: 57.93%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 18.97%;
+right: 20.32%;
+top: 57.93%;
+bottom: 0%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 18.97%;
+right: 20.32%;
+top: 57.93%;
+bottom: 0%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 18.97%;
+right: 20.32%;
+top: 57.93%;
+bottom: 0%;
+
+
+
+/* clippath-5 */
+
+position: absolute;
+left: 18.97%;
+right: 20.32%;
+top: 57.93%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 18.97%;
+right: 20.32%;
+top: 57.93%;
+bottom: 0%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 18.79%;
+right: 20.3%;
+top: 57.92%;
+bottom: -0.13%;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: 18.79%;
+right: 20.3%;
+top: 57.92%;
+bottom: -0.13%;
+
+background: url(.png);
+
+
+/* Clip path group */
+
+position: absolute;
+left: 3.35%;
+right: 3.33%;
+top: 31.78%;
+bottom: 35.17%;
+
+
+
+/* clippath-6 */
+
+position: absolute;
+left: 3.35%;
+right: 3.33%;
+top: 31.78%;
+bottom: 35.17%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 3.35%;
+right: 3.33%;
+top: 31.78%;
+bottom: 35.17%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 29.46%;
+bottom: 32.86%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 29.46%;
+bottom: 32.86%;
+
+
+
+/* clippath-7 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 29.46%;
+bottom: 32.86%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 29.46%;
+bottom: 32.86%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 29.46%;
+bottom: 32.86%;
+
+
+
+/* Clip path group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 29.46%;
+bottom: 32.86%;
+
+
+
+/* clippath-8 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 29.46%;
+bottom: 32.86%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 29.46%;
+bottom: 32.86%;
+
+background: #000000;
+
+
+/* Group */
+
+position: absolute;
+left: -0.12%;
+right: -0.22%;
+top: 29.26%;
+bottom: 32.75%;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: -0.12%;
+right: -0.22%;
+top: 29.26%;
+bottom: 32.75%;
+
+background: url(.png);
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 26.67px;
+
+width: 576px;
+height: 503px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Mehr Tiefe. Mehr Freude. Mehr Leben. */
+
+width: 576px;
+height: 118px;
+
+/* Tablet/H1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 54px;
+line-height: 110%;
+/* or 59px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, deserunt mollit anim id est laborum. At vero eos et accusamus et iusto odio. Tiefenpsychologisch fundiert Systemisch & körperorientiert Für Einzelpersonen, Paare & Familien */
+
+width: 576px;
+height: 288px;
+
+/* Desktop/P1 Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Primary Button S */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+gap: 12px;
+
+width: 274.18px;
+height: 42px;
+
+/* Cherrywood */
+background: #601D1D;
+border-radius: 100px;
+transform: rotate(0.36deg);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Button 1 */
+
+margin: 0 auto;
+width: 254.18px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+text-align: center;
+
+/* Spring Wood */
+color: #F9F4EE;
+
+transform: rotate(0.36deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Narrative Block 6 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: flex-start;
+align-content: space-between;
+padding: 40px;
+row-gap: 60px;
+
+width: 768px;
+height: 1080px;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+/* Inside auto layout */
+flex: none;
+order: 8;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Placeholder 2 */
+
+width: 687px;
+height: 508px;
+
+background: url(Guru_Couple_Best.jpg);
+border-radius: 16.6667px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 26.67px;
+
+width: 548px;
+height: 422px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Theresia & Axel Jansen */
+
+width: 548px;
+height: 134px;
+
+/* Desktop/H1 Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 60px;
+line-height: 69px;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt. */
+
+width: 548px;
+height: 192px;
+
+/* Desktop/P1 Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Primary Button S */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+gap: 12px;
+
+width: 175.86px;
+height: 42px;
+
+/* Cherrywood */
+background: #601D1D;
+border-radius: 100px;
+transform: rotate(0.36deg);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Button 1 */
+
+margin: 0 auto;
+width: 155.86px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+text-align: center;
+
+/* Spring Wood */
+color: #F9F4EE;
+
+transform: rotate(0.36deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Narrative Block 7 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 60px;
+gap: 6.67px;
+
+width: 768px;
+height: 720px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(pexels-2160239255-36617477.jpg);
+
+/* Inside auto layout */
+flex: none;
+order: 9;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 26.67px;
+
+margin: 0 auto;
+width: 570px;
+height: 474.67px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Bereit, tiefer zu gehen? */
+
+width: 570px;
+height: 138px;
+
+/* Desktop/H1 Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 60px;
+line-height: 69px;
+text-align: center;
+
+/* White */
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat — wir freuen uns auf dich. */
+
+width: 570px;
+height: 96px;
+
+/* Desktop/P1 Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+text-align: center;
+
+/* White */
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Button Group White S */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 12px;
+
+width: 473px;
+height: 42px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Button */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 13.5328px;
+gap: 7.62px;
+
+width: 231px;
+height: 42px;
+
+/* Spring Wood */
+border: 0.541311px solid #F9F4EE;
+border-radius: 67.6638px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Star */
+
+margin: 0 auto;
+display: none;
+width: 15.24px;
+height: 15.24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Erstgespräch buchen */
+
+margin: 0 auto;
+width: 123px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X */
+
+margin: 0 auto;
+display: none;
+width: 15.24px;
+height: 15.24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Button */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 13.5328px;
+gap: 7.62px;
+
+width: 230px;
+height: 42px;
+
+/* Spring Wood */
+background: #F9F4EE;
+/* Spring Wood */
+border: 0.9526px solid #F9F4EE;
+border-radius: 67.6638px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Star */
+
+margin: 0 auto;
+display: none;
+width: 15.24px;
+height: 15.24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Unsere Angebote */
+
+margin: 0 auto;
+width: 99px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+
+/* Black Full */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X */
+
+margin: 0 auto;
+display: none;
+width: 15.24px;
+height: 15.24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Narrative Block 8 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: flex-start;
+align-content: space-between;
+padding: 60px 40px;
+gap: 80px;
+
+width: 768px;
+height: 1304px;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+/* Inside auto layout */
+flex: none;
+order: 10;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Main Content */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 22.53px;
+
+width: 563.33px;
+height: 59px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 18.67px;
+
+width: 563.33px;
+height: 59px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* FAQ */
+
+width: 563.33px;
+height: 59px;
+
+/* Tablet/H1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 54px;
+line-height: 110%;
+/* or 59px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Main Content */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: flex-start;
+align-content: space-between;
+padding: 0px;
+gap: 50px 20px;
+
+width: 666px;
+height: 1055px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Line 2 */
+
+width: 666px;
+height: 0px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Text Line */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 18.77px;
+
+width: 612px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Wie läuft eine systemische Aufstellung ab? */
+
+width: 612px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Group 5 */
+
+width: 20px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Line 2 */
+
+position: absolute;
+width: 20px;
+height: 0px;
+left: 646px;
+top: 64.1px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Line 3 */
+
+position: absolute;
+width: 20px;
+height: 0px;
+left: 655.84px;
+top: 53.94px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+transform: rotate(90deg);
+
+
+/* Line 3 */
+
+width: 666px;
+height: 0px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Text Line */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 18.77px;
+
+width: 612px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Werden die Kosten von der Krankenkasse übernommen? */
+
+width: 612px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Group 6 */
+
+width: 20px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Line 2 */
+
+position: absolute;
+width: 20px;
+height: 0px;
+left: 646px;
+top: 195.97px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Line 3 */
+
+position: absolute;
+width: 20px;
+height: 0px;
+left: 655.84px;
+top: 185.81px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+transform: rotate(90deg);
+
+
+/* Line 4 */
+
+width: 666px;
+height: 0px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+flex-grow: 0;
+
+
+/* Text Line */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 18.77px;
+
+width: 612px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 7;
+flex-grow: 0;
+
+
+/* Für wen ist VitaLunaris geeignet? */
+
+width: 612px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Group 7 */
+
+width: 20px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 8;
+flex-grow: 0;
+
+
+/* Line 2 */
+
+position: absolute;
+width: 20px;
+height: 0px;
+left: 646px;
+top: 327.85px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Line 3 */
+
+position: absolute;
+width: 20px;
+height: 0px;
+left: 655.84px;
+top: 317.69px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+transform: rotate(90deg);
+
+
+/* Line 5 */
+
+width: 666px;
+height: 0px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+/* Inside auto layout */
+flex: none;
+order: 9;
+flex-grow: 0;
+
+
+/* Text Line */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 18.77px;
+
+width: 612px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 10;
+flex-grow: 0;
+
+
+/* Wie kann ich einen Termin buchen? */
+
+width: 612px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Group 8 */
+
+width: 20px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 11;
+flex-grow: 0;
+
+
+/* Line 2 */
+
+position: absolute;
+width: 20px;
+height: 0px;
+left: 646px;
+top: 459.72px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Line 3 */
+
+position: absolute;
+width: 20px;
+height: 0px;
+left: 655.84px;
+top: 449.56px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+transform: rotate(90deg);
+
+
+/* Line 6 */
+
+width: 666px;
+height: 0px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+/* Inside auto layout */
+flex: none;
+order: 12;
+flex-grow: 0;
+
+
+/* Text Line */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 18.77px;
+
+width: 612px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 13;
+flex-grow: 0;
+
+
+/* Wie läuft eine systemische Aufstellung ab? */
+
+width: 612px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Group 9 */
+
+width: 20px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 14;
+flex-grow: 0;
+
+
+/* Line 2 */
+
+position: absolute;
+width: 20px;
+height: 0px;
+left: 646px;
+top: 591.6px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Line 3 */
+
+position: absolute;
+width: 20px;
+height: 0px;
+left: 655.84px;
+top: 581.44px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+transform: rotate(90deg);
+
+
+/* Line 7 */
+
+width: 666px;
+height: 0px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+/* Inside auto layout */
+flex: none;
+order: 15;
+flex-grow: 0;
+
+
+/* Text Line */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 18.77px;
+
+width: 612px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 16;
+flex-grow: 0;
+
+
+/* Werden die Kosten von der Krankenkasse übernommen? */
+
+width: 612px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Group 10 */
+
+width: 20px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 17;
+flex-grow: 0;
+
+
+/* Line 2 */
+
+position: absolute;
+width: 20px;
+height: 0px;
+left: 646px;
+top: 723.47px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Line 3 */
+
+position: absolute;
+width: 20px;
+height: 0px;
+left: 655.84px;
+top: 713.31px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+transform: rotate(90deg);
+
+
+/* Line 8 */
+
+width: 666px;
+height: 0px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+/* Inside auto layout */
+flex: none;
+order: 18;
+flex-grow: 0;
+
+
+/* Text Line */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 18.77px;
+
+width: 612px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 19;
+flex-grow: 0;
+
+
+/* Für wen ist VitaLunaris geeignet? */
+
+width: 612px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Group 11 */
+
+width: 20px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 20;
+flex-grow: 0;
+
+
+/* Line 2 */
+
+position: absolute;
+width: 20px;
+height: 0px;
+left: 646px;
+top: 855.35px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Line 3 */
+
+position: absolute;
+width: 20px;
+height: 0px;
+left: 655.84px;
+top: 845.19px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+transform: rotate(90deg);
+
+
+/* Line 9 */
+
+width: 666px;
+height: 0px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+/* Inside auto layout */
+flex: none;
+order: 21;
+flex-grow: 0;
+
+
+/* Text Line */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 18.77px;
+
+width: 612px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 22;
+flex-grow: 0;
+
+
+/* Wie kann ich einen Termin buchen? */
+
+width: 612px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Group 12 */
+
+width: 20px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 23;
+flex-grow: 0;
+
+
+/* Line 2 */
+
+position: absolute;
+width: 20px;
+height: 0px;
+left: 646px;
+top: 987.22px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Line 3 */
+
+position: absolute;
+width: 20px;
+height: 0px;
+left: 655.84px;
+top: 977.06px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+transform: rotate(90deg);
+
+
+/* Line 10 */
+
+width: 666px;
+height: 0px;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+/* Inside auto layout */
+flex: none;
+order: 24;
+flex-grow: 0;
+
+
+/* News */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+padding: 60px;
+gap: 6.67px;
+
+width: 768px;
+height: 647px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 11;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Narrative Block 9 */
+
+box-sizing: border-box;
+
+margin: 0 auto;
+width: 686px;
+height: 561px;
+
+/* Spring Wood */
+background: #F9F4EE;
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+border-radius: 16.6667px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ebene_1 */
+
+position: absolute;
+width: 623.33px;
+height: 422.67px;
+left: -198px;
+top: -63.67px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 50.59%;
+right: 28.58%;
+top: 0.14%;
+bottom: 69.11%;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 19.96%;
+right: 42.37%;
+top: 30.89%;
+bottom: 13.5%;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 53.75%;
+right: 0.09%;
+top: 18.35%;
+bottom: 13.49%;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 16.02%;
+right: 67.92%;
+top: 76.15%;
+bottom: 0.14%;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 0.09%;
+right: 64.6%;
+top: 4.23%;
+bottom: 43.63%;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 52.62%;
+right: 44.25%;
+top: 41.27%;
+bottom: 54.11%;
+
+/* Raspberry Red */
+background: #9F4B67;
+
+
+/* Vector */
+
+position: absolute;
+left: 18.55%;
+right: 78.32%;
+top: 54.05%;
+bottom: 41.33%;
+
+/* Northern Lights Blue */
+background: #87C6B3;
+
+
+/* Vector */
+
+position: absolute;
+left: 33.84%;
+right: 63.03%;
+top: 28.58%;
+bottom: 66.8%;
+
+/* Pale Gold */
+background: #FFD869;
+
+
+/* Vector */
+
+position: absolute;
+left: 57.63%;
+right: 39.25%;
+top: 28.58%;
+bottom: 66.8%;
+
+/* Lavander Purple */
+background: #8E84B6;
+
+
+/* Vector */
+
+position: absolute;
+left: 69.43%;
+right: 27.45%;
+top: 17.23%;
+bottom: 78.16%;
+
+/* Northern Lights Blue */
+background: #87C6B3;
+
+
+/* Vector */
+
+position: absolute;
+left: 54.87%;
+right: 42.01%;
+top: 66.15%;
+bottom: 29.23%;
+
+/* Green Yellow */
+background: #B4AD27;
+
+
+/* Vector */
+
+position: absolute;
+left: 30.44%;
+right: 66.43%;
+top: 83.21%;
+bottom: 12.17%;
+
+/* Lavander Purple */
+background: #8E84B6;
+
+
+/* Vector */
+
+position: absolute;
+left: 22.49%;
+right: 74.39%;
+top: 73.84%;
+bottom: 21.54%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Ebene_1 */
+
+position: absolute;
+width: 576.67px;
+height: 384.67px;
+left: 530px;
+top: 324px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 59.16%;
+right: 19.83%;
+top: 19.95%;
+bottom: 48.55%;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 21.57%;
+right: 27.18%;
+top: 19.26%;
+bottom: 3.92%;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 76.63%;
+right: 0.09%;
+top: 0.14%;
+bottom: 64.96%;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 67.74%;
+right: 19.88%;
+top: 70.31%;
+bottom: 11.14%;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 16.16%;
+right: 67.64%;
+top: 75.57%;
+bottom: 0.14%;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 0.09%;
+right: 64.29%;
+top: 1.91%;
+bottom: 44.69%;
+
+/* Cherrywood */
+border: 0.666667px solid #601D1D;
+
+
+/* Vector */
+
+position: absolute;
+left: 70.78%;
+right: 26.07%;
+top: 48.92%;
+bottom: 46.35%;
+
+/* Raspberry Red */
+background: #9F4B67;
+
+
+/* Vector */
+
+position: absolute;
+left: 20%;
+right: 76.85%;
+top: 52.02%;
+bottom: 43.25%;
+
+/* Northern Lights Blue */
+background: #87C6B3;
+
+
+/* Vector */
+
+position: absolute;
+left: 33.86%;
+right: 62.98%;
+top: 20.77%;
+bottom: 74.5%;
+
+/* Pale Gold */
+background: #FFD869;
+
+
+/* Vector */
+
+position: absolute;
+left: 59.71%;
+right: 37.14%;
+top: 23.14%;
+bottom: 72.13%;
+
+/* Lavander Purple */
+background: #8E84B6;
+
+
+/* Vector */
+
+position: absolute;
+left: 77.05%;
+right: 19.79%;
+top: 25.5%;
+bottom: 69.77%;
+
+/* Northern Lights Blue */
+background: #87C6B3;
+
+
+/* Vector */
+
+position: absolute;
+left: 30.71%;
+right: 66.14%;
+top: 86.5%;
+bottom: 8.77%;
+
+/* Lavander Purple */
+background: #8E84B6;
+
+
+/* Vector */
+
+position: absolute;
+left: 22.68%;
+right: 74.16%;
+top: 73.21%;
+bottom: 22.07%;
+
+/* Fire Bush */
+background: #EC9F27;
+
+
+/* Vector */
+
+position: absolute;
+left: 69.67%;
+right: 27.18%;
+top: 69.33%;
+bottom: 25.94%;
+
+/* Pale Gold */
+background: #FFD869;
+
+
+/* Vector */
+
+position: absolute;
+left: 66.17%;
+right: 30.68%;
+top: 78.55%;
+bottom: 16.72%;
+
+/* Green Yellow */
+background: #B4AD27;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 26.67px;
+
+position: absolute;
+width: 575px;
+height: 336px;
+left: 52px;
+top: 134px;
+
+
+
+/* Impulse für deine innere Reise */
+
+width: 575px;
+height: 138px;
+
+/* Desktop/H1 Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 60px;
+line-height: 69px;
+text-align: center;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. */
+
+width: 575px;
+height: 24px;
+
+/* Desktop/P1 Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+text-align: center;
+
+/* Cherrywood */
+color: #601D1D;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Insert S */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 12px;
+
+width: 570px;
+height: 42px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Button */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 16.1473px 24.221px;
+gap: 9.09px;
+
+width: 451px;
+height: 42px;
+
+/* Cherrywood */
+border: 0.645892px solid #601D1D;
+border-radius: 80.7365px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Star */
+
+margin: 0 auto;
+display: none;
+width: 18.19px;
+height: 18.19px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* E-mail Adresse */
+
+margin: 0 auto;
+width: 86px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+
+/* Cherrywood */
+color: #601D1D;
+
+opacity: 0.5;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X */
+
+margin: 0 auto;
+display: none;
+width: 18.19px;
+height: 18.19px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Button */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 16.1473px;
+gap: 9.09px;
+
+width: 109px;
+height: 42px;
+
+/* Cherrywood */
+background: #601D1D;
+/* Cherrywood */
+border: 1.13664px solid #601D1D;
+border-radius: 80.7365px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Star */
+
+margin: 0 auto;
+display: none;
+width: 18.19px;
+height: 18.19px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Anmelden */
+
+margin: 0 auto;
+width: 60px;
+height: 14px;
+
+/* Desktop/Button Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X */
+
+margin: 0 auto;
+display: none;
+width: 18.19px;
+height: 18.19px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Footer */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: flex-start;
+align-content: space-between;
+padding: 40px;
+gap: 40px 26.6667px;
+
+width: 768px;
+height: 959px;
+
+/* Cherrywood */
+background: #601D1D;
+
+/* Inside auto layout */
+flex: none;
+order: 12;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* logo footer */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 28px;
+
+width: 688px;
+height: 194px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Logo_Compact 1 */
+
+width: 179.33px;
+height: 103.33px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 17.42%;
+right: 76.66%;
+top: 18.15%;
+bottom: 51.7%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Vector */
+
+position: absolute;
+left: 34.25%;
+right: 50.83%;
+top: 17.91%;
+bottom: 51.51%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Vector */
+
+position: absolute;
+left: 17.97%;
+right: 66.66%;
+top: 0%;
+bottom: 51.64%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 84.4%;
+top: 18.15%;
+bottom: 51.64%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Vector */
+
+position: absolute;
+left: 28.71%;
+right: 65.74%;
+top: 69.36%;
+bottom: 0.68%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Vector */
+
+position: absolute;
+left: 35.11%;
+right: 54.31%;
+top: 68.63%;
+bottom: 0.66%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Vector */
+
+position: absolute;
+left: 9.07%;
+right: 80.33%;
+top: 69.36%;
+bottom: 0.56%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Vector */
+
+position: absolute;
+left: 20.56%;
+right: 73.94%;
+top: 69.36%;
+bottom: 0.68%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Vector */
+
+position: absolute;
+left: 47.45%;
+right: 37.63%;
+top: 68.88%;
+bottom: 0.5%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Vector */
+
+position: absolute;
+left: 1.99%;
+right: 93.04%;
+top: 56.57%;
+bottom: 0.68%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Vector */
+
+position: absolute;
+left: 93.01%;
+right: 0.88%;
+top: 68.91%;
+bottom: 24.78%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Vector */
+
+position: absolute;
+left: 87.24%;
+right: 5.93%;
+top: 90.68%;
+bottom: 0.72%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Vector */
+
+position: absolute;
+left: 88.25%;
+right: 0%;
+top: 69.63%;
+bottom: 1.21%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Vector */
+
+position: absolute;
+left: 80.41%;
+right: 15.98%;
+top: 59.82%;
+bottom: 33.86%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Vector */
+
+position: absolute;
+left: 64.91%;
+right: 29.48%;
+top: 69.37%;
+bottom: 0.7%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Vector */
+
+position: absolute;
+left: 80.08%;
+right: 14.35%;
+top: 69.39%;
+bottom: 0.66%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Vector */
+
+position: absolute;
+left: 70.37%;
+right: 21.65%;
+top: 68.62%;
+bottom: 25.89%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. */
+
+width: 333px;
+height: 48px;
+
+/* Desktop/P1 Desktop */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 11.7px;
+
+width: 215px;
+height: 248px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Navigation */
+
+width: 215px;
+height: 28px;
+
+/* Tablet/H4 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+/* identical to box height */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Startseite */
+
+width: 215px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Angebote */
+
+width: 215px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Über uns */
+
+width: 215px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Prozess */
+
+width: 215px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Testimonials */
+
+width: 215px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* FAQ */
+
+width: 215px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 11.7px;
+
+width: 215px;
+height: 248px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Angebote */
+
+width: 215px;
+height: 28px;
+
+/* Tablet/H4 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+/* identical to box height */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Einzelsitzung */
+
+width: 215px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Paarsitzung */
+
+width: 215px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Familienkonstellation */
+
+width: 215px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Retreat & Intensivtag */
+
+width: 215px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Erstgespräch (kostenfrei) */
+
+width: 215px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 11.7px;
+
+width: 215px;
+height: 248px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Öffnungszeiten */
+
+width: 215px;
+height: 28px;
+
+/* Tablet/H4 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+/* identical to box height */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Montag – Freitag 09:00 – 18:00 Uhr Samstag Nach Vereinbarung */
+
+width: 215px;
+height: 120px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+align-content: flex-start;
+padding: 0px;
+gap: 30px 26.6667px;
+
+width: 376px;
+height: 156px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Mail */
+
+width: 23.33px;
+height: 23.33px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Icon */
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 16.67%;
+bottom: 16.67%;
+
+/* Spring Wood */
+border: 1.33333px solid #F9F4EE;
+
+
+/* info@vitalunaris.ch */
+
+width: 326px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Phone
+
+Keywords: call
+*/
+
+width: 23.33px;
+height: 23.33px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Icon */
+
+position: absolute;
+left: 8.8%;
+right: 8.33%;
+top: 8.33%;
+bottom: 8.63%;
+
+/* Spring Wood */
+border: 1.33333px solid #F9F4EE;
+
+
+/* Theresia Jansen +41 792 917 402 Axel Jansen +41 797 849 130 */
+
+width: 326px;
+height: 48px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Map pin
+
+Keywords: location, navigation, travel, marker
+*/
+
+width: 23.33px;
+height: 23.33px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Icon */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 4.17%;
+bottom: 4.16%;
+
+/* Spring Wood */
+border: 1.33333px solid #F9F4EE;
+
+
+/* Eichenaustrasse 32, CH-9470 Buchs */
+
+width: 326px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: flex-start;
+align-content: flex-start;
+padding: 0px;
+gap: 40px 26.6667px;
+
+width: 118px;
+height: 96px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Follow us */
+
+width: 118px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Facebook
+
+Keywords: logo, social
+*/
+
+width: 32px;
+height: 32px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Icon */
+
+position: absolute;
+left: 29.17%;
+right: 25%;
+top: 8.33%;
+bottom: 8.33%;
+
+/* Spring Wood */
+background: #F9F4EE;
+
+
+/* Instagram
+
+Keywords: logo, camera
+*/
+
+width: 32px;
+height: 32px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Icon */
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 8.33%;
+bottom: 8.33%;
+
+/* Spring Wood */
+border: 2px solid #F9F4EE;
+
+
+/* Footer credits */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+align-content: flex-start;
+padding: 0px;
+gap: 20px 13.3333px;
+
+width: 688px;
+height: 88px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+flex-grow: 0;
+
+
+/* Line 6 */
+
+width: 688px;
+height: 0px;
+
+/* Spring Wood */
+border: 0.666667px solid #F9F4EE;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 2026 VitaLunaris · Theresia & Axel Jansen */
+
+width: 688px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+opacity: 0.5;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Sitemap */
+
+width: 63.33px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Cookie-Einstellungen */
+
+width: 164px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Impressum */
+
+width: 88.67px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Datenschutz */
+
+width: 100.67px;
+height: 24px;
+
+/* Tablet/P1 Tablet */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;

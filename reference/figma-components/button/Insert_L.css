@@ -1,0 +1,165 @@
+/* Insert L */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+position: relative;
+width: 706px;
+height: 61px;
+left: 133.38px;
+top: 883px;
+
+
+
+/* Button */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 20px 30px;
+gap: 11.26px;
+
+width: 551px;
+height: 61px;
+
+/* Cherrywood */
+border: 0.8px solid #601D1D;
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Star */
+
+display: none;
+width: 22.53px;
+height: 22.53px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* E-mail Adresse */
+
+width: 129px;
+height: 21px;
+
+/* Desktop+/Button Desktop+ */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+/* identical to box height */
+
+/* Cherrywood */
+color: #601D1D;
+
+opacity: 0.5;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X */
+
+display: none;
+width: 22.53px;
+height: 22.53px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Button */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 20px;
+gap: 11.26px;
+
+width: 139px;
+height: 61px;
+
+/* Cherrywood */
+background: #601D1D;
+/* Cherrywood */
+border: 1.40784px solid #601D1D;
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Star */
+
+display: none;
+width: 22.53px;
+height: 22.53px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Anmelden */
+
+width: 89px;
+height: 21px;
+
+/* Desktop+/Button Desktop+ */
+font-family: 'ES Park TRIAL';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+/* identical to box height */
+
+/* Spring Wood */
+color: #F9F4EE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* X */
+
+display: none;
+width: 22.53px;
+height: 22.53px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;

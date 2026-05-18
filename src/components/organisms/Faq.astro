@@ -1,0 +1,96 @@
+---
+import Heading from '@atoms/Heading.astro';
+import Text from '@atoms/Text.astro';
+import FaqItem from '@molecules/FaqItem.astro';
+
+interface Question {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  eyebrow?: string;
+  title?: string;
+  intro?: string;
+  items: Question[];
+}
+
+const { eyebrow, title = 'FAQ', intro, items } = Astro.props;
+
+const mid = Math.ceil(items.length / 2);
+const columnA = items.slice(0, mid);
+const columnB = items.slice(mid);
+---
+
+<section class="faq">
+  <div class="faq__inner max-w-layout container-x">
+    <header class="faq__header">
+      {eyebrow && <Heading variant="eyebrow" class="faq__eyebrow">{eyebrow}</Heading>}
+      <Heading level={2} variant="h1" class="faq__title">{title}</Heading>
+      {intro && <Text size="p1" class="faq__intro">{intro}</Text>}
+    </header>
+
+    <div class="faq__columns">
+      <div class="faq__column">
+        {columnA.map((item, i) => <FaqItem {...item} open={i === 0} />)}
+      </div>
+      {columnB.length > 0 && (
+        <div class="faq__column">
+          {columnB.map((item) => <FaqItem {...item} />)}
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+    background: var(--c-spring-wood);
+    padding: 64px 0;
+  }
+  @media (min-width: 768px) { .faq { padding: 80px 0; } }
+  @media (min-width: 1280px) { .faq { padding: 90px 0; } }
+
+  .faq__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  @media (min-width: 1024px) { .faq__inner { gap: 80px; } }
+
+  .faq__header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 845px;
+  }
+  @media (min-width: 1024px) { .faq__header { gap: 28px; } }
+
+  .faq__eyebrow { color: var(--c-cherrywood); opacity: 0.7; }
+  .faq__title {
+    color: var(--c-cherrywood);
+    font-family: 'ES Park TRIAL', serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  @media (min-width: 768px) { .faq__title { font-size: 72px; } }
+  @media (min-width: 1280px) { .faq__title { font-size: 90px; } }
+  .faq__intro { color: var(--c-cherrywood); opacity: 0.85; }
+
+  .faq__columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 60px;
+    row-gap: 0;
+  }
+  @media (min-width: 1024px) {
+    .faq__columns { grid-template-columns: 1fr 1fr; }
+  }
+
+  .faq__column {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

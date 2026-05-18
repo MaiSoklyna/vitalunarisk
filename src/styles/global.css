@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   FONT FACES — ES Park TRIAL (display) + Inter (body)
+   ============================================================ */
+@font-face {
+  font-family: 'ES Park TRIAL';
+  src: url('/fonts/ESParkTRIAL-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ES Park TRIAL';
+  src: url('/fonts/ESParkTRIAL-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ES Park TRIAL';
+  src: url('/fonts/ESParkTRIAL-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ES Park TRIAL';
+  src: url('/fonts/ESParkTRIAL-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ES Park TRIAL';
+  src: url('/fonts/ESParkTRIAL-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ES Park TRIAL';
+  src: url('/fonts/ESParkTRIAL-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================================
+   DESIGN TOKENS (CSS variables mirror tailwind.config.mjs)
+   ============================================================ */
+:root {
+  /* Brand palette */
+  --c-cherrywood: #601D1D;
+  --c-spring-wood: #F9F4EE;
+  --c-lavender: #8E84B6;
+  --c-raspberry: #9F4B67;
+  --c-fire: #EC9F27;
+  --c-pale-gold: #FFD869;
+  --c-green-yellow: #B4AD27;
+  --c-aurora: #87C6B3;
+  --c-white: #FFFFFF;
+  --c-black: #000000;
+
+  /* Surfaces */
+  --bg-page: var(--c-spring-wood);
+  --bg-dark: var(--c-cherrywood);
+  --fg-default: var(--c-black);
+  --fg-on-dark: var(--c-spring-wood);
+
+  /* Signature gradient (Fire → Pale Gold → Spring Wood → Lavender) */
+  --gradient-header: linear-gradient(90.11deg,
+    #EC9F27 2.91%,
+    #FFD869 37.37%,
+    #F9F4EE 73.16%,
+    #8E84B6 101.35%);
+
+  /* Animations */
+  --nav-anim-duration: 600ms;
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ============================================================
+   RESET + BASE
+   ============================================================ */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'ES Park TRIAL', Georgia, serif;
+  background: var(--bg-page);
+  color: var(--fg-default);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, svg, video { display: block; max-width: 100%; height: auto; }
+
+::selection {
+  background: var(--c-cherrywood);
+  color: var(--c-spring-wood);
+}
+
+/* ============================================================
+   SEMANTIC TYPOGRAPHY  (.type-*  — mobile-first, scales at md)
+   Mapped from the Figma scale: phone → desktop
+   ============================================================ */
+.type-h1 {
+  font-family: 'ES Park TRIAL', serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 46px;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 768px) { .type-h1 { font-size: 60px; line-height: 69px; } }
+
+.type-h2 {
+  font-family: 'ES Park TRIAL', serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 768px) { .type-h2 { font-size: 40px; line-height: 46px; } }
+
+.type-h3 {
+  font-family: 'ES Park TRIAL', serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.2;
+}
+@media (min-width: 768px) { .type-h3 { font-size: 28px; line-height: 1.2; } }
+
+.type-h4 {
+  font-family: 'ES Park TRIAL', serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+@media (min-width: 768px) { .type-h4 { font-size: 24px; line-height: 28px; } }
+
+.type-eyebrow {
+  font-family: 'ES Park TRIAL', serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+@media (min-width: 768px) { .type-eyebrow { font-size: 18px; line-height: 21px; } }
+
+.type-p1 {
+  font-family: 'ES Park TRIAL', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.type-p2 {
+  font-family: 'ES Park TRIAL', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.type-p3 {
+  font-family: 'ES Park TRIAL', serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.type-button {
+  font-family: 'ES Park TRIAL', serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.type-link {
+  font-family: 'ES Park TRIAL', serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--c-cherrywood);
+}
+
+.type-tag {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
+
+/* ============================================================
+   LAYOUT UTILITIES
+   ============================================================ */
+.max-w-layout { max-width: 1490px; margin-left: auto; margin-right: auto; }
+
+.container-x { padding-left: 20px; padding-right: 20px; }
+@media (min-width: 768px) { .container-x { padding-left: 32px; padding-right: 32px; } }
+@media (min-width: 1280px) { .container-x { padding-left: 60px; padding-right: 60px; } }
+
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
+/* ============================================================
+   BUTTON BASE (used by atoms/Button.astro)
+   BEM: btn (block), btn__icon (element), btn--<variant> / btn--<size> (modifiers)
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: 'ES Park TRIAL', serif;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  border: 0.8px solid transparent;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease, transform 200ms ease;
+  white-space: nowrap;
+}
+.btn:focus-visible { outline: 2px solid var(--c-cherrywood); outline-offset: 2px; }
+.btn:disabled, .btn[aria-disabled='true'] { opacity: 0.5; cursor: not-allowed; pointer-events: none; }
+
+.btn--lg { padding: 20px 40px; font-size: 18px; line-height: 21px; min-height: 61px; }
+.btn--sm { padding: 12px 24px; font-size: 16px; line-height: 19px; min-height: 46px; }
+
+.btn--primary           { background: var(--c-cherrywood); color: var(--c-spring-wood); }
+.btn--primary:hover     { background: #4A1414; }
+
+.btn--secondary         { background: transparent; color: var(--c-spring-wood); border-color: var(--c-spring-wood); }
+.btn--secondary:hover   { background: var(--c-spring-wood); color: var(--c-cherrywood); }
+
+.btn--header            { background: transparent; color: var(--c-cherrywood); border-color: var(--c-cherrywood); }
+.btn--header:hover      { background: var(--c-cherrywood); color: var(--c-spring-wood); }
+
+.btn--insert            { background: var(--c-spring-wood); color: var(--c-cherrywood); }
+.btn--insert:hover      { background: #F3EBE0; }
+
+.btn--ghost             { background: transparent; color: var(--c-cherrywood); }
+.btn--ghost:hover       { background: rgba(96, 29, 29, 0.06); }
