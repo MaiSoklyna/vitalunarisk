@@ -18,7 +18,17 @@
       "Bash(copy \"D:\\\\Tanner\\\\vitalunaris\\\\public\\\\ES Park\\\\ES Park\\\\Web Licences\\\\woff2\\\\ESPark-Regular.woff2\" \"D:\\\\Tanner\\\\vitalunaris\\\\public\\\\fonts\\\\ESPark-Regular.woff2\")",
       "Bash(copy \"D:\\\\Tanner\\\\vitalunaris\\\\public\\\\ES Park\\\\ES Park\\\\Web Licences\\\\woff2\\\\ESPark-Italic.woff2\" \"D:\\\\Tanner\\\\vitalunaris\\\\public\\\\fonts\\\\ESPark-Italic.woff2\")",
       "Bash(copy \"D:\\\\Tanner\\\\vitalunaris\\\\public\\\\ES Park\\\\ES Park\\\\Web Licences\\\\woff\\\\ESPark-Regular.woff\" \"D:\\\\Tanner\\\\vitalunaris\\\\public\\\\fonts\\\\ESPark-Regular.woff\")",
-      "Bash(copy \"D:\\\\Tanner\\\\vitalunaris\\\\public\\\\ES Park\\\\ES Park\\\\Web Licences\\\\woff\\\\ESPark-Italic.woff\" \"D:\\\\Tanner\\\\vitalunaris\\\\public\\\\fonts\\\\ESPark-Italic.woff\")"
+      "Bash(copy \"D:\\\\Tanner\\\\vitalunaris\\\\public\\\\ES Park\\\\ES Park\\\\Web Licences\\\\woff\\\\ESPark-Italic.woff\" \"D:\\\\Tanner\\\\vitalunaris\\\\public\\\\fonts\\\\ESPark-Italic.woff\")",
+      "mcp__ide__getDiagnostics",
+      "Bash(python -c \"import PIL; print\\('PIL', PIL.__version__\\)\")",
+      "Bash(python3 -c \"from PIL import Image; print\\('ok'\\)\")",
+      "Bash(magick -version)",
+      "Bash(python *)",
+      "Bash(node -e \"try{require.resolve\\('playwright'\\);console.log\\('playwright-ok'\\)}catch\\(e\\){try{require.resolve\\('puppeteer'\\);console.log\\('puppeteer-ok'\\)}catch\\(e2\\){console.log\\('none'\\)}}\")",
+      "Bash(pkill -f \"astro preview\")",
+      "Bash(git -C D:/Tanner/vitalunaris status --short)",
+      "Bash(sed -n '1,40p' src/components/organisms/WorkshopsHero.astro)",
+      "Bash(sed -n '1,40p' src/components/molecules/EventCard.astro)"
     ]
   }
 }

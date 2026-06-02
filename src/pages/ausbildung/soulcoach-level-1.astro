@@ -1,0 +1,658 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@organisms/Hero.astro';
+import NarrativeBlock from '@organisms/NarrativeBlock.astro';
+import InfoCardsRow from '@organisms/InfoCardsRow.astro';
+import Faq from '@organisms/Faq.astro';
+import Heading from '@atoms/Heading.astro';
+import Text from '@atoms/Text.astro';
+import Button from '@atoms/Button.astro';
+
+/* ----- "Wir schauen auf:" — outcomes arc (4 cards) ----- */
+const outcomes = [
+  {
+    title: 'Familiensystem & Herkunft',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.',
+  },
+  {
+    title: 'Eigene Muster & Loyalitäten',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.',
+  },
+  {
+    title: 'Beziehungen & Bindungsdynamiken',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.',
+  },
+  {
+    title: 'Grundlagen systemischer Begleitung',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.',
+  },
+];
+
+/* ----- "Stimmen aus der Ausbildung" — star reviews ----- */
+const reviews = [
+  {
+    quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud exercitation.',
+    name: 'Maria S.',
+  },
+  {
+    quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud exercitation.',
+    name: 'Maria S.',
+  },
+  {
+    quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud exercitation.',
+    name: 'Maria S.',
+  },
+  {
+    quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud exercitation.',
+    name: 'Maria S.',
+  },
+];
+
+/* ----- "Alles was du wissen musst." — fact cards ----- */
+const infoCards = [
+  { eyebrow: 'Nächster Start', body: '1.8.2026' },
+  { eyebrow: 'Dauer', body: '3 Monate' },
+  { eyebrow: 'Gruppenformat', body: 'offline & online' },
+  { eyebrow: 'Investition', body: 'CHF 4800.–' },
+];
+
+/* ----- FAQ — first 4 fill the left column, next 4 the right ----- */
+const faqItems = [
+  { question: 'Ist Level 1 eine vollständige Ausbildung oder nur ein Einstieg?', answer: 'Level 1 ist ein vollwertiger, in sich geschlossener Ausbildungsabschnitt — und zugleich die Grundlage für Level 2. Du lernst das systemische Handwerk an dir selbst und kannst danach entscheiden, ob du weitergehen möchtest.' },
+  { question: 'Was ist der Unterschied zu einer klassischen Ausbildung?', answer: 'Wir arbeiten erfahrungsbasiert statt rein theoretisch. Du lernst nicht über Systeme, sondern in ihnen — an deinem eigenen System und an dem der Gruppe.' },
+  { question: 'Muss ich nach Level 1 als Systemic Soulcoach arbeiten?', answer: 'Nein. Viele machen Level 1 für die eigene Entwicklung. Ob du das Gelernte beruflich einsetzt, bleibt vollständig dir überlassen.' },
+  { question: 'Welche Vorkenntnisse brauche ich?', answer: 'Keine fachlichen. Wichtiger als Vorwissen sind deine Offenheit und die Bereitschaft, dich selbst und das eigene System wirklich anzuschauen.' },
+  { question: 'Ist das Therapie?', answer: 'Nein. Systemic Soulwork ist persönliche und berufliche Entwicklung, keine medizinische oder psychotherapeutische Behandlung.' },
+  { question: 'Wie ist das Format aufgebaut — online, Präsenz, oder beides?', answer: 'Beides. Wir kombinieren Präsenztage in der Gruppe mit Online-Anteilen — so bleibt Tiefe in der Begegnung erhalten und der Rahmen trotzdem zugänglich.' },
+  { question: 'Was kostet Level 1, und gibt es Ratenzahlung?', answer: 'Die Investition für Level 1 beträgt CHF 4800.–. Ratenzahlung ist möglich — die Details besprechen wir gerne im Erstgespräch.' },
+  { question: 'Lorem ipsum dolor sit?', answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
+];
+---
+
+<BaseLayout
+  title="Systemic Soulcoach Level 1 – VitaLunaris"
+  description="Level 1 der Ausbildung zum Systemic Soulcoach bei Theresia Jansen — drei Monate, in denen du dein eigenes System verstehst und das Fundament für systemische Begleitung legst."
+  currentPath="/ausbildung/soulcoach-level-1"
+>
+  <Hero
+    eyebrow="Ausbildung · Systemic Soulcoach Level 1 · 3 Monate"
+    title="Entfalte deine<br />systemische Praxis"
+    subtitle="Systemische Arbeit lernen, wie sie gelernt werden sollte — an dir selbst. Drei Monate, in denen du dein eigenes System verstehst und das Fundament für systemische Begleitung legst."
+    ctaText="Jetzt für Level 1 anmelden"
+    ctaHref="/kontakt"
+    image="/images/placeholder/Placeholder-9.jpg"
+  />
+
+  {/* ===================== Narrative — lavender ===================== */}
+  <NarrativeBlock
+    tone="lavender-gradient"
+    imageSide="left"
+    image="/images/placeholder/Placeholder-10.jpg"
+    imageAlt=""
+    title="Du kannst andere nur so weit begleiten wie du selbst gegangen bist."
+    body="Systemische Arbeit schaut nicht auf die Person allein — sondern auf das System dahinter. Die Familie, die Geschichte, die Muster die von Generation zu Generation weitergehen. Level 1 vermittelt diese Grundlagen nicht durch Theorie, sondern durch Selbsterfahrung. Du arbeitest in einer kleinen Gruppe mit deinem eigenen Thema — und lernst dabei, wie systemische Begleitung funktioniert. Für alle, die systemisch arbeiten wollen — ob für sich selbst oder professionell. Level 1 ist in sich vollständig und gleichzeitig die Pflichtgrundlage für Level 2."
+  />
+
+  {/* ===================== Wir schauen auf: — outcomes arc ===================== */}
+  <section class="outcomes">
+    <header class="outcomes__header">
+      <Heading level={2} variant="h1" class="outcomes__title">Wir schauen auf:</Heading>
+    </header>
+
+    {/* Desktop (≥1024px): single curve + absolutely positioned cards at ≥1072 */}
+    <div class="outcomes__desktop">
+      <img src="/images/ebene/process-curve.svg" alt="" class="outcomes__curve" />
+      <div class="outcomes__cards">
+        {outcomes.map((o, i) => (
+          <article class={`outcomes__card outcomes__card--${i + 1}`}>
+            <Heading level={3} class="outcomes__card-title">{o.title}</Heading>
+            <Text size="p1" class="outcomes__card-body">{o.description}</Text>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    {/* Mobile/tablet (<1024px): two halves, each with its own curve + 2 cards */}
+    <div class="outcomes__mobile">
+      {[0, 2].map((startIdx) => (
+        <div class="outcomes__mobile-section">
+          <div class="outcomes__mobile-curve">
+            <img
+              src={startIdx === 0 ? '/images/ebene/process-curve-1.svg' : '/images/ebene/process-curve-2.svg'}
+              alt=""
+            />
+          </div>
+          <div class="outcomes__mobile-cards">
+            {outcomes.slice(startIdx, startIdx + 2).map((o) => (
+              <article class="outcomes__mobile-card">
+                <Heading level={3} class="outcomes__card-title">{o.title}</Heading>
+                <Text size="p1" class="outcomes__card-body">{o.description}</Text>
+              </article>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="outcomes__cta">
+      <Button href="/kontakt" variant="primary" size="lg">Jetzt für Level 1 anmelden</Button>
+    </div>
+  </section>
+
+  {/* ===================== Stimmen aus der Ausbildung ===================== */}
+  <section class="reviews">
+    <div class="reviews__inner">
+      <Heading level={2} variant="h1" class="reviews__title">Stimmen aus<br />der Ausbildung</Heading>
+      <div class="reviews__grid">
+        {reviews.map((r) => (
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="5 von 5 Sternen">
+              {[0, 1, 2, 3, 4].map(() => (
+                <svg class="review-card__star" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path d="M10 1l2.47 5.27L18 7.09l-4 4.06.95 5.85L10 14.27 5.05 17l.95-5.85-4-4.06 5.53-.82L10 1z" />
+                </svg>
+              ))}
+            </div>
+            <Text size="p1" class="review-card__quote">{r.quote}</Text>
+            <Text size="p1" class="review-card__name">{r.name}</Text>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ===================== Theresia Jansen — gold, image right ===================== */}
+  <section class="lehrerin">
+    <div class="lehrerin__inner">
+      <div class="lehrerin__content">
+        <Heading variant="eyebrow" class="lehrerin__eyebrow">Theresia Jansen</Heading>
+        <Heading level={2} variant="h1" class="lehrerin__name">Entfalte was in dir ist, um weiterzugeben was du weisst.</Heading>
+        <Text size="p1" class="lehrerin__body">
+          Theresia begleitet seit über 30 Jahren Menschen in systemischer Arbeit — körperlich wie energetisch. Sie hat Aufstellen, Heilkunde und weitere Methoden in einer eigenständigen Praxis verbunden, die auf ihrer langjährigen Erfahrung in der Deutschschweiz aufbaut.
+        </Text>
+        <Text size="p1" class="lehrerin__body">
+          In Level 1 begleitet Theresia die Gruppe sowohl methodisch als auch in der Tiefe des Prozesses. Sie bringt ein, was sie selbst durchlebt und erprobt hat — kein importiertes Curriculum, sondern 30 Jahre gelebte Praxis.
+        </Text>
+      </div>
+      <div class="lehrerin__media">
+        <img src="/images/placeholder/Placeholder-8.jpg" alt="Theresia Jansen" loading="lazy" decoding="async" />
+      </div>
+    </div>
+  </section>
+
+  {/* ===================== Alles was du wissen musst. ===================== */}
+  <section class="wissen">
+    <div class="wissen__inner">
+      <Heading level={2} variant="h1" class="wissen__title">Alles was du wissen musst.</Heading>
+    </div>
+  </section>
+
+  <InfoCardsRow cards={infoCards} />
+
+  <section class="wissen-foot">
+    <div class="wissen-foot__inner">
+      <Text size="p1" class="wissen-foot__caption">Die Präsenztage finden jeden Donnerstag von 16:00 bis 18:00 statt</Text>
+      <div class="wissen-foot__cta">
+        <Button href="/kontakt" variant="primary" size="lg" class="wissen-foot__btn">Jetzt für Level 2 anmelden</Button>
+        <Button href="/kontakt" variant="header" size="lg" class="wissen-foot__btn">Fragen? Schreib uns.</Button>
+      </div>
+    </div>
+  </section>
+
+  {/* ===================== FAQ ===================== */}
+  <Faq title="FAQ" items={faqItems} />
+
+  {/* ===================== Infoanlass — dark CTA with form ===================== */}
+  <section class="infoanlass">
+    <div class="infoanlass__card">
+      <div class="infoanlass__content">
+        <Heading variant="eyebrow" class="infoanlass__eyebrow">Infoanlass | 12.08.2026</Heading>
+        <Heading level={2} variant="h1" class="infoanlass__title">Komm zum<br />nächsten Infoanlass<br />am 12.08.2026</Heading>
+        <Text size="p1" class="infoanlass__body">Lorem ipsum dolor sit amet. Online.</Text>
+        <form class="infoanlass__form" action="#" method="POST" novalidate>
+          <label for="infoanlass-email" class="infoanlass__label">E-Mail-Adresse</label>
+          <input
+            id="infoanlass-email"
+            type="email"
+            name="email"
+            class="infoanlass__input"
+            placeholder="E-mail Adresse"
+            required
+            autocomplete="email"
+          />
+          <button type="submit" class="infoanlass__submit">Für Infoanlass anmelden</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ============================================================
+     OUTCOMES — "Wir schauen auf:" (dome arc, 4 cards + CTA)
+     Mobile/tablet (<1024): two halves with separate curves (-1, -2)
+     Desktop (≥1024): single process-curve.svg
+     Desktop++ (≥1072): cards + CTA absolutely positioned per Figma
+     ============================================================ */
+  .outcomes {
+    background: var(--c-spring-wood);
+    padding: 64px 8px;
+    overflow: hidden;
+  }
+  @media (min-width: 768px)  { .outcomes { padding: 96px 8px; } }
+  @media (min-width: 1024px) { .outcomes { padding: 120px 8px; } }
+
+  .outcomes__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12px;
+    max-width: 1106px;
+    margin: 0 auto;
+  }
+  .outcomes__title { text-align: center; color: var(--c-cherrywood); margin: 0; }
+
+  .outcomes__card-title {
+    font-family: 'ES Park', serif;
+    font-weight: var(--weight-regular);
+    font-size: var(--h3-size);
+    line-height: 1.2;
+    color: var(--c-cherrywood);
+    margin: 0;
+  }
+  .outcomes__card-body { color: var(--c-cherrywood); font-size: var(--p1-size); line-height: 1.5; }
+
+  .outcomes__cta {
+    display: flex;
+    justify-content: center;
+    padding: 24px 12px 0;
+  }
+
+  .outcomes__desktop { display: none; }
+  .outcomes__mobile  { display: block; margin-top: 24px; }
+
+  @media (min-width: 1024px) {
+    .outcomes__desktop { display: block; margin-top: 32px; }
+    .outcomes__mobile  { display: none; }
+    .outcomes__curve { display: block; width: 100%; height: auto; margin: 0; }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1071.98px) {
+    .outcomes__cards {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      padding: 0 90px;
+      margin-top: 40px;
+      min-height: 0;
+      box-sizing: border-box;
+    }
+    .outcomes__card {
+      position: static;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      color: var(--c-cherrywood);
+    }
+  }
+
+  @media (min-width: 1072px) {
+    .outcomes {
+      position: relative;
+      --cv: min(100vw, 1920px);
+      --cx: calc((100vw - var(--cv)) / 2);
+      min-height: calc(0.68177 * var(--cv));
+      padding: 120px 0;
+    }
+    .outcomes__header { max-width: 1106px; padding: 0 12px; margin: 0 auto; }
+
+    .outcomes__desktop {
+      position: static;
+      width: 100%;
+      max-width: 1920px;
+      margin: 32px auto 0;
+    }
+    .outcomes__curve { max-width: none; }
+    .outcomes__cards { position: static; display: block; padding: 0; margin: 0; }
+
+    .outcomes__card {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: clamp(16px, 2.1vw, 40px);
+      color: var(--c-cherrywood);
+    }
+    .outcomes__card--1 { left: calc(var(--cx) + 0.05000 * var(--cv)); top: calc(0.37344 * var(--cv)); width: calc(0.20104 * var(--cv)); }
+    .outcomes__card--2 { left: calc(var(--cx) + 0.27552 * var(--cv)); top: calc(0.29792 * var(--cv)); width: calc(0.20104 * var(--cv)); }
+    .outcomes__card--3 { left: calc(var(--cx) + 0.50677 * var(--cv)); top: calc(0.28958 * var(--cv)); width: calc(0.20000 * var(--cv)); }
+    .outcomes__card--4 { left: calc(var(--cx) + 0.73698 * var(--cv)); top: calc(0.38177 * var(--cv)); width: calc(0.20000 * var(--cv)); }
+
+    .outcomes__card-title { font-size: clamp(24px, 2.1vw, 40px); line-height: 1.15; }
+    .outcomes__card-body  { font-size: clamp(16px, 1.2vw, 23px); line-height: 1.5; }
+
+    .outcomes__cta {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: calc(0.59583 * var(--cv));
+      padding: 0;
+      justify-content: center;
+    }
+  }
+
+  .outcomes__mobile-section { margin-top: 24px; }
+  .outcomes__mobile-section:first-child { margin-top: 0; }
+
+  .outcomes__mobile-curve {
+    width: auto;
+    aspect-ratio: 600 / 130;
+    overflow: visible;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: 0;
+    box-sizing: content-box;
+  }
+  @media (min-width: 768px) and (max-width: 1023.98px) {
+    .outcomes__mobile-curve { padding-top: 16px; }
+  }
+  .outcomes__mobile-curve img { display: block; width: 100%; height: 100%; }
+
+  .outcomes__mobile-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 16px 12px 0;
+  }
+  @media (min-width: 480px) and (max-width: 1023.98px) {
+    .outcomes__mobile-cards {
+      flex-direction: row;
+      gap: 28px;
+      padding: 24px 12px 0;
+      align-items: flex-start;
+    }
+    .outcomes__mobile-cards > .outcomes__mobile-card {
+      flex: 1 1 0;
+      min-width: 0;
+      max-width: calc(50% - 14px);
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1023.98px) {
+    .outcomes__mobile-cards { gap: 44px; padding: 32px 44px 0; }
+    .outcomes__mobile-cards > .outcomes__mobile-card { max-width: calc(50% - 22px); }
+  }
+
+  .outcomes__mobile-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    text-align: left;
+    color: var(--c-cherrywood);
+  }
+  @media (min-width: 768px) { .outcomes__mobile-card { gap: 26.67px; } }
+
+  /* ============================================================
+     REVIEWS — "Stimmen aus der Ausbildung" (star cards, cream→gold)
+     ============================================================ */
+  .reviews {
+    background: linear-gradient(180deg, #F9F4EE 55%, #FFD869 100%);
+    padding: 60px 20px;
+  }
+  @media (min-width: 768px)  { .reviews { padding: 80px 32px; } }
+  @media (min-width: 1280px) { .reviews { padding: 90px 60px; } }
+
+  .reviews__inner {
+    max-width: 1740px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+  .reviews__title { color: var(--c-cherrywood); text-align: center; margin: 0; max-width: 862px; }
+
+  .reviews__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+  @media (min-width: 640px)  { .reviews__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; } }
+  @media (min-width: 1024px) { .reviews__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+  .review-card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    background: var(--c-spring-wood);
+    border: 1px solid var(--c-cherrywood);
+    border-radius: 16.67px;
+    padding: 24px;
+    height: 100%;
+  }
+  @media (min-width: 1280px) { .review-card { border-radius: 20px; padding: 32px; gap: 24px; } }
+
+  .review-card__stars { display: flex; flex-direction: row; gap: 4px; color: var(--c-cherrywood); }
+  .review-card__star { display: block; }
+
+  .review-card__quote { color: var(--c-cherrywood); font-size: var(--p1-size); line-height: 1.5; flex-grow: 1; }
+  .review-card__name {
+    color: var(--c-cherrywood);
+    font-family: 'ES Park', serif;
+    font-weight: var(--weight-medium);
+    font-size: var(--p1-size);
+    line-height: 1.5;
+  }
+
+  /* ============================================================
+     LEHRERIN — "Theresia Jansen" (Pale Gold, text left / image right)
+     ============================================================ */
+  .lehrerin { background: var(--c-pale-gold); padding: 60px 20px; }
+  @media (min-width: 768px)  { .lehrerin { padding: 80px 32px; } }
+  @media (min-width: 1280px) { .lehrerin { padding: 90px 60px; } }
+  @media (min-width: 1920px) { .lehrerin { padding: 90px; } }
+
+  .lehrerin__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 1740px;
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px) { .lehrerin__inner { flex-direction: row; align-items: center; gap: 64px; } }
+  @media (min-width: 1920px) { .lehrerin__inner { gap: 100px; } }
+
+  .lehrerin__media {
+    flex: 0 0 auto;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16.67px;
+    background: rgba(96, 29, 29, 0.06);
+    aspect-ratio: 4 / 5;
+    order: -1;
+  }
+  @media (min-width: 1024px) { .lehrerin__media { width: 46%; border-radius: 20px; order: 0; } }
+  @media (min-width: 1920px) { .lehrerin__media { width: 711px; border-radius: 25px; aspect-ratio: 711 / 826; } }
+  .lehrerin__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .lehrerin__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  @media (min-width: 1024px) { .lehrerin__content { gap: 26.67px; } }
+  @media (min-width: 1920px) { .lehrerin__content { gap: 32px; max-width: 813px; } }
+
+  .lehrerin__eyebrow { color: var(--c-cherrywood); }
+  .lehrerin__name {
+    color: var(--c-cherrywood);
+    font-family: 'ES Park', serif;
+    font-weight: var(--weight-regular);
+    font-size: var(--h1-size);
+    line-height: 1.1;
+    margin: 0;
+  }
+  .lehrerin__body { color: var(--c-cherrywood); font-size: var(--p1-size); line-height: 1.5; }
+
+  /* ============================================================
+     WISSEN — "Alles was du wissen musst." (header + cards + footer)
+     ============================================================ */
+  .wissen { background: var(--c-spring-wood); padding: 60px 20px 32px; }
+  @media (min-width: 768px)  { .wissen { padding: 80px 32px 40px; } }
+  @media (min-width: 1280px) { .wissen { padding: 90px 60px 48px; } }
+  @media (min-width: 1920px) { .wissen { padding: 120px 90px 64px; } }
+
+  .wissen__inner { max-width: 1740px; margin: 0 auto; }
+  .wissen__title { color: var(--c-cherrywood); text-align: center; margin: 0; }
+
+  .wissen-foot { background: var(--c-spring-wood); padding: 8px 20px 60px; }
+  @media (min-width: 768px)  { .wissen-foot { padding: 8px 32px 80px; } }
+  @media (min-width: 1280px) { .wissen-foot { padding: 8px 60px 90px; } }
+  @media (min-width: 1920px) { .wissen-foot { padding: 8px 90px 120px; } }
+
+  .wissen-foot__inner {
+    max-width: 1740px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .wissen-foot__caption { color: var(--c-cherrywood); text-align: center; }
+
+  .wissen-foot__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+  @media (min-width: 640px) { .wissen-foot__cta { flex-direction: row; justify-content: center; gap: 20px; } }
+  .wissen-foot__cta :global(.btn) {
+    width: 100%;
+    max-width: 320px;
+    height: 52px;
+    min-height: 52px;
+    padding: 16px 28px;
+    border-radius: 100px;
+  }
+
+  /* ============================================================
+     INFOANLASS — dark Cherrywood CTA card with email form
+     ============================================================ */
+  .infoanlass { background: var(--c-spring-wood); padding: 40px 20px; }
+  @media (min-width: 768px)  { .infoanlass { padding: 64px 32px; } }
+  @media (min-width: 1280px) { .infoanlass { padding: 90px 60px; } }
+
+  .infoanlass__card {
+    position: relative;
+    overflow: hidden;
+    background: var(--c-cherrywood);
+    color: var(--c-spring-wood);
+    border-radius: 25px;
+    padding: 80px 24px;
+    min-height: 420px;
+    width: 100%;
+    max-width: 1740px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (min-width: 768px)  { .infoanlass__card { padding: 120px 48px; min-height: 560px; } }
+  @media (min-width: 1280px) { .infoanlass__card { padding: 160px 60px; min-height: 700px; } }
+
+  .infoanlass__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    max-width: 856px;
+    width: 100%;
+  }
+  @media (min-width: 1024px) { .infoanlass__content { gap: 40px; } }
+
+  .infoanlass__eyebrow { color: var(--c-spring-wood); opacity: 0.9; }
+
+  .infoanlass__title {
+    color: var(--c-spring-wood);
+    font-family: 'ES Park', serif;
+    font-weight: var(--weight-regular);
+    font-size: var(--h1-size);
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  .infoanlass__body { color: var(--c-spring-wood); font-size: var(--p1-size); line-height: 1.5; }
+
+  .infoanlass__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 706px;
+  }
+  @media (min-width: 640px) { .infoanlass__form { flex-direction: row; align-items: center; gap: 16px; } }
+
+  .infoanlass__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .infoanlass__input {
+    flex-grow: 1;
+    height: 61px;
+    padding: 20px 30px;
+    background: transparent;
+    border: 0.8px solid var(--c-spring-wood);
+    border-radius: 100px;
+    color: var(--c-spring-wood);
+    font-family: 'ES Park', serif;
+    font-weight: var(--weight-regular);
+    font-size: var(--p1-size);
+    line-height: 1.2;
+    outline: none;
+    transition: border-color 200ms ease, background 200ms ease;
+  }
+  .infoanlass__input::placeholder { color: var(--c-spring-wood); opacity: 0.6; }
+  .infoanlass__input:focus { background: rgba(249, 244, 238, 0.06); }
+
+  .infoanlass__submit {
+    flex-shrink: 0;
+    height: 61px;
+    padding: 20px 30px;
+    background: var(--c-spring-wood);
+    color: var(--c-cherrywood);
+    border: 0.8px solid var(--c-spring-wood);
+    border-radius: 100px;
+    font-family: 'ES Park', serif;
+    font-weight: var(--weight-regular);
+    font-size: var(--button-size);
+    line-height: 1.2;
+    cursor: pointer;
+    transition: background 200ms ease, color 200ms ease, transform 200ms ease;
+    white-space: nowrap;
+  }
+  @media (min-width: 640px) { .infoanlass__submit { min-width: 220px; } }
+  .infoanlass__submit:hover { background: transparent; color: var(--c-spring-wood); }
+  .infoanlass__submit:active { transform: scale(0.98); }
+</style>

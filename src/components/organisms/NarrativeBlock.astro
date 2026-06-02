@@ -139,13 +139,17 @@ const {
       gap: 26.67px;
       max-width: 684px;
     }
+    /* Scale proportionally toward the exact 1280 spec (660×411.33 @ left:552/top:211.86)
+       expressed in vw, so 779–1279 looks like a shrunk 1280 instead of a fixed 456×332.
+       At exactly 1280 these resolve to the same px the ≥1280 rule sets — smooth handoff. */
     .narrative--purple.narrative--image-right .narrative__media {
       position: absolute;
       z-index: 1;
-      top: 300px;
-      right: 38px;
-      width: 456px;
-      height: 332px;
+      top: 16.552vw;     /* 211.86 @ 1280 */
+      left: 43.125vw;    /* 552 @ 1280 */
+      right: auto;
+      width: 51.5625vw;  /* 660 @ 1280 */
+      height: 32.135vw;  /* 411.33 @ 1280 */
       margin-top: 0;
       border-radius: 16.67px;
     }
@@ -653,6 +657,137 @@ const {
       font-size: 23px;
       line-height: 150%;
     }
+  }
+
+  /* ============================================================
+     Gold + image-left — same rounded-card layout as the
+     lavender-gradient variant (image left 620×830, text right 712),
+     but on a solid Pale Gold background.
+     ============================================================ */
+  .narrative--gold.narrative--image-left {
+    background: var(--c-pale-gold);
+    border-radius: 16.67px;
+    margin: 0 16px;
+    padding: 48px 24px;
+  }
+  @media (min-width: 768px) {
+    .narrative--gold.narrative--image-left { margin: 0 40px; border-radius: 20px; padding: 64px 40px; }
+  }
+  @media (min-width: 1280px) {
+    .narrative--gold.narrative--image-left { margin: 0 60px; border-radius: 25px; padding: 90px 60px; }
+  }
+  @media (min-width: 1920px) {
+    .narrative--gold.narrative--image-left { margin: 0 90px; padding: 120px 130px 120px 90px; border-radius: 25px; }
+  }
+
+  .narrative--gold.narrative--image-left .narrative__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    padding: 0 !important;
+    max-width: none !important;
+    width: 100%;
+    margin: 0;
+  }
+  @media (min-width: 768px) {
+    .narrative--gold.narrative--image-left .narrative__inner {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 !important;
+      gap: 40px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .narrative--gold.narrative--image-left .narrative__inner { gap: 40px; }
+  }
+  @media (min-width: 1920px) {
+    .narrative--gold.narrative--image-left .narrative__inner {
+      flex-wrap: wrap;
+      align-content: space-between;
+      gap: 170px 172px;
+    }
+  }
+
+  .narrative--gold.narrative--image-left .narrative__media {
+    border-radius: 16.67px;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 612 / 420;
+    align-self: stretch;
+  }
+  @media (min-width: 768px) {
+    .narrative--gold.narrative--image-left .narrative__media {
+      order: 1;
+      flex: 1 1 50%;
+      max-width: none;
+      width: 100%;
+      height: auto;
+      aspect-ratio: auto;
+      border-radius: 20px;
+      align-self: stretch;
+    }
+  }
+  @media (min-width: 1280px) {
+    .narrative--gold.narrative--image-left .narrative__media { border-radius: 25px; aspect-ratio: 620 / 830; }
+  }
+  @media (min-width: 1920px) {
+    .narrative--gold.narrative--image-left .narrative__media { flex: none; width: 620px; height: 830px; aspect-ratio: auto; border-radius: 25px; }
+  }
+  .narrative--gold.narrative--image-left .narrative__image { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .narrative--gold.narrative--image-left .narrative__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    align-self: stretch;
+  }
+  @media (min-width: 768px) {
+    .narrative--gold.narrative--image-left .narrative__content {
+      order: 2;
+      flex: 1 1 50%;
+      max-width: 574px;
+      gap: 26.67px;
+      align-self: center;
+    }
+  }
+  @media (min-width: 1280px) {
+    .narrative--gold.narrative--image-left .narrative__content { max-width: none; gap: 40px; }
+  }
+  @media (min-width: 1920px) {
+    .narrative--gold.narrative--image-left .narrative__content { flex: none; width: 712px; max-width: 712px; gap: 40px; }
+  }
+
+  .narrative--gold.narrative--image-left .narrative__title {
+    font-family: 'ES Park', serif;
+    font-weight: var(--weight-regular);
+    font-size: var(--h2-size);
+    line-height: 1.15;
+    color: var(--c-cherrywood);
+    margin: 0;
+    align-self: stretch;
+  }
+  @media (min-width: 1920px) {
+    .narrative--gold.narrative--image-left .narrative__title { font-size: 60px; line-height: 69px; }
+  }
+  .narrative--gold.narrative--image-left .narrative__body {
+    font-family: 'ES Park', serif;
+    font-weight: var(--weight-regular);
+    font-size: var(--p1-size);
+    line-height: 1.5;
+    color: var(--c-cherrywood);
+    opacity: 1;
+    max-width: none;
+    align-self: stretch;
+  }
+  @media (min-width: 1920px) {
+    .narrative--gold.narrative--image-left .narrative__body { font-size: 23px; line-height: 150%; }
   }
 
   /* ============================================================

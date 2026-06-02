@@ -55,7 +55,16 @@ const { eyebrow, title, intro, offers } = Astro.props;
     margin: 0 auto 48px;
     width: 100%;
     max-width: 574.67px;
+    padding-left: 24px;
+    padding-right: 24px;
     text-align: center;
+  }
+  @media (min-width: 1024px) {
+    .offer-block__header { padding-left: 40px; padding-right: 40px; max-width: 654.67px; }
+  }
+  /* Desktop+ (Figma): centered text block 862px wide, 64px gap down to the cards */
+  @media (min-width: 1280px) {
+    .offer-block__header { max-width: 862px; gap: 40px; margin-bottom: 64px; }
   }
   .offer-block__eyebrow {
     color: var(--c-cherrywood);
@@ -66,8 +75,8 @@ const { eyebrow, title, intro, offers } = Astro.props;
     color: var(--c-cherrywood);
     font-family: 'ES Park', serif;
     font-weight: var(--weight-regular);
-    font-size: var(--h2-size);
-    line-height: 1.15;
+    font-size: var(--h1-size);
+    line-height: 1.1;
     text-align: center;
     align-self: stretch;
     margin: 0;
@@ -85,15 +94,19 @@ const { eyebrow, title, intro, offers } = Astro.props;
   .offer-block__grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 13.33px;
+    gap: 16px;
   }
-  @media (min-width: 640px)  { .offer-block__grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (min-width: 1024px) { .offer-block__grid { grid-template-columns: repeat(4, 1fr); gap: 13px; } }
+  /* minmax(0, 1fr) forces truly equal columns — plain 1fr lets a card with
+     wider min-content (long word / button label) steal width from the others. */
+  @media (min-width: 1024px) {
+    .offer-block__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  }
+  /* Figma cards row: 3 × 558.67 + 2 × 32 gap = 1740px */
+  @media (min-width: 1280px) { .offer-block__grid { gap: 32px; } }
+
+  /* Desktop++ (Figma w=1920): full 1740px row — widen past the default 1490px
+     layout cap and drop the container-x padding (block already pads 90px). */
   @media (min-width: 1920px) {
-    .offer-block__grid {
-      grid-template-columns: repeat(4, 411px);
-      justify-content: center;
-      gap: 20px;
-    }
+    .offer-block__inner { max-width: 1740px; padding-left: 0; padding-right: 0; }
   }
 </style>

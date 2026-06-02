@@ -13,32 +13,25 @@ import NewsletterBlock from '@organisms/NewsletterBlock.astro';
 
 const offers = [
   {
-    icon: '/images/ebene/Ebene_2.svg',
-    title: 'Ich möchte erst mal rein schnuppern',
-    description: 'Jeden Monat gibt es einen Online-Workshop zu einem anderen Thema — Aufstellen, Numerologie, Heilkunde. Kein Vorwissen nötig, keine Verpflichtung. Einfach kommen und schauen.',
-    ctaText: 'Aktueller Workshop ansehen →',
-    ctaHref: '/angebot#tiefenarbeit',
-  },
-  {
-    icon: '/images/ebene/Ebene_2-6.svg',
-    title: 'Ich suche Orientierung und Veränderung',
-    description: 'Etwas in deinem Leben fühlt sich fest an — eine Beziehung, eine Entscheidung, ein Muster, das sich wiederholt. Es gibt verschiedene Wege, das sichtbar und veränderbar zu machen.',
-    ctaText: 'Unsere Praxisangebote →',
-    ctaHref: '/angebot#begleitung',
-  },
-  {
     icon: '/images/ebene/Ebene_2-3.svg',
     title: 'Ich will Systemisches Aufstellen lernen',
-    description: 'Du willst systemisches Aufstellen nicht nur erleben, sondern begleiten und weitergeben. Die Ausbildung zum Systemic Soulcoach gibt dir das Handwerk und die Tiefe dafür.',
+    description: 'Du willst systemisches Aufstellen nicht nur erleben, sondern auch selber anwenden oder sogar weitergeben. Die Ausbildung zum Systemic Soulcoach gibt dir das Handwerk und die Tiefe dafür.',
     ctaText: 'Zu den Ausbildungen →',
-    ctaHref: '/angebot#retreats',
+    ctaHref: '/ausbildung',
   },
   {
     icon: '/images/ebene/Ebene_2-8.svg',
-    title: 'Ich will meine Praxis vertiefen und Neues lernen',
-    description: 'Aufstellen ist kein einmaliges Erlebnis. In den monatlichen Kursen und der Membership bleibst du in der Praxis — regelmäßig, in der Gruppe, am Wachsen.',
-    ctaText: 'Zu den Kursen →',
-    ctaHref: '/kontakt',
+    title: 'Ich will meine Praxis vertiefen oder Neues lernen',
+    description: 'Aus unserem Jahrzehntelangen Erfahrungsschatz geben wir unser Wissen weiter. Wir bieten Weiterbildungen und Kurse in verschiedenen systemischen Bereichen an: Aufstellen, Hypnose, Numerologie, EFT und vieles mehr.',
+    ctaText: 'Zu den Workshops & Kursen →',
+    ctaHref: '/workshops',
+  },
+  {
+    icon: '/images/ebene/Ebene_2-6.svg',
+    title: 'Ich suche eine Veränderung in meinem Leben',
+    description: 'Etwas in deinem Leben fühlt sich fest an — eine Beziehung, eine Entscheidung, ein Muster, das sich wiederholt. Es gibt verschiedene Wege, das sichtbar und veränderbar zu machen.',
+    ctaText: 'Unsere Praxisangebote →',
+    ctaHref: '/praxisangebote',
   },
 ];
 
@@ -131,14 +124,14 @@ const faqItems = [
   
 
   <OfferCardsBlock
-    title="Wonach suchst du?"
+    title="Wie können wir dir helfen?"
     offers={offers}
   />
 
   <NarrativeBlock
     tone="light"
     imageSide="left"
-    image="/images/placeholder/placeholder-2.jpg"
+    image="/images/placeholder/Placeholder-6.jpg" 
     imageAlt=""
     title="Wissen, das nicht nur aus Büchern kommt."
     body="Systemisches Aufstellen macht sichtbar, was unter der Oberfläche wirkt. Muster in Familien, in Beziehungen, im eigenen Körper — sie lassen sich erkennen, verstehen und verändern. Theres Jansen arbeitet seit über 30 Jahren in der Heilkunde. Körperlich wie energetisch. Was sie lehrt und begleitet, hat sie selbst durchlebt, verfeinert und tausende Male in der Praxis bewährt. Das ist der Unterschied zwischen Wissen und Erfahrung."

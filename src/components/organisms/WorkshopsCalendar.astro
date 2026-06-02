@@ -1,0 +1,157 @@
+---
+type ChipColor = 'gold' | 'raspberry' | 'lavender' | 'fire';
+
+interface CalEvent {
+  day: number;
+  label: string;
+  color?: ChipColor;
+  href?: string;
+}
+
+interface Props {
+  /** Number of days in the displayed month. */
+  daysInMonth?: number;
+  /** Column (0 = Mo … 6 = So) that day 1 falls in. */
+  firstWeekday?: number;
+  events?: CalEvent[];
+  weekdayLabels?: string[];
+}
+
+const {
+  daysInMonth = 30,
+  firstWeekday = 5,
+  events = [],
+  weekdayLabels = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'],
+} = Astro.props;
+
+const eventsByDay = new Map<number, CalEvent[]>();
+for (const ev of events) {
+  const list = eventsByDay.get(ev.day) ?? [];
+  list.push(ev);
+  eventsByDay.set(ev.day, list);
+}
+
+// Leading blank cells + the numbered days, padded to a full final week.
+const cells: (number | null)[] = [
+  ...Array.from({ length: firstWeekday }, () => null),
+  ...Array.from({ length: daysInMonth }, (_, i) => i + 1),
+];
+while (cells.length % 7 !== 0) cells.push(null);
+---
+
+<div class="cal">
+  <div class="cal__scroll">
+    <div class="cal__grid">
+      <div class="cal__weekdays">
+        {weekdayLabels.map((d) => <span class="cal__weekday">{d}</span>)}
+      </div>
+      <div class="cal__days">
+        {cells.map((cell) =>
+          cell === null ? (
+            <div class="cal__cell cal__cell--empty" aria-hidden="true"></div>
+          ) : (
+            <div class="cal__cell">
+              <span class="cal__date">{cell}</span>
+              {eventsByDay.get(cell)?.map((ev) => {
+                const Tag = ev.href ? 'a' : 'span';
+                return (
+                  <Tag
+                    class={`cal__event cal__event--${ev.color ?? 'gold'}`}
+                    {...(ev.href ? { href: ev.href } : {})}
+                  >
+                    {ev.label}
+                  </Tag>
+                );
+              })}
+            </div>
+          )
+        )}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* ============================================================
+     WORKSHOPS CALENDAR — month grid with event chips.
+     Scrolls horizontally on narrow screens so columns stay aligned.
+     ============================================================ */
+  .cal { width: 100%; }
+  .cal__scroll { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  .cal__grid {
+    min-width: 680px;
+    border: 1px solid rgba(96, 29, 29, 0.18);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  @media (min-width: 1280px) { .cal__grid { min-width: 0; border-radius: 16px; } }
+
+  /* Weekday header row */
+  .cal__weekdays,
+  .cal__days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .cal__weekdays { background: #EFE7DA; }
+
+  .cal__weekday {
+    padding: 12px 16px;
+    font-family: 'ES Park', serif;
+    font-weight: var(--weight-medium);
+    font-size: var(--p2-size);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--c-cherrywood);
+    border-right: 1px solid rgba(96, 29, 29, 0.12);
+  }
+  .cal__weekday:last-child { border-right: 0; }
+
+  /* Day cells */
+  .cal__cell {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    min-height: 92px;
+    padding: 12px 14px;
+    border-top: 1px solid rgba(96, 29, 29, 0.12);
+    border-right: 1px solid rgba(96, 29, 29, 0.12);
+    background: var(--c-spring-wood);
+  }
+  @media (min-width: 1280px) { .cal__cell { min-height: 132px; padding: 16px; } }
+  .cal__cell:nth-child(7n) { border-right: 0; }
+
+  /* Leading blanks before day 1 get the muted fill from the design */
+  .cal__cell--empty { background: #F2EADF; }
+
+  .cal__date {
+    font-family: 'ES Park', serif;
+    font-weight: var(--weight-medium);
+    font-size: var(--p1-size);
+    line-height: 1;
+    color: var(--c-cherrywood);
+  }
+
+  /* Event chips */
+  .cal__event {
+    display: inline-block;
+    align-self: stretch;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-family: 'ES Park', serif;
+    font-weight: var(--weight-medium);
+    font-size: 13px;
+    line-height: 1.25;
+    text-decoration: none;
+  }
+  a.cal__event { transition: filter 200ms ease; }
+  a.cal__event:hover { filter: brightness(0.95); }
+
+  .cal__event--gold      { background: rgba(255, 216, 105, 0.55); color: #B07A0C; }
+  .cal__event--raspberry { background: rgba(159, 75, 103, 0.18); color: var(--c-raspberry); }
+  .cal__event--lavender  { background: rgba(142, 132, 182, 0.22); color: var(--c-lavender); }
+  .cal__event--fire      { background: rgba(236, 159, 39, 0.20); color: var(--c-fire); }
+</style>

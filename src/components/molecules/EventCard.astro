@@ -6,6 +6,7 @@ import Button from '@atoms/Button.astro';
 interface Props {
   image: string;
   imageAlt?: string;
+  eyebrow?: string;
   title: string;
   description: string;
   price: string;
@@ -17,6 +18,7 @@ interface Props {
 const {
   image,
   imageAlt = '',
+  eyebrow,
   title,
   description,
   price,
@@ -31,6 +33,7 @@ const {
     <div class="event-card__image-wrap">
       <img src={image} alt={imageAlt} class="event-card__image" />
     </div>
+    {eyebrow && <Heading variant="eyebrow" class="event-card__eyebrow">{eyebrow}</Heading>}
     <Heading level={3} class="event-card__title">{title}</Heading>
     <Text size="p2" class="event-card__body">{description}</Text>
   </div>
@@ -114,6 +117,13 @@ const {
     height: 100%;
     object-fit: cover;
     display: block;
+  }
+
+  /* ----- eyebrow (category | date) ----- */
+  .event-card__eyebrow {
+    color: var(--c-cherrywood);
+    text-transform: uppercase;
+    align-self: stretch;
   }
 
   /* ----- title ----- */

@@ -16,6 +16,8 @@ interface Props {
   pills: Pill[];
   workshopTitle?: string;
   workshopDescription?: string;
+  /** Optional brand symbol shown centered above the eyebrow. */
+  logo?: string;
 }
 
 const {
@@ -25,12 +27,14 @@ const {
   pills,
   workshopTitle,
   workshopDescription,
+  logo,
 } = Astro.props;
 ---
 
 <section class="workshops-hero">
   <div class="workshops-hero__inner">
     <div class="workshops-hero__text">
+      {logo && <img src={logo} alt="" aria-hidden="true" class="workshops-hero__logo" />}
       {eyebrow && <Heading variant="eyebrow" class="workshops-hero__eyebrow">{eyebrow}</Heading>}
       <Heading level={1} class="workshops-hero__title">
         <Fragment set:html={title} />
@@ -45,9 +49,7 @@ const {
     <div class="workshops-hero__card">
       {workshopTitle && <Heading level={2} class="workshops-hero__card-title">{workshopTitle}</Heading>}
       {workshopDescription && <Text size="p1" class="workshops-hero__card-desc">{workshopDescription}</Text>}
-      <div class="workshops-hero__calendar">
-        <Heading level={2} class="workshops-hero__calendar-title">Kalenderansicht</Heading>
-      </div>
+      <slot name="calendar" />
     </div>
   </div>
 </section>
@@ -60,19 +62,20 @@ const {
   /* ----- SECTION ----- */
   .workshops-hero {
     background: var(--c-spring-wood);
-    padding: 40px 20px 60px;
+    /* Top padding clears the fixed nav (mirrors Hero / OverviewHero rhythm). */
+    padding: 100px 20px 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   @media (min-width: 768px) {
-    .workshops-hero { padding: 60px 32px 80px; }
+    .workshops-hero { padding: 140px 32px 80px; }
   }
   @media (min-width: 1280px) {
-    .workshops-hero { padding: 60px 60px 90px; }
+    .workshops-hero { padding: 140px 60px 90px; }
   }
   @media (min-width: 1920px) {
-    .workshops-hero { padding: 90px 90px 120px; }
+    .workshops-hero { padding: 175px 90px 120px; }
   }
 
   /* ----- INNER ----- */
@@ -105,6 +108,16 @@ const {
     }
   }
 
+  /* ----- LOGO SYMBOL ----- */
+  .workshops-hero__logo {
+    display: block;
+    align-self: center;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+  }
+  @media (min-width: 1280px) { .workshops-hero__logo { width: 56px; height: 56px; } }
+
   /* ----- EYEBROW ----- */
   .workshops-hero__eyebrow {
     color: var(--c-cherrywood);
@@ -123,6 +136,7 @@ const {
     text-align: center;
     align-self: stretch;
   }
+  .workshops-hero__title :global(em) { font-style: italic; }
 
   /* ----- SUBTITLE ----- */
   .workshops-hero__subtitle {

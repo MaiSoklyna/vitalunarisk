@@ -79,20 +79,17 @@ const {
     .offer-card {
       border-width: 1px;
       border-radius: 25px;
-      padding: 284px 24px 24px;
-      gap: 40px;
+      padding: 200px 24px 24px;
+      gap: 24px;
+      justify-content: space-between;
       isolation: isolate;
     }
   }
-  /* Desktop++ — Figma "Property 1=Default": 411×628, padding 284 24 24, gap 40, icon absolute */
+  /* Desktop++ (Figma w=1920): CARD 558.67×803, padding 284 32 32, gap 24, radius 25 */
   @media (min-width: 1920px) {
     .offer-card {
-      width: 411px;
-      border-width: 1px;
-      border-radius: 25px;
-      padding: 284px 24px 24px;
-      gap: 40px;
-      min-height: 628px;
+      padding: 284px 32px 32px;
+      gap: 24px;
     }
   }
 
@@ -115,32 +112,25 @@ const {
     justify-content: flex-start;
   }
   .offer-card__icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  /* Desktop+ — icon floats absolutely, centered above the title (Figma Ebene_2) */
   @media (min-width: 1280px) {
     .offer-card__icon {
       position: absolute;
-      top: 36px;
+      top: 28px;
       left: 50%;
       transform: translateX(-50%);
-      width: 145px;
-      height: 203px;
+      width: 122px;
+      height: 171px;
       justify-content: center;
       z-index: 2;
     }
   }
-  /* Desktop++ — icon floats above the title-block at top-center */
+  /* Desktop++ (Figma w=1920): Ebene_2 145×203, top 36px, horizontally centered */
   @media (min-width: 1920px) {
-    .offer-card__icon {
-      position: absolute;
-      top: 36px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 145px;
-      height: 203px;
-      justify-content: center;
-    }
+    .offer-card__icon { top: 36px; width: 145px; height: 203px; }
   }
 
-  /* H3 title */
+  /* Title — H3 token on mobile/tablet; Figma custom 48px/120% w500 at desktop */
   .offer-card__title {
     font-family: 'ES Park', serif;
     font-weight: var(--weight-medium);
@@ -149,6 +139,8 @@ const {
     color: var(--c-cherrywood);
     margin: 0;
   }
+  @media (min-width: 1280px) { .offer-card__title { font-size: 40px; } }
+  @media (min-width: 1920px) { .offer-card__title { font-size: 48px; } }
 
   /* Body — P2 per Figma (18px at Desktop++ via --p1-size token) */
   .offer-card__body {

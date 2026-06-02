@@ -1,0 +1,748 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import OverviewHero from '@organisms/OverviewHero.astro';
+import NarrativeBlock from '@organisms/NarrativeBlock.astro';
+import Faq from '@organisms/Faq.astro';
+import NewsletterBlock from '@organisms/NewsletterBlock.astro';
+import Heading from '@atoms/Heading.astro';
+import Text from '@atoms/Text.astro';
+import Button from '@atoms/Button.astro';
+
+/* ----- "Drei Stufen, ein Weg" — three stage cards (image + eyebrow + title + body + CTA) ----- */
+const stages = [
+  {
+    image: '/images/cards/card-1.jpg', 
+    eyebrow: 'Teil 1 — Grundlagen',
+    title: 'Der Einstieg in die systemische Arbeit',
+    body: 'Du lernst die Grundlagen des systemischen Aufstellens — was Systeme sind, wie sie funktionieren, und was passiert, wenn sich etwas in ihnen festgesetzt hat. Du stellst, du wirst aufgestellt, du lernst durch Erleben.',
+    ctaHref: '/ausbildung/soulcoach-level-1',
+  },
+  {
+    image: '/images/cards/card-2.jpg',
+    eyebrow: 'Teil 2 — Vertiefung',
+    title: 'Vom Verständnis zur Praxis',
+    body: 'Du vertiefst dein methodisches Handwerk. Komplexere Systeme, schwierigere Dynamiken, dein eigener Stil als Begleitperson. Nach Teil 2 bist du bereit, eigenständig zu arbeiten.',
+    ctaHref: '/ausbildung/soulcoach-level-2',
+  },
+  {
+    image: '/images/cards/card-3.jpg',
+    eyebrow: 'Begleitung & Circle',
+    title: 'In der Praxis bleiben und weiterlernen',
+    body: 'Einmal im Monat gemeinsames Aufstellen in der Gruppe. Für alle, die nach der Ausbildung nicht aufhören wollen — die das Handwerk lebendig halten und weiter wachsen wollen.',
+    ctaHref: '/ausbildung/begleitung-kreis',
+  },
+];
+
+/* ----- "Nach dieser Ausbildung arbeitest du anderst." — outcomes arc (4 cards) ----- */
+const outcomes = [
+  {
+    title: 'Du siehst Systeme.',
+    description: 'Du erkennst, welche unsichtbaren Dynamiken in Familien, Organisationen oder Beziehungen wirken — und wie sie sich auf einzelne Menschen auswirken.',
+  },
+  {
+    title: 'Du begleitest sicher.',
+    description: 'Du führst Einzel- und Gruppenaufstellungen durch — mit klarer Haltung, methodischer Sicherheit und dem Wissen, wann du eingreifst und wann du Raum lässt.',
+  },
+  {
+    title: 'Du hältst die Spannung.',
+    description: 'Konflikte, Widerstand, schwierige Momente — du weisst sie zu halten, ohne dich zu verlieren. Du gibst dem System den Raum, den es braucht.',
+  },
+  {
+    title: 'Du arbeitest aus Erfahrung.',
+    description: 'Nicht aus Theorie. Was du weitergibst, hast du selbst durchlebt. Das ist der Unterschied — und das ist Teil der Methode.',
+  },
+];
+
+/* ----- "Stimmen aus der Ausbildung" — star reviews ----- */
+const reviews = [
+  {
+    quote: 'Die Ausbildung hat mir nicht nur Werkzeuge gegeben — sie hat meinen Blick auf die Welt verändert. Ich sehe heute Systeme, wo ich früher Zufälle vermutet habe.',
+    name: 'Maria S.',
+  },
+  {
+    quote: 'Theres bringt 30 Jahre Erfahrung in jeden Moment. Das spürt man — in der Klarheit, in der Tiefe, in der Sicherheit, die sie ausstrahlt.',
+    name: 'Thomas K.',
+  },
+  {
+    quote: 'Was hier passiert, ist mehr als Methodenlernen. Es ist eine Schule des Hinschauens — auf sich selbst, auf andere, auf das, was zwischen uns wirkt.',
+    name: 'Claudia R.',
+  },
+  {
+    quote: 'Nach der Ausbildung habe ich angefangen, eigenständig zu arbeiten. Das hätte ich vor zwei Jahren für unmöglich gehalten.',
+    name: 'Lena M.',
+  },
+];
+
+const faqItems = [
+  {
+    question: 'Wie läuft eine systemische Aufstellung ab?',
+    answer: 'In einer Aufstellung machen wir sichtbar, was zwischen den Mitgliedern eines Systems wirkt. Stellvertreter:innen oder Bodenanker nehmen Positionen ein, und im Raum zeigt sich, was vorher unbewusst war. Du erlebst, beobachtest und verstehst — und Veränderung wird möglich.',
+  },
+  {
+    question: 'Werden die Kosten von der Krankenkasse übernommen?',
+    answer: 'Systemisches Aufstellen ist eine Form der persönlichen und beruflichen Entwicklung und in der Regel keine kassenpflichtige Leistung. Für die Ausbildung erhältst du im Erstgespräch eine detaillierte Übersicht der Investition.',
+  },
+  {
+    question: 'Für wen ist VitaLunaris geeignet?',
+    answer: 'Für Menschen, die mit Tiefe arbeiten wollen — ob als angehende Begleiter:innen, in helfenden Berufen oder aus dem Wunsch, das eigene System wirklich zu verstehen. Vorwissen ist nicht nötig, Offenheit schon.',
+  },
+  {
+    question: 'Wie kann ich einen Termin buchen?',
+    answer: 'Am einfachsten über ein kostenloses Erstgespräch. Dort klären wir gemeinsam, ob die Ausbildung das Richtige für dich ist, und besprechen Ablauf, Termine und Investition.',
+  },
+  {
+    question: 'Wie lange dauert die Ausbildung?',
+    answer: 'Die Ausbildung erstreckt sich über mehrere Module, die aufeinander aufbauen. Du lernst in einem Rhythmus, der Tiefe zulässt — mit genug Zeit zwischen den Treffen, um das Erlebte zu integrieren. Die genauen Termine besprechen wir im Erstgespräch.',
+  },
+  {
+    question: 'Brauche ich Vorkenntnisse, um teilzunehmen?',
+    answer: 'Nein. Du musst keine therapeutische oder psychologische Vorbildung mitbringen. Wichtiger als Vorwissen sind deine Offenheit und die Bereitschaft, dich selbst und das eigene System wirklich anzuschauen.',
+  },
+  {
+    question: 'Finden die Treffen online oder vor Ort statt?',
+    answer: 'Systemisches Aufstellen lebt vom Raum und von der Begegnung — deshalb arbeiten wir vor Ort in der Gruppe. Wo und wann die Treffen stattfinden, erfährst du im Erstgespräch.',
+  },
+  {
+    question: 'Ersetzt die Ausbildung eine Therapie?',
+    answer: 'Nein. Systemic Soulwork ist persönliche und berufliche Entwicklung, keine medizinische oder psychotherapeutische Behandlung. Sie kann ein kraftvoller Weg der Selbsterkenntnis sein — ersetzt aber bei Bedarf keine ärztliche oder therapeutische Unterstützung.',
+  },
+];
+---
+
+<BaseLayout
+  title="Übersicht – Systemic Soulcoach Ausbildung bei VitaLunaris"
+  description="Übersicht der Ausbildung zum Systemic Soulcoach bei Theresia Jansen — Methode, Haltung und Tiefe, aufgebaut auf über 30 Jahren gelebter Praxis."
+  currentPath="/uebersicht"
+>
+  <OverviewHero
+    eyebrow="Systemic Soulcoach Ausbildung"
+    title="Systemische Arbeit.<br />Professionell begleiten<br />und wirklich tief gehen."
+    subtitle="Die Ausbildung zum Systemic Soulcoach bei Theresia Jansen. Für Menschen, die mit Tiefe arbeiten wollen — und die Tiefe suchen, die oberflächliche Methoden nicht erreichen. In zwei Stufen, aufgebaut auf über 30 Jahren gelebter Praxis."
+  />
+
+  {/* ===================== Methode. Haltung. Tiefe. ===================== */}
+  <NarrativeBlock
+    tone="lavender-gradient"
+    imageSide="left"
+    image="/images/placeholder/Placeholder-7.jpg"
+    imageAlt=""
+    title="Methode.<br />Haltung. Tiefe."
+    body="Systemische Arbeit schaut nicht auf die Person allein — sondern auf das System dahinter. Die Familie, die Geschichte, die Muster die von Generation zu Generation weitergehen ohne je ausgesprochen zu werden. Was sich im Leben einer Person immer wiederholt, sitzt selten nur in ihr. Ein Systemic Soulcoach sieht das System hinter der Person — und weiss, wie er es begleiten kann."
+  />
+
+  {/* ===================== Drei Stufen, ein Weg ===================== */}
+  <section class="stages">
+    <div class="stages__inner">
+      <div class="stages__header">
+        <Heading level={2} variant="h1" class="stages__title">Drei Stufen, ein Weg</Heading>
+        <Text size="p1" class="stages__intro">
+          Jede Stufe baut auf der vorherigen auf. Die Ausbildung ist in zwei Teile gegliedert, mit einer optionalen Begleitung für alle, die in der gemeinsamen Praxis bleiben wollen.
+        </Text>
+      </div>
+      <div class="stages__grid">
+        {stages.map((s) => (
+          <article class="stage-card">
+            <div class="stage-card__media">
+              <img src={s.image} alt="" loading="lazy" decoding="async" />
+            </div>
+            <div class="stage-card__text">
+              <Heading variant="eyebrow" class="stage-card__eyebrow">{s.eyebrow}</Heading>
+              <Heading level={3} variant="h2" class="stage-card__title">{s.title}</Heading>
+              <Text size="p1" class="stage-card__body">{s.body}</Text>
+            </div>
+            <div class="stage-card__cta">
+              <Button href={s.ctaHref} variant="primary" size="lg" fullWidth>Mehr erfahren</Button>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ===================== Nach dieser Ausbildung arbeitest du anderst. ===================== */}
+  <section class="outcomes">
+    <header class="outcomes__header">
+      <Heading level={2} variant="h1" class="outcomes__title">Nach dieser Ausbildung arbeitest du anderst.</Heading>
+    </header>
+
+    {/* Desktop (≥1024px): single curve + absolutely positioned cards at ≥1072 */}
+    <div class="outcomes__desktop">
+      <img src="/images/ebene/process-curve.svg" alt="" class="outcomes__curve" />
+      <div class="outcomes__cards">
+        {outcomes.map((o, i) => (
+          <article class={`outcomes__card outcomes__card--${i + 1}`}>
+            <Heading level={3} class="outcomes__card-title">{o.title}</Heading>
+            <Text size="p1" class="outcomes__card-body">{o.description}</Text>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    {/* Mobile/tablet (<1024px): two halves, each with its own curve + 2 cards */}
+    <div class="outcomes__mobile">
+      {[0, 2].map((startIdx) => (
+        <div class="outcomes__mobile-section">
+          <div class="outcomes__mobile-curve">
+            <img
+              src={startIdx === 0 ? '/images/ebene/process-curve-1.svg' : '/images/ebene/process-curve-2.svg'}
+              alt=""
+            />
+          </div>
+          <div class="outcomes__mobile-cards">
+            {outcomes.slice(startIdx, startIdx + 2).map((o) => (
+              <article class="outcomes__mobile-card">
+                <Heading level={3} class="outcomes__card-title">{o.title}</Heading>
+                <Text size="p1" class="outcomes__card-body">{o.description}</Text>
+              </article>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {/* ===================== Deine Lehrerin — Theresia Jansen ===================== */}
+  <section class="lehrerin">
+    <div class="lehrerin__inner">
+      <div class="lehrerin__media">
+        <img src="/images/placeholder/Placeholder-8.jpg" alt="Theresia Jansen" loading="lazy" decoding="async" />
+      </div>
+      <div class="lehrerin__content">
+        <Heading variant="eyebrow" class="lehrerin__eyebrow">Deine Lehrerin</Heading>
+        <Heading level={2} variant="h1" class="lehrerin__name">Theresia Jansen</Heading>
+        <Text size="p1" class="lehrerin__body">
+          Über 30 Jahre Praxis in systemischer Arbeit und Heilkunde — körperlich wie energetisch. Theresia lehrt nicht, was sie gelesen hat, sondern was sie selbst tausende Male erprobt, verfeinert und durchlebt hat.
+        </Text>
+        <Text size="p1" class="lehrerin__body">
+          Kein Online-Kurs. Kein importiertes Curriculum. Sondern 30 Jahre Praxis in der Deutschschweiz — mit echten Menschen, in echten Prozessen.
+        </Text>
+        <div class="lehrerin__cta">
+          <Button href="/ueber-uns" variant="primary" size="lg">Mehr über Theresia</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ===================== Stimmen aus der Ausbildung ===================== */}
+  <section class="reviews">
+    <div class="reviews__inner">
+      <Heading level={2} variant="h1" class="reviews__title">Stimmen aus der Ausbildung</Heading>
+      <div class="reviews__grid">
+        {reviews.map((r) => (
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="5 von 5 Sternen">
+              {[0, 1, 2, 3, 4].map(() => (
+                <svg class="review-card__star" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path d="M10 1l2.47 5.27L18 7.09l-4 4.06.95 5.85L10 14.27 5.05 17l.95-5.85-4-4.06 5.53-.82L10 1z" />
+                </svg>
+              ))}
+            </div>
+            <Text size="p1" class="review-card__quote">{r.quote}</Text>
+            <Text size="p1" class="review-card__name">{r.name}</Text>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ===================== Gold claim / quote ===================== */}
+  <section class="uquote">
+    <div class="uquote__inner">
+      <div class="uquote__media">
+        <img src="/images/placeholder/Placeholder-5.jpg" alt="" loading="lazy" decoding="async" />
+      </div>
+      <div class="uquote__content">
+        <Heading level={2} variant="h1" class="uquote__text">
+          Lerne Aufstellen von jemandem, die es lebt — und gib weiter, was wirklich trägt.
+        </Heading>
+        <Text size="p1" class="uquote__attribution">Theresia Jansen · VitaLunaris</Text>
+      </div>
+    </div>
+  </section>
+
+  {/* ===================== FAQ ===================== */}
+  <Faq title="FAQ" items={faqItems} />
+
+  {/* ===================== Noch nicht sicher? — Newsletter ===================== */}
+  <NewsletterBlock
+    title="Noch nicht sicher?"
+    body="Melde dich für den Newsletter an — wir informieren dich, wenn der nächste Ausbildungsstart bekannt ist. Und in der Zwischenzeit laden wir dich ein, in einem unserer Seminare zu schnuppern."
+    placeholder="E-mail Adresse"
+    submitText="Anmelden"
+  />
+</BaseLayout>
+
+<style>
+  /* ============================================================
+     STAGES — "Drei Stufen, ein Weg" (image + eyebrow + title + body + CTA)
+     ============================================================ */
+  .stages {
+    background: var(--c-spring-wood);
+    padding: 64px 20px;
+  }
+  @media (min-width: 768px)  { .stages { padding: 96px 32px; } }
+  @media (min-width: 1280px) { .stages { padding: 120px 60px; } }
+  @media (min-width: 1920px) { .stages { padding: 90px; } }
+
+  .stages__inner {
+    max-width: 1740px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+  @media (min-width: 1920px) { .stages__inner { gap: 64px; } }
+
+  .stages__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    width: 100%;
+    max-width: 862px;
+  }
+  @media (min-width: 768px) { .stages__header { gap: 40px; } }
+
+  .stages__title { color: var(--c-cherrywood); margin: 0; text-align: center; width: 100%; }
+  .stages__intro { color: var(--c-cherrywood); text-align: center; width: 100%; }
+
+  .stages__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+  }
+  @media (min-width: 768px)  { .stages__grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1280px) { .stages__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; } }
+
+  .stage-card {
+    box-sizing: border-box;
+    background: var(--c-spring-wood);
+    border: 1px solid var(--c-cherrywood);
+    border-radius: 16.67px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    height: 100%;
+  }
+  @media (min-width: 1280px) { .stage-card { padding: 24px; gap: 32px; border-radius: 20px; } }
+  @media (min-width: 1920px) { .stage-card { padding: 32px; gap: 40px; border-radius: 25px; } }
+
+  .stage-card__media {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--c-pale-gold);
+  }
+  @media (min-width: 1280px) { .stage-card__media { border-radius: 16px; } }
+  .stage-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .stage-card__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    flex-grow: 1;
+  }
+  .stage-card__eyebrow { color: var(--c-cherrywood); align-self: stretch; }
+
+  .stage-card__title {
+    color: var(--c-cherrywood);
+    font-family: 'ES Park', serif;
+    font-weight: var(--weight-regular);
+    font-size: var(--h2-size);
+    line-height: 1.15;
+    margin: 0;
+    align-self: stretch;
+  }
+  @media (min-width: 1280px) { .stage-card__title { font-size: 32px; } }
+
+  .stage-card__body { color: var(--c-cherrywood); font-size: var(--p1-size); line-height: 1.5; align-self: stretch; }
+
+  .stage-card__cta { align-self: stretch; width: 100%; }
+  .stage-card__cta :global(.btn) {
+    width: 100%;
+    height: 42px;
+    min-height: 42px;
+    padding: 10px;
+    font-size: var(--button-size);
+    line-height: 1.2;
+    border-radius: 100px;
+  }
+  @media (min-width: 1024px) {
+    .stage-card__cta :global(.btn) { height: 56px; min-height: 56px; padding: 18px; }
+  }
+
+  /* ============================================================
+     OUTCOMES — "Nach dieser Ausbildung arbeitest du anderst."
+     Mobile/tablet (<1024): two halves with separate curves (-1, -2)
+     Desktop (≥1024): single process-curve.svg
+     Desktop++ (≥1072): cards absolutely positioned per Figma
+     ============================================================ */
+  .outcomes {
+    background: var(--c-spring-wood);
+    padding: 64px 8px;
+    overflow: hidden;
+  }
+  @media (min-width: 768px)  { .outcomes { padding: 96px 8px; } }
+  @media (min-width: 1024px) { .outcomes { padding: 120px 8px; } }
+
+  .outcomes__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12px;
+    max-width: 1106px;
+    margin: 0 auto;
+  }
+  .outcomes__title { text-align: center; color: var(--c-cherrywood); margin: 0; }
+
+  .outcomes__card-title {
+    font-family: 'ES Park', serif;
+    font-weight: var(--weight-regular);
+    font-size: var(--h3-size);
+    line-height: 1.2;
+    color: var(--c-cherrywood);
+    margin: 0;
+  }
+  .outcomes__card-body { color: var(--c-cherrywood); font-size: var(--p1-size); line-height: 1.5; }
+
+  .outcomes__desktop { display: none; }
+  .outcomes__mobile  { display: block; margin-top: 24px; }
+
+  @media (min-width: 1024px) {
+    .outcomes__desktop { display: block; margin-top: 32px; }
+    .outcomes__mobile  { display: none; }
+    .outcomes__curve { display: block; width: 100%; height: auto; margin: 0; }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1071.98px) {
+    .outcomes__cards {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      padding: 0 90px;
+      margin-top: 40px;
+      min-height: 0;
+      box-sizing: border-box;
+    }
+    .outcomes__card {
+      position: static;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      color: var(--c-cherrywood);
+    }
+  }
+
+  @media (min-width: 1072px) {
+    .outcomes {
+      position: relative;
+      --cv: min(100vw, 1920px);
+      --cx: calc((100vw - var(--cv)) / 2);
+      min-height: calc(0.68177 * var(--cv));
+      padding: 120px 0;
+    }
+    .outcomes__header { max-width: 1106px; padding: 0 12px; margin: 0 auto; }
+
+    .outcomes__desktop {
+      position: static;
+      width: 100%;
+      max-width: 1920px;
+      margin: 32px auto 0;
+    }
+    .outcomes__curve { max-width: none; }
+    .outcomes__cards { position: static; display: block; padding: 0; margin: 0; }
+
+    .outcomes__card {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: clamp(16px, 2.1vw, 40px);
+      color: var(--c-cherrywood);
+    }
+    .outcomes__card--1 { left: calc(var(--cx) + 0.05000 * var(--cv)); top: calc(0.37344 * var(--cv)); width: calc(0.20104 * var(--cv)); }
+    .outcomes__card--2 { left: calc(var(--cx) + 0.27552 * var(--cv)); top: calc(0.29792 * var(--cv)); width: calc(0.20104 * var(--cv)); }
+    .outcomes__card--3 { left: calc(var(--cx) + 0.50677 * var(--cv)); top: calc(0.28958 * var(--cv)); width: calc(0.20000 * var(--cv)); }
+    .outcomes__card--4 { left: calc(var(--cx) + 0.73698 * var(--cv)); top: calc(0.38177 * var(--cv)); width: calc(0.20000 * var(--cv)); }
+
+    .outcomes__card-title { font-size: clamp(28px, 2.5vw, 48px); line-height: 1.15; }
+    .outcomes__card-body  { font-size: clamp(16px, 1.2vw, 23px); line-height: 1.5; }
+  }
+
+  .outcomes__mobile-section { margin-top: 24px; }
+  .outcomes__mobile-section:first-child { margin-top: 0; }
+
+  .outcomes__mobile-curve {
+    width: auto;
+    aspect-ratio: 600 / 130;
+    overflow: visible;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: 0;
+    box-sizing: content-box;
+  }
+  @media (min-width: 768px) and (max-width: 1023.98px) {
+    .outcomes__mobile-curve { padding-top: 16px; }
+  }
+  .outcomes__mobile-curve img { display: block; width: 100%; height: 100%; }
+
+  .outcomes__mobile-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 16px 12px 0;
+  }
+  @media (min-width: 480px) and (max-width: 1023.98px) {
+    .outcomes__mobile-cards {
+      flex-direction: row;
+      gap: 28px;
+      padding: 24px 12px 0;
+      align-items: flex-start;
+    }
+    .outcomes__mobile-cards > .outcomes__mobile-card {
+      flex: 1 1 0;
+      min-width: 0;
+      max-width: calc(50% - 14px);
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1023.98px) {
+    .outcomes__mobile-cards { gap: 44px; padding: 32px 44px 0; }
+    .outcomes__mobile-cards > .outcomes__mobile-card { max-width: calc(50% - 22px); }
+  }
+
+  .outcomes__mobile-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    text-align: left;
+    color: var(--c-cherrywood);
+  }
+  @media (min-width: 768px) { .outcomes__mobile-card { gap: 26.67px; } }
+
+  /* ============================================================
+     LEHRERIN — "Theresia Jansen" (portrait left, text right)
+     ============================================================ */
+  .lehrerin { background: var(--c-spring-wood); padding: 60px 20px; }
+  @media (min-width: 768px)  { .lehrerin { padding: 80px 32px; } }
+  @media (min-width: 1280px) { .lehrerin { padding: 90px 60px; } }
+  @media (min-width: 1920px) { .lehrerin { padding: 90px; } }
+
+  .lehrerin__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 1740px;
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px) {
+    .lehrerin__inner { flex-direction: row; align-items: center; gap: 64px; }
+  }
+  @media (min-width: 1920px) { .lehrerin__inner { gap: 100px; } }
+
+  .lehrerin__media {
+    flex: 0 0 auto;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16.67px;
+    background: var(--c-pale-gold);
+    aspect-ratio: 4 / 5;
+  }
+  @media (min-width: 1024px) { .lehrerin__media { width: 46%; border-radius: 20px; } }
+  @media (min-width: 1920px) { .lehrerin__media { width: 711px; border-radius: 25px; aspect-ratio: 711 / 826; } }
+  .lehrerin__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .lehrerin__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  @media (min-width: 1024px) { .lehrerin__content { gap: 26.67px; } }
+  @media (min-width: 1920px) { .lehrerin__content { gap: 32px; max-width: 813px; } }
+
+  .lehrerin__eyebrow { color: var(--c-cherrywood); }
+  .lehrerin__name {
+    color: var(--c-cherrywood);
+    font-family: 'ES Park', serif;
+    font-weight: var(--weight-regular);
+    font-size: var(--h1-size);
+    line-height: 1.1;
+    margin: 0;
+  }
+  .lehrerin__body { color: var(--c-cherrywood); font-size: var(--p1-size); line-height: 1.5; }
+  .lehrerin__cta { margin-top: 8px; }
+
+  /* ============================================================
+     REVIEWS — "Stimmen aus der Ausbildung" (star cards, cream→gold)
+     ============================================================ */
+  .reviews {
+    background: linear-gradient(180deg, #F9F4EE 50%, #FFD869 100%);
+    padding: 60px 20px;
+  }
+  @media (min-width: 768px)  { .reviews { padding: 80px 32px; } }
+  @media (min-width: 1280px) { .reviews { padding: 90px 60px; } }
+
+  .reviews__inner {
+    max-width: 1740px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+  .reviews__title { color: var(--c-cherrywood); text-align: center; margin: 0; max-width: 862px; }
+
+  .reviews__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+  @media (min-width: 640px)  { .reviews__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; } }
+  @media (min-width: 1024px) { .reviews__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+  .review-card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    background: var(--c-spring-wood);
+    border: 1px solid var(--c-cherrywood);
+    border-radius: 16.67px;
+    padding: 24px;
+    height: 100%;
+  }
+  @media (min-width: 1280px) { .review-card { border-radius: 20px; padding: 32px; gap: 24px; } }
+
+  .review-card__stars { display: flex; flex-direction: row; gap: 4px; color: var(--c-cherrywood); }
+  .review-card__star { display: block; }
+
+  .review-card__quote { color: var(--c-cherrywood); font-size: var(--p1-size); line-height: 1.5; flex-grow: 1; }
+  .review-card__name {
+    color: var(--c-cherrywood);
+    font-family: 'ES Park', serif;
+    font-weight: var(--weight-medium);
+    font-size: var(--p1-size);
+    line-height: 1.5;
+  }
+
+  /* ============================================================
+     GOLD QUOTE — overlay layout (text top-left, image absolutely
+     positioned right). Mirrors Narrative Block 1 (purple/image-right)
+     but on Pale Gold bg with Cherrywood text.
+     Mobile (360): stacked column, text on top, image card below
+     Tablet (768)+: image full-bleed background, text overlay top-left
+     ============================================================ */
+  .uquote { background: var(--c-pale-gold); color: var(--c-cherrywood); padding: 0; }
+
+  .uquote__inner {
+    position: relative;
+    display: block;
+    padding: 40px 20px;
+    max-width: none;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .uquote__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    color: var(--c-cherrywood);
+  }
+
+  .uquote__text {
+    font-family: 'ES Park', serif;
+    font-weight: var(--weight-regular);
+    font-size: var(--h2-size);
+    line-height: 1.15;
+    color: var(--c-cherrywood);
+    margin: 0;
+    align-self: stretch;
+  }
+  .uquote__attribution {
+    font-family: 'ES Park', serif;
+    font-weight: var(--weight-regular);
+    font-size: var(--p1-size);
+    line-height: 1.5;
+    color: var(--c-cherrywood);
+    opacity: 1;
+    max-width: none;
+  }
+
+  .uquote__media {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 332px;
+    border-radius: 16.67px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  .uquote__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  @media (min-width: 768px) {
+    .uquote__inner { padding: 60px 46px; min-height: 692px; }
+    .uquote__content { gap: 26.67px; max-width: 684px; }
+    .uquote__media {
+      position: absolute;
+      z-index: 1;
+      top: 16.552vw;     /* 211.86 @ 1280 */
+      left: 43.125vw;    /* 552 @ 1280 */
+      width: 51.5625vw;  /* 660 @ 1280 */
+      height: 32.135vw;  /* 411.33 @ 1280 */
+      margin-top: 0;
+      border-radius: 16.67px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .uquote__inner { padding: 60px; min-height: 720px; }
+    .uquote__content { gap: 26.67px; max-width: 759.33px; }
+    .uquote__text { font-size: 40px; line-height: 46px; }
+    .uquote__attribution { font-size: 16px; line-height: 150%; }
+    .uquote__media {
+      top: 211.86px;
+      left: 552px;
+      width: 660px;
+      height: 411.33px;
+      border-radius: 16.6667px;
+    }
+  }
+
+  /* Desktop++ (≥1920) — Figma Text spec: width 1139, gap 40, H2 60/69, P1 23/150 */
+  @media (min-width: 1920px) {
+    .uquote__inner { padding: 90px; min-height: 1080px; }
+    .uquote__content { width: 1139px; max-width: 1139px; gap: 40px; }
+    .uquote__text { font-size: 60px; line-height: 69px; }
+    .uquote__attribution { font-size: 23px; line-height: 150%; }
+    .uquote__media {
+      top: 317.79px;
+      left: 828px;
+      width: 990px;
+      height: 617px;
+      border-radius: 25px;
+    }
+  }
+</style>

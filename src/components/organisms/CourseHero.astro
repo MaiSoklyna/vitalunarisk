@@ -31,14 +31,12 @@ const {
 <section class="course-hero">
   <div class="course-hero__inner">
     <div class="course-hero__content">
-      <div class="course-hero__meta">
-        <Heading variant="eyebrow" class="course-hero__category">{categoryMeta}</Heading>
-        <Text size="p2" class="course-hero__duration">{durationMeta}</Text>
-      </div>
+      <Heading variant="eyebrow" class="course-hero__category">{categoryMeta}</Heading>
       <Heading level={1} class="course-hero__title">
         <Fragment set:html={title} />
       </Heading>
       {description && <Text size="p1" class="course-hero__desc">{description}</Text>}
+      {durationMeta && <Text size="p2" class="course-hero__duration">{durationMeta}</Text>}
       <Heading level={3} class="course-hero__price">{price}</Heading>
       <div class="course-hero__cta">
         <Button href={ctaHref} variant="primary" size="lg">{ctaText}</Button>
@@ -55,42 +53,41 @@ const {
      COURSE HERO — responsive (360 / 768 / 1280 / 1920)
      ============================================================ */
 
-  /* ----- SECTION ----- */
-  .course-hero {
-    background: var(--c-spring-wood);
-    padding: 40px 20px;
-  }
-  @media (min-width: 768px) {
-    .course-hero { padding: 60px 32px; }
-  }
-  @media (min-width: 1280px) {
-    .course-hero { padding: 60px; }
-  }
-  @media (min-width: 1920px) {
-    .course-hero { padding: 90px; }
-  }
+  /* ----- SECTION (mirrors Hero — top padding clears the fixed nav) ----- */
+  .course-hero { background: var(--c-spring-wood); padding: 72px 20px 64px; }
+  @media (min-width: 768px)  { .course-hero { padding: 120px 32px 80px; } }
+  @media (min-width: 1280px) { .course-hero { padding: 80px 60px 80px; } }
+  @media (min-width: 1920px) { .course-hero { padding: 175px 90px 90px; } }
 
   /* ----- INNER ----- */
   .course-hero__inner {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    align-items: stretch;
-    width: 100%;
-    max-width: 1740px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
   }
-  @media (min-width: 768px) {
+  .course-hero__media   { order: 0; }   /* image above text on mobile/tablet */
+  .course-hero__content { order: 1; }
+
+  @media (min-width: 1024px) {
+    .course-hero__inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; }
+    .course-hero__media   { order: 2; }  /* image right of text on desktop */
+    .course-hero__content { order: 1; }
+  }
+  /* Desktop++ — horizontal flow, fixed 170px gap, image right of text */
+  @media (min-width: 1920px) {
     .course-hero__inner {
+      display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: space-between;
       align-items: center;
-      gap: 40px;
+      gap: 170px;
+      max-width: none;
+      padding: 0;
     }
-  }
-  @media (min-width: 1920px) {
-    .course-hero__inner { gap: 170px; }
+    .course-hero__content { order: 1; }
+    .course-hero__media   { order: 2; }
   }
 
   /* ----- CONTENT ----- */
@@ -99,55 +96,30 @@ const {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 24px;
-    width: 100%;
-  }
-  @media (min-width: 768px) {
-    .course-hero__content {
-      flex: 1 1 45%;
-      max-width: 560px;
-    }
-  }
-  @media (min-width: 1280px) {
-    .course-hero__content { gap: 32px; }
+    gap: 26.67px;
   }
   @media (min-width: 1920px) {
     .course-hero__content {
       gap: 40px;
       width: 813px;
-      max-width: 813px;
-      flex: none;
+      flex: 0 0 813px;
     }
   }
 
-  /* ----- META ROW ----- */
-  .course-hero__meta {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    align-self: stretch;
-  }
-  @media (min-width: 1920px) {
-    .course-hero__meta { gap: 80px; }
-  }
-
-  /* Category */
+  /* ----- CATEGORY (eyebrow, full-width row) ----- */
   .course-hero__category {
     color: var(--c-cherrywood);
-    flex: 1;
+    align-self: stretch;
   }
 
-  /* Duration */
+  /* ----- DURATION (meta line below the description) ----- */
   .course-hero__duration {
     font-family: 'ES Park', serif;
     font-weight: var(--weight-regular);
     font-size: var(--p2-size);
     line-height: 1.4;
     color: var(--c-cherrywood);
-    text-align: right;
-    flex-shrink: 0;
+    align-self: stretch;
   }
 
   /* ----- TITLE ----- */
@@ -180,24 +152,21 @@ const {
     margin: 0;
   }
 
-  /* ----- MEDIA ----- */
+  /* ----- MEDIA (mirrors Hero) ----- */
   .course-hero__media {
-    width: 100%;
-    border-radius: 16.67px;
+    aspect-ratio: 4 / 5;
     overflow: hidden;
+    border-radius: 25px;
+    background: var(--c-pale-gold);
+    width: 100%;
   }
-  @media (min-width: 768px) {
-    .course-hero__media {
-      flex: 1 1 45%;
-      max-width: none;
-      border-radius: 20px;
-    }
-  }
+  @media (min-width: 1024px) { .course-hero__media { aspect-ratio: 1 / 1; } }
   @media (min-width: 1920px) {
     .course-hero__media {
       width: 858px;
-      flex: none;
-      border-radius: 25px;
+      height: 868px;
+      aspect-ratio: auto;
+      flex: 0 0 858px;
     }
   }
 
@@ -207,6 +176,5 @@ const {
     height: 100%;
     object-fit: cover;
     display: block;
-    aspect-ratio: 858 / 868;
   }
 </style>

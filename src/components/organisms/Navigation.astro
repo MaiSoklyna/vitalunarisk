@@ -7,19 +7,72 @@ interface Props {
 
 const { currentPath = '/' } = Astro.props;
 
-const navLinks = [
+interface NavChild {
+  href: string;
+  label: string;
+  /** Renders the item dimmed + non-interactive (Figma "opacity 0.2" state, e.g. coming soon). */
+  disabled?: boolean;
+}
+interface NavLink {
+  href: string;
+  label: string;
+  children?: NavChild[];
+  /** When true, clicking the parent navigates to its href instead of toggling the dropdown. */
+  navigateOnClick?: boolean;
+}
+
+const navLinks: NavLink[] = [
+  {
+    href: '/ausbildung',
+    label: 'Systemische Ausbildung',
+    children: [
+      { href: '/uebersicht', label: 'Übersicht' },
+      { href: '/ausbildung/soulcoach-level-1', label: 'Systemischer Soulcoach – Level 1' },
+      { href: '/ausbildung/soulcoach-level-2', label: 'Systemischer Soulcoach – Level 2' },
+      { href: '/ausbildung/begleitung-kreis', label: 'Begleitung & Kreis' },
+      { href: '/ausbildung/infoanlaesse', label: 'Infoanlässe' },
+    ],
+  },
+  {
+    href: '/workshops-kurse',
+    label: 'Workshops & Kurse',
+    navigateOnClick: true,
+    children: [
+      { href: '/workshops-kurse/kalender-uebersicht', label: 'Kalender & Übersicht' },
+      { href: '/workshops-kurse/aktueller-monatsworkshop', label: 'Aktueller Monatsworkshop' },
+    ],
+  },
+  {
+    href: '/praxisangebote',
+    label: 'Praxisangebote',
+    children: [
+      { href: '/praxisangebote', label: 'Übersicht' },
+      { href: '/praxisangebote/aufstellungen', label: '1:1 Aufstellungen' },
+      { href: '/praxisangebote/hypnose', label: 'Hypnose' },
+      { href: '/praxisangebote/numerologieberatung', label: 'Numerologieberatung' },
+      { href: '/praxisangebote/fussreflexzonenbehandlung', label: 'Fussreflexzonenbehandlung' },
+      { href: '/jawort-by-jansen', label: 'Jawort by Jansen' },
+    ],
+  },
+  {
+    href: '/wissen',
+    label: 'Wissen',
+    children: [
+      { href: '/wissen/journal', label: 'Journal' },
+      { href: '/wissen/lebenszahlrechner', label: 'Lebenszahlrechner' },
+    ],
+  },
+  { href: '/neuigkeiten', label: 'Neuigkeiten' },
   { href: '/ueber-uns', label: 'Über uns' },
-  { href: '/praxisangebote', label: 'Praxisangebote' },
-  { href: '/ausbildung', label: 'Ausbildung' },
-  { href: '/workshops', label: 'Workshops & Events' },
-  { href: '/membership', label: 'Membership' },
-  { href: '/wissen', label: 'Wissen' },
-  { href: '/jawort-by-jansen', label: 'JaWort by Jansen' },
   { href: '/kontakt', label: 'Kontakt' },
 ];
 
 const isActive = (href: string) =>
   href === '/' ? currentPath === '/' : currentPath.startsWith(href);
+
+/** A parent is active when its own route or any of its children match. */
+const isGroupActive = (item: NavLink) =>
+  isActive(item.href) || (item.children?.some((c) => isActive(c.href)) ?? false);
 ---
 
 <header id="main-header" class="nav">
@@ -30,14 +83,46 @@ const isActive = (href: string) =>
 
     <!-- Desktop pill nav (≥ 1280px) -->
     <nav class="nav__pill" aria-label="Hauptnavigation">
-      {navLinks.map(({ href, label }) => (
-        <a
-          href={href}
-          class={`nav__link ${isActive(href) ? 'nav__link--active' : ''}`}
-        >
-          {label}
-        </a>
-      ))}
+      {navLinks.map((item) =>
+        item.children ? (
+          <div class="nav__group" data-nav-group>
+            <a
+              href={item.href}
+              class={`nav__link nav__link--has-menu ${isGroupActive(item) ? 'nav__link--active' : ''}`}
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-nav-navigate={item.navigateOnClick ? 'true' : undefined}
+            >
+              {item.label}
+              <svg class="nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <div class="nav__menu" role="menu">
+              {item.children.map((child) => (
+                <a
+                  href={child.disabled ? undefined : child.href}
+                  role="menuitem"
+                  aria-disabled={child.disabled ? 'true' : undefined}
+                  tabindex={child.disabled ? -1 : undefined}
+                  class={`nav__menu-link ${child.disabled ? 'nav__menu-link--disabled' : ''} ${
+                    isActive(child.href) && !child.disabled ? 'nav__menu-link--active' : ''
+                  }`}
+                >
+                  {child.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <a
+            href={item.href}
+            class={`nav__link ${isActive(item.href) ? 'nav__link--active' : ''}`}
+          >
+            {item.label}
+          </a>
+        )
+      )}
     </nav>
 
     <!-- Compact menu trigger (< 1024px): hover/focus reveals the dropdown nav -->
@@ -54,14 +139,28 @@ const isActive = (href: string) =>
       </button>
 
       <div id="compact-menu" class="nav__dropdown" role="menu" aria-hidden="true">
-        {navLinks.map(({ href, label }) => (
-          <a
-            href={href}
-            role="menuitem"
-            class={`nav__dropdown-link ${isActive(href) ? 'nav__dropdown-link--active' : ''}`}
-          >
-            {label}
-          </a>
+        {navLinks.map((item) => (
+          <>
+            <a
+              href={item.href}
+              role="menuitem"
+              class={`nav__dropdown-link ${isGroupActive(item) ? 'nav__dropdown-link--active' : ''}`}
+            >
+              {item.label}
+            </a>
+            {item.children?.map((child) => (
+              <a
+                href={child.disabled ? undefined : child.href}
+                role="menuitem"
+                aria-disabled={child.disabled ? 'true' : undefined}
+                class={`nav__dropdown-link nav__dropdown-link--sub ${
+                  child.disabled ? 'nav__dropdown-link--disabled' : ''
+                } ${isActive(child.href) && !child.disabled ? 'nav__dropdown-link--active' : ''}`}
+              >
+                {child.label}
+              </a>
+            ))}
+          </>
         ))}
         <div class="nav__dropdown-cta">
           <Button href="/kontakt" variant="header" size="sm" fullWidth>
@@ -192,6 +291,88 @@ const isActive = (href: string) =>
   .nav__link--active { font-weight: 600; }
   @media (min-width: 1280px) { .nav__link { font-size: 16px; } }
 
+  /* ---------- DESKTOP DROPDOWN GROUP (≥ 1280px) — Figma w=1920 spec ----------
+     One data-driven pattern reused by every nav item that has children. */
+  .nav__group {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+  .nav__link--has-menu {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+  }
+  .nav__caret {
+    flex-shrink: 0;
+    transition: transform 220ms ease;
+  }
+  .nav__group:hover .nav__caret,
+  .nav__group:focus-within .nav__caret,
+  .nav__group.is-open .nav__caret { transform: rotate(180deg); }
+
+  .nav__menu {
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Padding / gap / radius scale per breakpoint; font-size stays on the
+       global --link-size token (Figma's 18px is ignored on purpose). */
+    gap: 20px;
+    padding: 24px;
+    background: var(--c-spring-wood);
+    border: 1px solid var(--c-cherrywood);
+    border-radius: 24px;
+    box-shadow: 0 16px 40px rgba(96, 29, 29, 0.14);
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 220ms ease, transform 220ms ease, visibility 220ms ease;
+  }
+  /* Hover bridge: keep the gap between trigger and panel "hot" so the
+     cursor can travel down without the menu closing. */
+  .nav__menu::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    height: 12px;
+  }
+  /* Desktop++ (≥ 1920px) — exact Figma box: 32px padding / 32px gap / 32px radius */
+  @media (min-width: 1920px) {
+    .nav__menu { gap: 32px; padding: 32px; border-radius: 32px; }
+  }
+
+  .nav__group:hover .nav__menu,
+  .nav__group:focus-within .nav__menu,
+  .nav__group.is-open .nav__menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav__menu-link {
+    font-family: 'ES Park', serif;
+    font-size: var(--link-size);
+    font-weight: var(--weight-regular);
+    line-height: 1.2;
+    color: var(--c-cherrywood);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 180ms ease;
+  }
+  .nav__menu-link:hover { opacity: 0.6; }
+  .nav__menu-link--active { font-weight: 600; }
+  .nav__menu-link--disabled { opacity: 0.2; pointer-events: none; cursor: default; }
+
   /* ---------- COMPACT TRIGGER + DROPDOWN ( < 1024px ) ---------- */
   .nav__compact {
     position: relative;
@@ -279,6 +460,13 @@ const isActive = (href: string) =>
   }
   .nav__dropdown-link:hover { background: rgba(96, 29, 29, 0.08); }
   .nav__dropdown-link--active { font-weight: 600; }
+  /* Nested sub-pages: indented + lighter, font-size stays on global token */
+  .nav__dropdown-link--sub {
+    padding-left: 28px;
+    font-weight: var(--weight-regular);
+    opacity: 0.85;
+  }
+  .nav__dropdown-link--disabled { opacity: 0.2; pointer-events: none; }
 
   .nav__dropdown-cta { margin-top: 8px; padding: 0 4px 4px; }
 </style>
@@ -314,6 +502,51 @@ const isActive = (href: string) =>
   document.addEventListener('click', (e) => {
     if (!compact) return;
     if (!compact.contains(e.target as Node)) setMenu(false);
+  });
+
+  // Desktop dropdown groups: hover/focus reveal is CSS-driven. A click on the
+  // parent trigger should NOT navigate — it opens (sticks) the submenu so the
+  // user can pick a child page. Clicking again, outside, or Escape closes it.
+  const navGroups = Array.from(document.querySelectorAll<HTMLElement>('[data-nav-group]'));
+
+  function closeGroups(except?: HTMLElement) {
+    navGroups.forEach((group) => {
+      if (group === except) return;
+      group.classList.remove('is-open');
+      group.querySelector('.nav__link--has-menu')?.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  navGroups.forEach((group) => {
+    const trigger = group.querySelector<HTMLElement>('.nav__link--has-menu');
+    if (!trigger) return;
+    const sync = (open: boolean) => trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+
+    // Click the parent: stick the menu open instead of following its href.
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const open = !group.classList.contains('is-open');
+      closeGroups(group);
+      group.classList.toggle('is-open', open);
+      sync(open);
+    });
+
+    group.addEventListener('mouseenter', () => sync(true));
+    group.addEventListener('mouseleave', () => { if (!group.classList.contains('is-open')) sync(false); });
+    group.addEventListener('focusin', () => sync(true));
+    group.addEventListener('focusout', () => {
+      window.requestAnimationFrame(() => {
+        if (!group.contains(document.activeElement) && !group.classList.contains('is-open')) sync(false);
+      });
+    });
+  });
+
+  // Close stuck submenus on outside click or Escape.
+  document.addEventListener('click', (e) => {
+    if (!navGroups.some((g) => g.contains(e.target as Node))) closeGroups();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeGroups();
   });
 
   // logo collapse on scroll

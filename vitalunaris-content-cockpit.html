@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VitaLunaris — Content Cockpit (for Miu &amp; Client)</title>
+<meta name="description" content="Per-page content audit and ready-to-use German copy for the VitaLunaris website. Prepared for the designer (Miu) and the client." />
+<style>
+  :root{
+    --cherry:#601D1D; --spring:#F9F4EE; --gold:#FFD869; --fire:#EC9F27;
+    --lav:#8E84B6; --rasp:#9F4B67; --green:#B4AD27; --blue:#87C6B3; --white:#fff;
+    --ok:#2f7d4f; --ok-bg:#e6f4ec; --warn:#9a6a00; --warn-bg:#fdf3da;
+    --bad:#a3322f; --bad-bg:#fbe7e6; --bug:#6b3fa0; --bug-bg:#efe8fb;
+    --ink:#3a2622; --muted:#7a655f; --line:#e7ddd2;
+    --radius:16px; --shadow:0 10px 30px rgba(96,29,29,.10);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--spring); color:var(--ink);
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--rasp)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:linear-gradient(120deg,#FFAC8A 0%,#F5E193 32%,#E1E2FC 66%,#8E84B6 100%);
+    color:var(--cherry); padding:48px 0 44px; border-bottom:3px solid var(--cherry);
+  }
+  .hero h1{margin:0 0 6px;font-size:2.05rem;letter-spacing:-.5px}
+  .hero .lede{margin:0;max-width:760px;font-size:1.02rem;color:#4a1717}
+  .hero .meta{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
+  .pill{display:inline-block;background:rgba(255,255,255,.65);border:1px solid rgba(96,29,29,.25);
+    padding:5px 12px;border-radius:100px;font-size:.82rem;font-weight:600;color:#4a1717}
+
+  /* ---------- KPI ---------- */
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:28px 0}
+  .kpi{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+    padding:16px 14px;text-align:center;box-shadow:var(--shadow)}
+  .kpi .n{font-size:1.9rem;font-weight:800;line-height:1}
+  .kpi .l{font-size:.78rem;color:var(--muted);margin-top:6px;font-weight:600;text-transform:uppercase;letter-spacing:.4px}
+  .kpi.t .n{color:var(--cherry)} .kpi.ok .n{color:var(--ok)} .kpi.warn .n{color:var(--warn)}
+  .kpi.bad .n{color:var(--bad)} .kpi.bug .n{color:var(--bug)}
+  @media(max-width:760px){.kpis{grid-template-columns:repeat(2,1fr)}}
+
+  /* ---------- SECTION ---------- */
+  section.block{margin:34px 0}
+  h2.sec{font-size:1.35rem;color:var(--cherry);margin:0 0 4px;display:flex;align-items:center;gap:10px}
+  h2.sec .em{font-size:1.3rem}
+  .sec-sub{color:var(--muted);margin:0 0 16px;font-size:.95rem}
+
+  /* ---------- LEGEND / FILTER ---------- */
+  .toolbar{position:sticky;top:0;z-index:20;background:rgba(249,244,238,.92);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 0;margin-bottom:8px}
+  .toolbar .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .filterbtn{cursor:pointer;border:1px solid var(--line);background:var(--white);
+    padding:7px 13px;border-radius:100px;font-size:.85rem;font-weight:600;color:var(--ink);
+    transition:.15s}
+  .filterbtn:hover{border-color:var(--cherry)}
+  .filterbtn.active{background:var(--cherry);color:var(--spring);border-color:var(--cherry)}
+  .search{flex:1;min-width:160px;padding:8px 14px;border:1px solid var(--line);border-radius:100px;
+    font-size:.9rem;background:var(--white);color:var(--ink)}
+  .search:focus{outline:none;border-color:var(--cherry)}
+
+  /* ---------- STATUS BADGES ---------- */
+  .badge{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:100px;
+    font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.3px}
+  .badge.ok{background:var(--ok-bg);color:var(--ok)}
+  .badge.warn{background:var(--warn-bg);color:var(--warn)}
+  .badge.bad{background:var(--bad-bg);color:var(--bad)}
+  .badge.bug{background:var(--bug-bg);color:var(--bug)}
+
+  /* ---------- PAGE CARD ---------- */
+  .card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+    margin-bottom:14px;box-shadow:var(--shadow);overflow:hidden}
+  .card.hidden{display:none}
+  .card__head{display:flex;align-items:center;gap:14px;padding:16px 18px;cursor:pointer;user-select:none}
+  .card__head:hover{background:#fbf7f1}
+  .card__route{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9rem;font-weight:700;color:var(--cherry)}
+  .card__title{font-size:.86rem;color:var(--muted)}
+  .card__grow{flex:1;min-width:0}
+  .card__chev{transition:.2s;color:var(--muted);flex-shrink:0}
+  .card.open .card__chev{transform:rotate(90deg)}
+  .card__body{display:none;padding:0 18px 20px;border-top:1px solid var(--line)}
+  .card.open .card__body{display:block}
+
+  .row{margin-top:16px}
+  .row h4{margin:0 0 7px;font-size:.82rem;text-transform:uppercase;letter-spacing:.5px;color:var(--cherry)}
+  ul.clean{margin:0;padding-left:18px}
+  ul.clean li{margin:4px 0}
+  .tag{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:5px;margin-right:6px;vertical-align:middle}
+  .tag.bug{background:var(--bug-bg);color:var(--bug)}
+  .tag.link{background:var(--bad-bg);color:var(--bad)}
+  .tag.copy{background:var(--warn-bg);color:var(--warn)}
+  .tag.fact{background:#e2eef6;color:#2a6080}
+
+  /* copy block */
+  .copyblk{background:#fbf6ef;border:1px dashed var(--cherry);border-radius:12px;padding:13px 14px;margin:8px 0;position:relative}
+  .copyblk .de{font-size:.95rem;color:var(--ink);white-space:pre-wrap}
+  .copyblk .where{font-size:.74rem;color:var(--muted);font-weight:700;margin-bottom:6px;text-transform:uppercase;letter-spacing:.3px}
+  .copybtn{position:absolute;top:10px;right:10px;font-size:.72rem;border:1px solid var(--line);background:var(--white);
+    border-radius:7px;padding:3px 9px;cursor:pointer;color:var(--muted)}
+  .copybtn:hover{border-color:var(--cherry);color:var(--cherry)}
+  .copybtn.done{background:var(--ok-bg);color:var(--ok);border-color:var(--ok)}
+
+  /* decisions / facts */
+  .panel{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+  .decision{border-left:4px solid var(--fire);padding:10px 0 10px 14px;margin:12px 0}
+  .decision .q{font-weight:700;color:var(--cherry)}
+  .decision .opt{font-size:.92rem;color:var(--ink)}
+  .factgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px 26px}
+  @media(max-width:680px){.factgrid{grid-template-columns:1fr}}
+  .fact{padding:8px 0;border-bottom:1px solid var(--line)}
+  .fact b{color:var(--cherry)}
+  .note{background:var(--warn-bg);border:1px solid #efd9a3;border-radius:12px;padding:12px 14px;font-size:.9rem;margin-top:14px}
+
+  footer.foot{background:var(--cherry);color:var(--spring);padding:30px 0;margin-top:40px;font-size:.9rem}
+  footer.foot a{color:var(--gold)}
+  .mini{font-size:.8rem;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<!-- ======================= HERO ======================= -->
+<header class="hero">
+  <div class="wrap">
+    <h1>VitaLunaris — Content Cockpit</h1>
+    <p class="lede">A page-by-page check of <b>which information belongs on each page</b>, what is still missing or wrong, and <b>ready-to-use German copy</b> to fill the gaps. Built so the client can sign off and Miu can finalise the designs — one source of truth for the whole site.</p>
+    <div class="meta">
+      <span class="pill">Prepared: 2 June 2026</span>
+      <span class="pill">For: Miu (Design) &amp; Client (Theresia &amp; Axel Jansen)</span>
+      <span class="pill">Scope: 9 built pages + 13 still-to-build routes</span>
+      <span class="pill">German copy = ready to paste · drafts need client OK</span>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= KPIs ======================= -->
+<div class="wrap">
+  <div class="kpis">
+    <div class="kpi t"><div class="n">22</div><div class="l">Routes in nav</div></div>
+    <div class="kpi ok"><div class="n">2</div><div class="l">Content ready</div></div>
+    <div class="kpi warn"><div class="n">7</div><div class="l">Built · needs copy</div></div>
+    <div class="kpi bad"><div class="n">13</div><div class="l">Not built yet</div></div>
+    <div class="kpi bug"><div class="n">9</div><div class="l">Bugs / conflicts</div></div>
+  </div>
+</div>
+
+<!-- ======================= TOOLBAR (filter) ======================= -->
+<div class="toolbar">
+  <div class="wrap">
+    <button class="filterbtn active" data-filter="all">All pages</button>
+    <button class="filterbtn" data-filter="ok">✅ Ready</button>
+    <button class="filterbtn" data-filter="warn">⚠️ Needs copy</button>
+    <button class="filterbtn" data-filter="bad">⛔ To build</button>
+    <button class="filterbtn" data-filter="bug">🐞 Has bug</button>
+    <input class="search" id="search" type="search" placeholder="Search route or page name…" />
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ======================= DECISIONS NEEDED ======================= -->
+  <section class="block">
+    <h2 class="sec"><span class="em">🧭</span> Decisions we need from the client first</h2>
+    <p class="sec-sub">These block correct content everywhere — please confirm before we finalise copy. Each is a real contradiction found inside the current site.</p>
+    <div class="panel">
+      <div class="decision">
+        <div class="q">1. Where is the practice located — Zürich or Buchs?</div>
+        <div class="opt">The homepage says “VitaLunaris in <b>Zürich</b>”, but the footer address is <b>Eichenaustrasse 32, CH-9470 Buchs (SG)</b>, and an FAQ says “vor Ort in Buchs”. <b>We assume Buchs (SG) is correct</b> and have written copy accordingly — please confirm. (If sessions also happen in Zürich, tell us and we’ll phrase it as “Buchs &amp; online, plus Zürich on request”.)</div>
+      </div>
+      <div class="decision">
+        <div class="q">2. How long is the full Ausbildung — 3 + 3 months, or 18–24 months?</div>
+        <div class="opt">The Level 1 and Level 2 pages each say “3 Monate”, but the Ausbildung overview FAQ says the whole training runs “18 bis 24 Monate”. These can’t both be true. Please give us the real duration of Level 1, Level 2, and the gap between them.</div>
+      </div>
+      <div class="decision">
+        <div class="q">3. What is the real “Praxisangebote” / “Angebote” structure?</div>
+        <div class="opt">The navigation lists <b>Praxisangebote</b> → 1:1 Aufstellungen · Hypnose · Numerologieberatung · Fussreflexzonenbehandlung · Jawort by Jansen. The footer lists a different set under <b>/angebot</b> → Einzelsitzung · Paarsitzung · Familienkonstellation · Retreat. We need <b>one</b> agreed list of services (with prices &amp; duration) before these pages can be written.</div>
+      </div>
+      <div class="decision">
+        <div class="q">4. Real dates, prices, group sizes &amp; the workshop schedule</div>
+        <div class="opt">All dates (“12.8.2026”, “28.6.2026”…), group sizes (“max. 5” vs “max. 9 Teilnehmer”) and some prices are placeholders. We need the real 2026/2027 workshop calendar, the Level 1 / Level 2 start dates, and confirmed prices (currently Level 1 = CHF 4’800, Level 2 = CHF 6’200).</div>
+      </div>
+      <div class="decision">
+        <div class="q">5. Real testimonials</div>
+        <div class="opt">Every quote (“Maria S.”, “Thomas K.”…) is invented placeholder text. <b>Testimonials must be genuine</b> quotes from real clients/participants (with their consent). Our German drafts below only show the right tone &amp; length — please replace them with real voices.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= GLOBAL ISSUES ======================= -->
+  <section class="block">
+    <h2 class="sec"><span class="em">🌐</span> Site-wide issues (affect many pages)</h2>
+    <p class="sec-sub">Fix once, benefits everywhere.</p>
+    <div class="panel">
+      <div class="row">
+        <h4><span class="tag link">Broken links</span> Internal links that point to pages that don’t exist</h4>
+        <ul class="clean">
+          <li><code>/kontakt</code> — <b>the #1 priority.</b> Every “Erstgespräch buchen / Jetzt anmelden / Termin buchen” button points here, but the page doesn’t exist. Right now no one can convert.</li>
+          <li><code>/ueber-uns</code> — linked from many pages (“Mehr über uns”), not built.</li>
+          <li><code>/angebot</code> &amp; <code>/angebot#…</code> — used on the homepage &amp; footer; the nav uses <code>/praxisangebote</code> instead. Pick one path and make all links match.</li>
+          <li>Homepage offer card 2 links to <code>/workshops</code>; the real route is <code>/workshops-kurse</code>.</li>
+          <li><code>/impressum</code>, <code>/datenschutz</code>, <code>/cookies</code>, <code>/sitemap</code> — footer legal links, all missing. <b>Legally required</b> for a Swiss site.</li>
+        </ul>
+      </div>
+      <div class="row">
+        <h4><span class="tag copy">Spelling / consistency</span> Same word written differently across the site</h4>
+        <ul class="clean">
+          <li>“arbeitest du <b>anderst</b>” → correct German is “<b>anders</b>” (appears as a big heading on Ausbildung &amp; Übersicht).</li>
+          <li>“<b>Nummerologie</b>” / “NUMMEROLOGIE” → correct German is “<b>Numerologie</b>” (one m). The nav already spells it right; the homepage, calendar &amp; course slug don’t.</li>
+          <li>Homepage hero title is broken: <code>Erforsche die&lt;br&gt; Systeme der .&lt;br&gt;Seele</code> — there’s a stray “ . ” and odd line breaks. Should read “Erforsche die Systeme der Seele”.</li>
+          <li>“EIch bin der Titel des Kurses” (Aktueller Monatsworkshop hero) — typo + placeholder.</li>
+        </ul>
+      </div>
+      <div class="row">
+        <h4><span class="tag fact">Factual / labelling</span></h4>
+        <ul class="clean">
+          <li>Homepage “Klient:innen-Stimme” shows <b>“Theresia &amp; Axel Jansen · Klient:innen seit 2024”</b> — the founders are labelled as their own clients. Replace with a real client quote, or relabel as a founders’ statement.</li>
+          <li>Footer tagline is still Lorem ipsum.</li>
+          <li>Images everywhere are <code>placeholder/Placeholder-*.jpg</code> with inconsistent capitalisation (<code>Placeholder_1</code> vs <code>placeholder-3</code>) — needs the real photo set with a single naming convention.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= PAGE CARDS (rendered by JS) ======================= -->
+  <section class="block">
+    <h2 class="sec"><span class="em">📄</span> Page-by-page</h2>
+    <p class="sec-sub">Click any page to expand. Green = content ready · Amber = built but needs real copy · Red = not built yet. “Copy” buttons put the German text on your clipboard.</p>
+    <div id="cards"></div>
+  </section>
+
+  <!-- ======================= CONFIRMED FACTS ======================= -->
+  <section class="block">
+    <h2 class="sec"><span class="em">📌</span> Confirmed facts (use these everywhere)</h2>
+    <p class="sec-sub">Taken from the footer — the only hard data currently in the project. Please double-check.</p>
+    <div class="panel">
+      <div class="factgrid">
+        <div class="fact"><b>Brand:</b> VitaLunaris — Theresia &amp; Axel Jansen</div>
+        <div class="fact"><b>Address:</b> Eichenaustrasse 32, CH-9470 Buchs (SG)</div>
+        <div class="fact"><b>Email:</b> info@vitalunaris.ch</div>
+        <div class="fact"><b>Phone (Theresia):</b> +41 79 291 74 02</div>
+        <div class="fact"><b>Phone (Axel):</b> +41 79 784 91 30</div>
+        <div class="fact"><b>Hours:</b> Mon–Fri 09:00–18:00 · Sat by arrangement</div>
+        <div class="fact"><b>Focus:</b> Systemisches Aufstellen, Heilkunde, Hypnose, Numerologie</div>
+        <div class="fact"><b>Tone:</b> deep but grounded — “ohne Esoterik-Kitsch”, clear, warm</div>
+      </div>
+      <div class="note">⚠️ The homepage currently contradicts this address by saying “Zürich”. Until the client confirms, treat <b>Buchs (SG)</b> as correct.</div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>VitaLunaris Content Cockpit · prepared for Miu &amp; the client · 2 June 2026.<br>
+    <span class="mini" style="color:#e9d9c9">This is a planning &amp; review document. German marked “ready” can go live as-is; German marked “draft” (testimonials, service descriptions) needs the client’s real information first. No existing project files were changed to create this.</span></p>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   DATA — every route, its status, issues, and proposed German copy
+   status: ok | warn | bad   ·  bug:true adds it to the 🐞 filter
+   ============================================================ */
+const PAGES = [
+  /* ---------------- HOMEPAGE ---------------- */
+  {
+    route:"/", title:"Startseite (Homepage)", file:"src/pages/index.astro",
+    status:"warn", bug:true,
+    purpose:"First impression: who VitaLunaris is, the three ways it helps (Ausbildung / Workshops / Praxis), proof, and a clear path to a free first call.",
+    issues:[
+      {t:"bug", s:"Hero title is broken — stray “ . ” and wrong line breaks: should simply read “Erforsche die Systeme der Seele”."},
+      {t:"copy", s:"“ClaimBlock” body (“Mehr Tiefe. Mehr Freude…”) is Lorem ipsum."},
+      {t:"fact", s:"Founders labelled as “Klient:innen seit 2024” — wrong. Use a real client quote or relabel."},
+      {t:"link", s:"Buttons point to /workshops (should be /workshops-kurse) and /angebot (doesn’t exist)."},
+      {t:"copy", s:"Subtitle spells “Nummerologie” — should be “Numerologie”. Says “in Zürich” — should be Buchs."}
+    ],
+    need:"Real claim paragraph, one real client testimonial, correct location, correct CTA links, real hero photo.",
+    copy:[
+      {where:"Hero title (fix)", de:"Erforsche die\nSysteme der Seele"},
+      {where:"Hero subtitle (fix spelling + location)", de:"VitaLunaris ist die Praxis für systemisches Aufstellen, Heilkunde, Hypnose und Numerologie. Gegründet und gelebt auf Jahrzehnten Erfahrung von Theresia und Axel Jansen — in Buchs (SG) und online."},
+      {where:"ClaimBlock body (replace Lorem ipsum)", de:"Tiefenpsychologisch fundiert, systemisch und körperorientiert. Wir begleiten Einzelpersonen, Paare und Familien — mit über 30 Jahren gelebter Erfahrung, klarer Sprache und einem geschützten Raum, in dem Veränderung wirklich geschehen darf."},
+      {where:"Featured testimonial (DRAFT — replace with a real client + consent)", de:"„Ich kam mit einer Frage, die ich seit Jahren mit mir trug — und ging mit einer Klarheit, die ich nicht für möglich gehalten hätte. Diese Begleitung wirkt leise und tief.“ — Klientin, seit 2024"}
+    ]
+  },
+
+  /* ---------------- ÜBERSICHT ---------------- */
+  {
+    route:"/uebersicht", title:"Ausbildung – Übersicht", file:"src/pages/uebersicht.astro",
+    status:"ok", bug:false,
+    purpose:"Sells the whole Systemic-Soulcoach training: method, the three stages, what changes after, the teacher (Theresia), reviews, FAQ.",
+    issues:[
+      {t:"copy", s:"Heading “arbeitest du anderst” → “anders”."},
+      {t:"link", s:"Links to /ausbildung/begleitung-kreis and /ueber-uns (both not built yet)."},
+      {t:"fact", s:"Real copy throughout — strongest page. Just needs real photos + the link targets to exist."}
+    ],
+    need:"Mostly done. Confirm the duration (see decision #2) and supply photos of Theresia + course situations.",
+    copy:[
+      {where:"Heading fix", de:"Nach dieser Ausbildung arbeitest du anders."}
+    ]
+  },
+
+  /* ---------------- AUSBILDUNG ---------------- */
+  {
+    route:"/ausbildung", title:"Systemische Ausbildung (landing)", file:"src/pages/ausbildung.astro",
+    status:"ok", bug:false,
+    purpose:"Main Ausbildung landing page: what you can do after, the three stages, voices, FAQ, newsletter.",
+    issues:[
+      {t:"copy", s:"Heading “arbeitest du anderst” → “anders”."},
+      {t:"fact", s:"FAQ says training lasts 18–24 months — conflicts with the 3-month Level pages (decision #2)."},
+      {t:"link", s:"CTA to /angebot (doesn’t exist) and /kontakt (not built)."}
+    ],
+    need:"Confirm duration; align /angebot vs /praxisangebote; real photos.",
+    copy:[
+      {where:"Heading fix", de:"Nach der Ausbildung arbeitest du anders."}
+    ]
+  },
+
+  /* ---------------- LEVEL 1 ---------------- */
+  {
+    route:"/ausbildung/soulcoach-level-1", title:"Systemic Soulcoach – Level 1", file:"src/pages/ausbildung/soulcoach-level-1.astro",
+    status:"warn", bug:true,
+    purpose:"Level-1 detail page: what you look at, voices, the teacher, the facts (start/duration/format/price), FAQ, info-event sign-up.",
+    issues:[
+      {t:"bug", s:"Bottom CTA on this Level 1 page says “Jetzt für Level 2 anmelden” — wrong, should be Level 1."},
+      {t:"copy", s:"The 4 “Wir schauen auf:” cards are all Lorem ipsum."},
+      {t:"copy", s:"All 4 reviews are Lorem ipsum; last FAQ item is Lorem ipsum."},
+      {t:"copy", s:"Info-event (“Infoanlass”) body is Lorem ipsum."}
+    ],
+    need:"Real descriptions for the 4 focus areas, real reviews, the last FAQ, the info-event text, and the correct Level-1 CTA label.",
+    copy:[
+      {where:"Card 1 — Familiensystem & Herkunft", de:"Woher du kommst, prägt, wie du heute fühlst, entscheidest und in Beziehung gehst. Wir machen die Dynamiken deiner Herkunftsfamilie sichtbar — und lösen, was dich unbewusst bindet."},
+      {where:"Card 2 — Eigene Muster & Loyalitäten", de:"Warum wiederholt sich dasselbe Muster immer wieder? Oft tragen wir aus Loyalität, was gar nicht unseres ist. Wir schauen hin — und geben zurück, was nicht zu uns gehört."},
+      {where:"Card 3 — Beziehungen & Bindungsdynamiken", de:"Wie du Nähe und Distanz regelst, hat ein System. Du lernst, deine Bindungsmuster zu erkennen — und sie bewusst und freier zu gestalten."},
+      {where:"Card 4 — Grundlagen systemischer Begleitung", de:"Du lernst Haltung und Handwerk, um systemische Prozesse zu lesen und sicher zu begleiten — das Fundament für alles, was in Level 2 folgt."},
+      {where:"Bottom CTA label (fix)", de:"Jetzt für Level 1 anmelden"},
+      {where:"Infoanlass body (replace Lorem ipsum)", de:"Lerne die Ausbildung unverbindlich kennen: An unserem Infoanlass erklären wir Inhalte, Ablauf und Investition und beantworten deine Fragen — online, ca. 60 Minuten."},
+      {where:"Last FAQ (DRAFT Q&A)", de:"Frage: Kann ich Level 1 auch nur für mich selbst machen?\nAntwort: Ja. Viele Teilnehmer:innen kommen ausschliesslich für die eigene Entwicklung. Ob du das Gelernte später beruflich einsetzt, bleibt vollständig dir überlassen."},
+      {where:"Reviews (DRAFT — replace with real voices)", de:"„Level 1 hat mir zum ersten Mal gezeigt, dass meine Themen einen Ort haben — und dass sie sich bewegen lassen.“ — Teilnehmerin Level 1"}
+    ]
+  },
+
+  /* ---------------- LEVEL 2 ---------------- */
+  {
+    route:"/ausbildung/soulcoach-level-2", title:"Systemic Soulcoach – Level 2", file:"src/pages/ausbildung/soulcoach-level-2.astro",
+    status:"warn", bug:false,
+    purpose:"Level-2 detail page (for Level-1 graduates): the professional craft, voices, the teacher, the facts, FAQ, info-event.",
+    issues:[
+      {t:"copy", s:"The 4 “Wir schauen auf:” cards are all Lorem ipsum."},
+      {t:"copy", s:"All 4 reviews are Lorem ipsum; last FAQ item is Lorem ipsum."},
+      {t:"copy", s:"Info-event body is Lorem ipsum."}
+    ],
+    need:"Real descriptions for the 4 craft areas, real reviews, the last FAQ, info-event text. Price shown: CHF 6’200 — confirm.",
+    copy:[
+      {where:"Card 1 — Aufstellungsbrett", de:"Du lernst, mit dem Aufstellungsbrett zu arbeiten — präzise, auch im Einzelsetting. Ein Werkzeug, mit dem du Systeme sichtbar machst, ohne eine Gruppe zu brauchen."},
+      {where:"Card 2 — Prozessführung & Gruppenleitung", de:"Du führst Aufstellungen sicher durch eine Gruppe: Anliegen klären, Repräsentant:innen wählen, Bewegungen lesen und den Prozess sauber zum Abschluss bringen."},
+      {where:"Card 3 — Coaching-Haltung & Ethik", de:"Begleiten heisst Verantwortung tragen. Du entwickelst eine klare Haltung, kennst deine Grenzen und arbeitest ethisch, transparent und im Dienst der Klient:innen."},
+      {where:"Card 4 — Nervensystem & Trauma", de:"Du lernst, Stress- und Trauma-Reaktionen im Körper zu erkennen und behutsam zu begleiten — damit Tiefe nie zur Überforderung wird."},
+      {where:"Infoanlass body (replace Lorem ipsum)", de:"Du hast Level 1 abgeschlossen und überlegst weiterzugehen? Am Infoanlass zeigen wir, was Level 2 fachlich verlangt und ermöglicht — online, ca. 60 Minuten."},
+      {where:"Reviews (DRAFT — replace with real voices)", de:"„In Level 2 wurde aus Selbsterfahrung ein Handwerk. Heute leite ich eigene Aufstellungen — mit einer Sicherheit, die ich Theres verdanke.“ — Absolvent:in Level 2"}
+    ]
+  },
+
+  /* ---------------- WORKSHOPS LANDING ---------------- */
+  {
+    route:"/workshops-kurse", title:"Workshops & Kurse (landing)", file:"src/pages/workshops-kurse.astro",
+    status:"warn", bug:false,
+    purpose:"Calendar + the monthly-workshop idea, the next upcoming events, voices, the founders, FAQ, newsletter.",
+    issues:[
+      {t:"copy", s:"The 3 “Nächste Kurse” cards all read “Lorem ipsum dolor sit amet”."},
+      {t:"copy", s:"Testimonials are duplicated and all named “Maria S.”."},
+      {t:"fact", s:"Filter pills (Alle / Monats-Workshops / …) are not clickable yet (href=\"#\")."},
+      {t:"fact", s:"Calendar dates are placeholders — needs the real schedule (decision #4)."}
+    ],
+    need:"The real upcoming workshops (title, date, time, format, price, max participants) + varied real testimonials.",
+    copy:[
+      {where:"Event-card template (client fills the real data)", de:"Titel: [Workshop-Name]\nEyebrow: [Kategorie] | [Datum] [Uhrzeit]\nText: [1–2 Sätze: worum geht es und für wen]\nPreis: [z. B. 120 CHF / Kostenlos]\nDauer: [z. B. 90 Min. | Online / vor Ort in Buchs]"},
+      {where:"Testimonial variety (DRAFT — use real names/quotes)", de:"„Ich bin wegen eines Numerologie-Abends gekommen — drei Monate später war ich in Level 1. Es hat sich alles gefügt.“ — Teilnehmerin"}
+    ]
+  },
+
+  /* ---------------- KALENDER-ÜBERSICHT ---------------- */
+  {
+    route:"/workshops-kurse/kalender-uebersicht", title:"Kurs-Detail (currently named “Kalender & Übersicht”)", file:"src/pages/workshops-kurse/kalender-uebersicht.astro",
+    status:"warn", bug:true,
+    purpose:"Detail page for a single workshop (here: “Einführung ins Systemische Aufstellen”).",
+    issues:[
+      {t:"bug", s:"Route name says “kalender-uebersicht” but the page is actually a single course detail — the name misleads. Either rename, or make it the real calendar overview."},
+      {t:"copy", s:"“Was wir anschauen” section title + body are Lorem ipsum."},
+      {t:"copy", s:"All testimonials + the 3 “Weitere Kurse” cards are Lorem ipsum."}
+    ],
+    need:"Decide if this is a calendar or a course-detail page; real “Was wir anschauen” text; real related courses.",
+    copy:[
+      {where:"“Was wir anschauen” (DRAFT for the intro workshop)", de:"Titel: Was systemisches Aufstellen sichtbar macht\nText: An diesem Abend erlebst du, wie eine Aufstellung funktioniert: Wir stellen ein einfaches Anliegen in den Raum und schauen gemeinsam, was sich zeigt. Kein Vorwissen nötig — nur Neugier und die Bereitschaft, hinzuschauen."}
+    ]
+  },
+
+  /* ---------------- AKTUELLER MONATSWORKSHOP ---------------- */
+  {
+    route:"/workshops-kurse/aktueller-monatsworkshop", title:"Aktueller Monatsworkshop", file:"src/pages/workshops-kurse/aktueller-monatsworkshop.astro",
+    status:"warn", bug:true,
+    purpose:"Highlights the current month’s workshop with full details + sign-up.",
+    issues:[
+      {t:"bug", s:"Hero title is “EIch bin der Titel des Kurses” — typo + placeholder."},
+      {t:"copy", s:"Hero description, “Was wir anschauen”, testimonials & related cards are all Lorem ipsum."},
+      {t:"fact", s:"Says “Max. 9 Teilnehmer” while other pages say “max. 5” — pick one (decision #4)."}
+    ],
+    need:"The real current-month workshop: title, what it covers, date/time/format, price, max participants, real voices.",
+    copy:[
+      {where:"Hero (template — client fills monthly)", de:"Titel: [Thema des Monats]\nMeta: MONATS-WORKSHOP | [Monat] | [Datum] [Uhrzeit] | [Dauer] | [Online / Buchs] | max. [n] Teilnehmer\nText: [2–3 Sätze: worum geht es diesen Monat und was nimmst du mit]\nPreis: [Betrag / Kostenlos]"}
+    ]
+  },
+
+  /* ---------------- KURS [slug] ---------------- */
+  {
+    route:"/kurs/[slug]", title:"Einzelkurs-Vorlage (dynamic)", file:"src/pages/kurs/[slug].astro",
+    status:"warn", bug:true,
+    purpose:"Reusable template for every single course/event (one URL per course).",
+    issues:[
+      {t:"bug", s:"Only ONE course exists (nummerologie-august) and almost everything is Lorem ipsum / “Ich bin der Titel des Kurses”."},
+      {t:"copy", s:"Spelled “NUMMEROLOGIE” — should be “Numerologie”."},
+      {t:"fact", s:"Needs a real course catalogue (one entry per workshop) to generate these pages."}
+    ],
+    need:"A structured list of all real courses. Each entry feeds one page automatically.",
+    copy:[
+      {where:"Per-course data template", de:"slug: numerologie-august\nKategorie/Datum: Numerologie | August | [Datum]\nTitel: [echter Kurstitel]\nKurztext: [1–2 Sätze]\nPreis: [Betrag]\nDauer/Ort: [90 Min. | Online]\nWann/Wo/Was: [die drei Infokarten]"}
+    ]
+  },
+
+  /* ================= MISSING PAGES ================= */
+  {
+    route:"/kontakt", title:"Kontakt — ⭐ build first", file:"— not built —",
+    status:"bad", bug:true,
+    purpose:"The conversion page. Every CTA on the whole site points here, so this is the highest priority.",
+    issues:[
+      {t:"link", s:"Linked from literally every page’s main button — currently a dead end."}
+    ],
+    need:"Contact form (name, email, phone, message), free-first-call booking, address + map, email, both phones, opening hours, response-time promise.",
+    copy:[
+      {where:"Intro copy (ready)", de:"Lass uns sprechen. Buche ein kostenloses, unverbindliches Erstgespräch von 30 Minuten — online oder vor Ort in Buchs. Wir klären gemeinsam, was dich bewegt und welcher Weg zu dir passt."},
+      {where:"Form labels", de:"Name · E-Mail · Telefon (optional) · Worum geht es? · Absenden"},
+      {where:"Reassurance line", de:"Wir melden uns in der Regel innerhalb von zwei Werktagen. Deine Angaben behandeln wir vertraulich."}
+    ]
+  },
+  {
+    route:"/ueber-uns", title:"Über uns — build early", file:"— not built —",
+    status:"bad", bug:false,
+    purpose:"The trust page: who Theresia and Axel are, their story, philosophy, qualifications.",
+    issues:[{t:"link", s:"“Mehr über uns” buttons across the site point here."}],
+    need:"Theresia bio (30+ yrs, healing/systemic work), Axel bio (hypnosis, numerology), the VitaLunaris story, photos, qualifications, values.",
+    copy:[
+      {where:"Opening (ready)", de:"VitaLunaris ist kein Konzept — es ist ein Feld, in dem wir Raum für dich halten. Hinter dieser Praxis stehen Theresia und Axel Jansen: über 30 Jahre gelebte Erfahrung in systemischer Arbeit, Heilkunde, Hypnose und Numerologie — bodenständig, klar und ohne Esoterik-Kitsch."}
+    ]
+  },
+  {
+    route:"/praxisangebote", title:"Praxisangebote – Übersicht", file:"— not built —",
+    status:"bad", bug:false,
+    purpose:"Overview of all 1:1 / practice services with links to each detail page.",
+    issues:[{t:"link", s:"Conflicts with the footer’s /angebot structure — resolve decision #3 first."}],
+    need:"Agreed service list, each with a short description, who it’s for, price and duration.",
+    copy:[
+      {where:"Intro (ready)", de:"Manchmal braucht es keinen Kurs, sondern Begleitung — für dich, für euch als Paar oder für eine konkrete Frage. Unsere Praxisangebote sind individuelle Sitzungen, in denen wir genau dort arbeiten, wo sich bei dir etwas bewegen will."}
+    ]
+  },
+  {
+    route:"/praxisangebote/aufstellungen", title:"1:1 Aufstellungen", file:"— not built —",
+    status:"bad", bug:false,
+    purpose:"Detail page for individual systemic constellation sessions.",
+    issues:[], need:"What a 1:1 constellation is, for whom, how it runs, duration, price, location/online.",
+    copy:[{where:"Lead (DRAFT)", de:"In der Einzelaufstellung machen wir dein Anliegen mit Bodenankern oder dem Aufstellungsbrett sichtbar — ganz ohne Gruppe. Geschützt, klar und in deinem Tempo."}]
+  },
+  {
+    route:"/praxisangebote/hypnose", title:"Hypnose", file:"— not built —",
+    status:"bad", bug:false,
+    purpose:"Detail page for Axel’s hypnosis sessions.",
+    issues:[], need:"What this hypnosis is (and isn’t — “ohne Bühnentricks”), use cases, session length, price.",
+    copy:[{where:"Lead (DRAFT)", de:"Hypnose bei VitaLunaris hat nichts mit Bühnenshows zu tun. Axel arbeitet präzise und respektvoll mit deinem Unterbewusstsein — um Muster zu lösen, Ruhe zu finden und Veränderung von innen anzustossen."}]
+  },
+  {
+    route:"/praxisangebote/numerologieberatung", title:"Numerologieberatung", file:"— not built —",
+    status:"bad", bug:false,
+    purpose:"Detail page for numerology readings.",
+    issues:[{t:"copy", s:"Make sure it’s spelled “Numerologie” (one m) everywhere."}],
+    need:"What a numerology reading reveals, the format, what the client receives, duration, price.",
+    copy:[{where:"Lead (DRAFT)", de:"Zahlen erzählen eine Geschichte über dich. In der Numerologieberatung liest Axel deine Zahlen — direkt und ohne Kitsch — und übersetzt sie in konkrete Impulse für deinen Alltag und deine Entscheidungen."}]
+  },
+  {
+    route:"/praxisangebote/fussreflexzonenbehandlung", title:"Fussreflexzonenbehandlung", file:"— not built —",
+    status:"bad", bug:false,
+    purpose:"Detail page for reflexology treatment.",
+    issues:[], need:"What the treatment does, benefits, session length, price.",
+    copy:[{where:"Lead (DRAFT)", de:"Über die Reflexzonen der Füsse erreichen wir den ganzen Körper. Diese Behandlung löst Spannungen, bringt das Nervensystem zur Ruhe und unterstützt deine Selbstregulation — eine wohltuende Ergänzung zur systemischen Arbeit."}]
+  },
+  {
+    route:"/jawort-by-jansen", title:"Jawort by Jansen", file:"— not built —",
+    status:"bad", bug:false,
+    purpose:"Likely a wedding-ceremony / free-officiant service by the Jansens — needs confirmation.",
+    issues:[{t:"fact", s:"We need the client to tell us exactly what “Jawort by Jansen” offers."}],
+    need:"What this service is (free wedding ceremonies?), what’s included, area covered, pricing, gallery.",
+    copy:[{where:"Lead (DRAFT — confirm concept)", de:"Jawort by Jansen begleitet euren grossen Moment: eine freie Trauung, persönlich gestaltet und mit Herz gehalten. Eure Geschichte, eure Worte — wir geben ihnen einen würdigen Rahmen."}]
+  },
+  {
+    route:"/ausbildung/begleitung-kreis", title:"Begleitung & Kreis", file:"— not built —",
+    status:"bad", bug:false,
+    purpose:"The ongoing monthly practice group for graduates (the “third stage”).",
+    issues:[{t:"link", s:"Linked as the 3rd stage card on the Übersicht page."}],
+    need:"How the monthly circle works, who can join, cost/membership, rhythm.",
+    copy:[{where:"Lead (ready)", de:"Einmal im Monat treffen wir uns zum gemeinsamen Aufstellen in der Gruppe — für alle, die nach der Ausbildung in der Praxis bleiben, ihr Handwerk lebendig halten und weiter wachsen wollen."}]
+  },
+  {
+    route:"/ausbildung/infoanlaesse", title:"Infoanlässe", file:"— not built —",
+    status:"bad", bug:false,
+    purpose:"Lists upcoming free information events about the training.",
+    issues:[], need:"List of info-event dates, format (online), duration, sign-up.",
+    copy:[{where:"Lead (ready)", de:"Du willst die Ausbildung erst kennenlernen? An unseren Infoanlässen erklären wir Inhalte, Ablauf und Investition — und beantworten alle deine Fragen. Kostenlos und unverbindlich."}]
+  },
+  {
+    route:"/wissen/journal", title:"Journal (Blog)", file:"— not built —",
+    status:"bad", bug:false,
+    purpose:"Articles / blog that build trust and help SEO.",
+    issues:[], need:"A handful of starter articles, or at least 1–2 to launch with; category structure.",
+    copy:[{where:"Section intro (ready)", de:"Gedanken, Übungen und Geschichten aus unserer Praxis — über Systeme, Heilung und das, was zwischen uns wirkt."}]
+  },
+  {
+    route:"/wissen/lebenszahlrechner", title:"Lebenszahlrechner (tool)", file:"— not built —",
+    status:"bad", bug:false,
+    purpose:"Interactive tool: enter your birth date → get your life number + a short reading. Great lead magnet.",
+    issues:[{t:"fact", s:"Needs the calculation logic + the meaning text for each number from Axel."}],
+    need:"The calculation rules and a short description for each life number (1–9, master numbers).",
+    copy:[{where:"Tool intro (ready)", de:"Deine Lebenszahl verrät, welche Themen dich durchs Leben begleiten. Gib dein Geburtsdatum ein und entdecke deine Zahl — als kleiner erster Einblick in die Welt der Numerologie."}]
+  },
+  {
+    route:"/neuigkeiten", title:"Neuigkeiten (News)", file:"— not built —",
+    status:"bad", bug:false,
+    purpose:"Announcements: new course dates, events, milestones.",
+    issues:[], need:"Decide if this is separate from the Journal, or merge the two.",
+    copy:[{where:"Note", de:"Empfehlung: „Neuigkeiten“ und „Journal“ zu einem Bereich zusammenlegen, falls der Inhalt sonst zu dünn wird."}]
+  },
+  {
+    route:"/impressum · /datenschutz · /cookies · /sitemap", title:"Legal pages (required)", file:"— not built —",
+    status:"bad", bug:true,
+    purpose:"Legally required for a Swiss business website; linked from the footer.",
+    issues:[{t:"link", s:"All four footer legal links currently lead nowhere."}],
+    need:"Imprint (owner, address, contact, UID if applicable), privacy policy (GDPR/revDSG), cookie notice. Usually drafted with the client/lawyer.",
+    copy:[{where:"Note", de:"Pflichtangaben — bitte mit dem Kunden (oder dessen Rechtsberatung) erstellen. Mindestens: Impressum + Datenschutzerklärung vor dem Go-Live."}]
+  }
+];
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+const badgeText = {ok:"Ready", warn:"Needs copy", bad:"To build"};
+const tagLabel = {bug:"bug", link:"broken link", copy:"copy", fact:"info"};
+const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+
+function cardHTML(p, i){
+  const issues = (p.issues||[]).map(x =>
+    `<li><span class="tag ${x.t}">${tagLabel[x.t]||x.t}</span>${x.s}</li>`).join("");
+  const copy = (p.copy||[]).map((c,ci) =>
+    `<div class="copyblk">
+       <div class="where">${c.where}</div>
+       <div class="de" id="de-${i}-${ci}">${esc(c.de)}</div>
+       <button class="copybtn" data-target="de-${i}-${ci}">Copy</button>
+     </div>`).join("");
+  return `<div class="card" data-status="${p.status}" data-bug="${p.bug?1:0}"
+            data-search="${(p.route+' '+p.title).toLowerCase()}">
+    <div class="card__head" onclick="this.parentNode.classList.toggle('open')">
+      <span class="badge ${p.status}">${badgeText[p.status]}</span>
+      <div class="card__grow">
+        <div class="card__route">${esc(p.route)} ${p.bug?'<span class="tag bug" style="margin-left:6px">bug</span>':''}</div>
+        <div class="card__title">${esc(p.title)} &nbsp;·&nbsp; <span class="mini">${esc(p.file)}</span></div>
+      </div>
+      <svg class="card__chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="card__body">
+      <div class="row"><h4>Purpose — what this page is for</h4><p style="margin:0">${esc(p.purpose)}</p></div>
+      ${issues?`<div class="row"><h4>What’s wrong / missing</h4><ul class="clean">${issues}</ul></div>`:""}
+      ${p.need?`<div class="row"><h4>Information we need from the client</h4><p style="margin:0">${esc(p.need)}</p></div>`:""}
+      ${copy?`<div class="row"><h4>Ready-to-use German copy</h4>${copy}</div>`:""}
+    </div>
+  </div>`;
+}
+
+document.getElementById("cards").innerHTML = PAGES.map(cardHTML).join("");
+
+/* ---- filter ---- */
+let curFilter = "all";
+function applyFilter(){
+  const q = document.getElementById("search").value.trim().toLowerCase();
+  document.querySelectorAll(".card").forEach(c=>{
+    const okFilter = curFilter==="all"
+      ? true
+      : curFilter==="bug" ? c.dataset.bug==="1"
+      : c.dataset.status===curFilter;
+    const okSearch = !q || c.dataset.search.includes(q);
+    c.classList.toggle("hidden", !(okFilter && okSearch));
+  });
+}
+document.querySelectorAll(".filterbtn").forEach(b=>{
+  b.addEventListener("click",()=>{
+    document.querySelectorAll(".filterbtn").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active"); curFilter=b.dataset.filter; applyFilter();
+  });
+});
+document.getElementById("search").addEventListener("input", applyFilter);
+
+/* ---- copy to clipboard ---- */
+document.addEventListener("click", e=>{
+  const btn = e.target.closest(".copybtn"); if(!btn) return;
+  const el = document.getElementById(btn.dataset.target);
+  const text = el ? el.innerText : "";
+  navigator.clipboard?.writeText(text).then(()=>{
+    btn.textContent="Copied ✓"; btn.classList.add("done");
+    setTimeout(()=>{btn.textContent="Copy";btn.classList.remove("done");},1400);
+  }).catch(()=>{ btn.textContent="Press Ctrl+C"; });
+});
+</script>
+</body>
+</html>
